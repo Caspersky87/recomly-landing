@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Polityka prywatności — Recomly</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --primary: #6938ef;
+    --primary-dark: #5a2dd6;
+    --primary-light: #f3efff;
+    --text: #0f0b1f;
+    --muted: #6b6580;
+    --border: #ece8f5;
+  }
+  * { font-family: 'Poppins', system-ui, sans-serif; }
+  body { color: var(--text); background: #fff; }
+  .font-logo { font-family: 'Outfit', sans-serif; font-weight: 500; letter-spacing: -0.02em; }
+  .text-primary { color: var(--primary); }
+  .bg-primary { background-color: var(--primary); }
+  .hover\:bg-primary-dark:hover { background-color: var(--primary-dark); }
+  .prose-doc h2 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; }
+  .prose-doc h3 { font-size: 1.125rem; font-weight: 600; color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  .prose-doc p { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+  .prose-doc ul { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: disc; }
+  .prose-doc ol { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: decimal; }
+  .prose-doc li { margin-bottom: 0.5rem; }
+  .prose-doc strong { color: var(--text); }
+  .prose-doc a { color: var(--primary); text-decoration: underline; }
+  .prose-doc table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  .prose-doc th, .prose-doc td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; color: var(--muted); }
+  .prose-doc th { background: var(--primary-light); color: var(--text); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-[var(--border)]">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2 ml-[1.3cm]">
+      <img src="logo.png" alt="Recomly" class="h-8 w-auto"/>
+    </a>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <button id="lang-toggle" class="flex items-center gap-1 px-3 py-2 rounded-full border border-[var(--border)] hover:border-primary text-sm font-semibold text-[var(--text)] transition-all">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <span id="lang-label">EN</span>
+      </button>
+      <a href="index.html" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-i18n="nav.back">← Powrót</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
+  <div class="prose-doc">
+    <p class="text-sm" data-i18n="meta">Ostatnia aktualizacja: 25 kwietnia 2026 r.</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6" data-i18n="title">Polityka prywatności</h1>
+    <p data-i18n="intro">Niniejsza Polityka prywatności opisuje, w jaki sposób Recomly sp. z o.o. przetwarza dane osobowe osób korzystających ze strony internetowej recomly.app oraz zapisujących się na listę oczekujących (waitlistę). Dokument został sporządzony zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO) oraz polskimi przepisami o ochronie danych osobowych.</p>
+
+    <!-- §1 Administrator -->
+    <h2 data-i18n="s1.h">§1. Administrator danych osobowych</h2>
+    <p data-i18n="s1.p1">Administratorem Twoich danych osobowych jest:</p>
+    <p data-i18n-html="s1.p2"><strong>Recomly sp. z o.o.</strong><br/>
+    ul. Kasprzaka 31A, Warszawa<br/>
+    NIP: 5273199463<br/>
+    KRS: 0001214798<br/>
+    Sąd Rejonowy dla m.st. Warszawy w Warszawie, XII Wydział Gospodarczy KRS<br/>
+    Adres email: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></p>
+    <p data-i18n="s1.p3">Inspektor Ochrony Danych nie został powołany. We wszelkich sprawach związanych z przetwarzaniem danych osobowych prosimy o kontakt pod wskazanym wyżej adresem email.</p>
+
+    <!-- §2 Zakres danych -->
+    <h2 data-i18n="s2.h">§2. Jakie dane zbieramy</h2>
+    <p data-i18n="s2.p1">W ramach zapisu na waitlistę zbieramy następujące dane:</p>
+    <ul>
+      <li data-i18n-html="s2.l1"><strong>Adres email</strong> — wymagany do zapisu na listę oczekujących</li>
+      <li data-i18n-html="s2.l2"><strong>Nazwa użytkownika Instagram</strong> — opcjonalnie, podawana dobrowolnie przez użytkownika</li>
+      <li data-i18n-html="s2.l3"><strong>Data wyrażenia zgody</strong> — automatycznie zapisywana w momencie zapisu</li>
+    </ul>
+    <p data-i18n="s2.p2">Stosujemy zasadę minimalizacji danych (art. 5 ust. 1 lit. c RODO) — zbieramy wyłącznie dane niezbędne do realizacji celów wskazanych w niniejszej polityce.</p>
+
+    <!-- §3 Cele i podstawy prawne -->
+    <h2 data-i18n="s3.h">§3. Cele i podstawy prawne przetwarzania</h2>
+    <p data-i18n="s3.p1">Twoje dane osobowe przetwarzamy w następujących celach:</p>
+    <ul>
+      <li data-i18n-html="s3.l1"><strong>Zapis i prowadzenie listy oczekujących</strong> — podstawa prawna: zgoda osoby (art. 6 ust. 1 lit. a RODO)</li>
+      <li data-i18n-html="s3.l2"><strong>Wysłanie informacji o uruchomieniu aplikacji Recomly</strong> — podstawa prawna: zgoda osoby (art. 6 ust. 1 lit. a RODO)</li>
+      <li data-i18n-html="s3.l3"><strong>Statystyki i analiza ruchu na stronie</strong> — podstawa prawna: prawnie uzasadniony interes administratora (art. 6 ust. 1 lit. f RODO), polegający na monitorowaniu zainteresowania produktem</li>
+      <li data-i18n-html="s3.l4"><strong>Realizacja praw osoby, której dane dotyczą</strong> — podstawa prawna: obowiązek prawny (art. 6 ust. 1 lit. c RODO)</li>
+      <li data-i18n-html="s3.l5"><strong>Dochodzenie lub obrona przed roszczeniami</strong> — podstawa prawna: prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO)</li>
+    </ul>
+    <p data-i18n="s3.p2">Nie podejmujemy decyzji opartych wyłącznie na zautomatyzowanym przetwarzaniu danych, w tym profilowaniu, które wywoływałyby skutki prawne lub w podobny sposób istotnie wpływały na osobę, której dane dotyczą.</p>
+
+    <!-- §4 Okres przechowywania -->
+    <h2 data-i18n="s4.h">§4. Okres przechowywania danych</h2>
+    <p data-i18n="s4.p1">Dane przechowujemy przez następujące okresy:</p>
+    <ul>
+      <li data-i18n-html="s4.l1"><strong>Dane z waitlisty</strong> — do momentu uruchomienia aplikacji i wysłania informacji o dostępie, jednak nie dłużej niż 24 miesiące od daty zapisu. Po tym okresie dane są automatycznie usuwane.</li>
+      <li data-i18n-html="s4.l2"><strong>Po wycofaniu zgody</strong> — dane usuwamy niezwłocznie, nie później niż w terminie 30 dni</li>
+      <li data-i18n-html="s4.l3"><strong>Dane zachowywane dla celów dowodowych</strong> — do upływu okresu przedawnienia roszczeń (zgodnie z Kodeksem cywilnym)</li>
+    </ul>
+
+    <!-- §5 Odbiorcy danych -->
+    <h2 data-i18n="s5.h">§5. Odbiorcy danych</h2>
+    <p data-i18n="s5.p1">Twoje dane mogą być przekazywane następującym kategoriom odbiorców:</p>
+    <ul>
+      <li data-i18n-html="s5.l1"><strong>Supabase Inc.</strong> — dostawca infrastruktury bazodanowej. Dane przechowywane są w regionie Frankfurt (Niemcy), w obrębie Europejskiego Obszaru Gospodarczego.</li>
+      <li data-i18n-html="s5.l2"><strong>Vercel Inc.</strong> — dostawca hostingu strony internetowej. Dane techniczne (logi serwera, statystyki ruchu) przetwarzane są zgodnie z polityką prywatności Vercel.</li>
+      <li data-i18n-html="s5.l3"><strong>Dostawca usług mailingowych</strong> — w momencie wysyłki maili informacyjnych dane mogą zostać przekazane wybranemu dostawcy. Lista dostawców zostanie zaktualizowana w niniejszym dokumencie przed pierwszą wysyłką.</li>
+      <li data-i18n-html="s5.l4"><strong>Organy państwowe</strong> — w przypadkach wymaganych przepisami prawa (np. żądanie sądu, prokuratury)</li>
+    </ul>
+    <p data-i18n="s5.p2">Nie sprzedajemy ani nie udostępniamy Twoich danych podmiotom trzecim w celach marketingowych.</p>
+
+    <!-- §6 Transfer poza EOG -->
+    <h2 data-i18n="s6.h">§6. Transfer danych poza EOG</h2>
+    <p data-i18n="s6.p1">Co do zasady, dane osobowe nie są przekazywane poza Europejski Obszar Gospodarczy (EOG). Główna baza danych Recomly utrzymywana jest na serwerach Supabase w regionie Frankfurt (Niemcy).</p>
+    <p data-i18n="s6.p2">W przypadku gdyby dany podproces (np. dostawca mailingowy) wymagał transferu poza EOG, transfer nastąpi wyłącznie do państw, dla których Komisja Europejska wydała decyzję stwierdzającą odpowiedni stopień ochrony, lub na podstawie standardowych klauzul umownych zatwierdzonych przez Komisję Europejską (art. 46 RODO).</p>
+
+    <!-- §7 Prawa -->
+    <h2 data-i18n="s7.h">§7. Twoje prawa</h2>
+    <p data-i18n="s7.p1">Zgodnie z RODO przysługują Ci następujące prawa:</p>
+    <ul>
+      <li data-i18n-html="s7.l1"><strong>Prawo dostępu do danych</strong> (art. 15 RODO) — możesz zażądać informacji o tym, jakie dane na Twój temat przetwarzamy</li>
+      <li data-i18n-html="s7.l2"><strong>Prawo do sprostowania</strong> (art. 16 RODO) — możesz żądać poprawienia błędnych lub nieaktualnych danych</li>
+      <li data-i18n-html="s7.l3"><strong>Prawo do usunięcia (prawo do bycia zapomnianym)</strong> (art. 17 RODO) — możesz żądać usunięcia swoich danych</li>
+      <li data-i18n-html="s7.l4"><strong>Prawo do ograniczenia przetwarzania</strong> (art. 18 RODO)</li>
+      <li data-i18n-html="s7.l5"><strong>Prawo do przenoszenia danych</strong> (art. 20 RODO) — możesz otrzymać swoje dane w formacie umożliwiającym przeniesienie do innego administratora</li>
+      <li data-i18n-html="s7.l6"><strong>Prawo do sprzeciwu</strong> (art. 21 RODO) — wobec przetwarzania na podstawie prawnie uzasadnionego interesu</li>
+      <li data-i18n-html="s7.l7"><strong>Prawo do wycofania zgody</strong> (art. 7 ust. 3 RODO) — w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania, którego dokonano przed wycofaniem</li>
+      <li data-i18n-html="s7.l8"><strong>Prawo do wniesienia skargi do organu nadzorczego</strong> — Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl">uodo.gov.pl</a>)</li>
+    </ul>
+    <p data-i18n="s7.p2">W celu realizacji któregokolwiek z powyższych praw skontaktuj się z nami pod adresem kontakt@recomly.app. Odpowiedź otrzymasz w terminie 30 dni od otrzymania żądania. W uzasadnionych przypadkach termin ten może zostać wydłużony o kolejne 60 dni, o czym zostaniesz poinformowany.</p>
+
+    <!-- §8 Cookies -->
+    <h2 data-i18n="s8.h">§8. Pliki cookies</h2>
+    <p data-i18n="s8.p1">Strona recomly.app używa plików cookies (ciasteczek) — niewielkich plików tekstowych zapisywanych w pamięci Twojej przeglądarki. Stosujemy wyłącznie cookies, które są niezbędne do prawidłowego funkcjonowania strony — zgodnie z art. 173 Prawa telekomunikacyjnego nie wymagają one Twojej zgody.</p>
+    <h3 data-i18n="s8.h2">Rodzaje cookies używanych na stronie:</h3>
+    <table>
+      <thead>
+        <tr>
+          <th data-i18n="s8.t.col1">Nazwa</th>
+          <th data-i18n="s8.t.col2">Cel</th>
+          <th data-i18n="s8.t.col3">Czas przechowywania</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>recomly-lang</td>
+          <td data-i18n="s8.t.r1">Zapamiętanie wybranego języka strony (PL/EN)</td>
+          <td data-i18n="s8.t.r1.dur">12 miesięcy</td>
+        </tr>
+        <tr>
+          <td>cookie-consent</td>
+          <td data-i18n="s8.t.r2">Zapamiętanie potwierdzenia banera cookies</td>
+          <td data-i18n="s8.t.r2.dur">12 miesięcy</td>
+        </tr>
+      </tbody>
+    </table>
+    <p data-i18n="s8.p2">Do analizy ruchu na stronie używamy Vercel Analytics — narzędzia, które nie wykorzystuje plików cookies, nie tworzy profili użytkowników i nie przekazuje danych poza EOG. Z tego powodu nie wymaga ono zgody w rozumieniu RODO ani Prawa telekomunikacyjnego.</p>
+    <p data-i18n="s8.p3">Możesz zablokować zapisywanie cookies w ustawieniach swojej przeglądarki — może to jednak wpłynąć na działanie niektórych funkcji strony.</p>
+
+    <!-- §9 Bezpieczeństwo -->
+    <h2 data-i18n="s9.h">§9. Bezpieczeństwo danych</h2>
+    <p data-i18n="s9.p1">Stosujemy odpowiednie środki techniczne i organizacyjne, aby zapewnić bezpieczeństwo Twoich danych:</p>
+    <ul>
+      <li data-i18n="s9.l1">Szyfrowanie połączenia certyfikatem SSL/TLS</li>
+      <li data-i18n="s9.l2">Szyfrowanie danych w spoczynku po stronie infrastruktury Supabase</li>
+      <li data-i18n="s9.l3">Ograniczony dostęp do bazy danych — wyłącznie dla osób upoważnionych</li>
+      <li data-i18n="s9.l4">Regularne kopie zapasowe wykonywane przez dostawcę infrastruktury</li>
+      <li data-i18n="s9.l5">Polityka silnych haseł oraz uwierzytelnianie wieloskładnikowe dla kont administracyjnych</li>
+      <li data-i18n="s9.l6">Stosowanie zasady najmniejszych uprawnień (least privilege)</li>
+    </ul>
+
+    <!-- §10 Naruszenie ochrony danych -->
+    <h2 data-i18n="s10.h">§10. Naruszenie ochrony danych</h2>
+    <p data-i18n="s10.p1">W przypadku stwierdzenia naruszenia ochrony danych osobowych, Recomly podejmie następujące działania:</p>
+    <ul>
+      <li data-i18n="s10.l1">Niezwłocznie, nie później niż w ciągu 72 godzin od stwierdzenia naruszenia, zgłosi je Prezesowi Urzędu Ochrony Danych Osobowych (zgodnie z art. 33 RODO)</li>
+      <li data-i18n="s10.l2">Jeśli naruszenie może powodować wysokie ryzyko naruszenia praw lub wolności osób fizycznych, zawiadomi te osoby bez zbędnej zwłoki (art. 34 RODO)</li>
+      <li data-i18n="s10.l3">Podejmie wszelkie niezbędne działania w celu usunięcia naruszenia i zapobieżenia jego skutkom</li>
+    </ul>
+
+    <!-- §11 Zmiany -->
+    <h2 data-i18n="s11.h">§11. Zmiany Polityki prywatności</h2>
+    <p data-i18n="s11.p1">Recomly zastrzega sobie prawo do zmiany niniejszej Polityki prywatności w każdym czasie, w szczególności w przypadku zmian w przepisach prawa lub zmian w sposobie świadczenia usług. O każdej zmianie poinformujemy poprzez aktualizację daty „ostatniej aktualizacji" na początku dokumentu, a w przypadku istotnych zmian — także drogą emailową.</p>
+
+    <!-- §12 Postanowienia końcowe -->
+    <h2 data-i18n="s12.h">§12. Postanowienia końcowe</h2>
+    <p data-i18n="s12.p1">W sprawach nieuregulowanych niniejszą Polityką prywatności mają zastosowanie przepisy RODO oraz polskiej Ustawy o ochronie danych osobowych z dnia 10 maja 2018 r.</p>
+    <p data-i18n="s12.p2">Jeżeli którekolwiek z postanowień niniejszej Polityki okaże się nieważne lub niewykonalne, nie wpływa to na ważność pozostałych postanowień (klauzula salwatoryjna).</p>
+    <p data-i18n="s12.p3">Wszelkie pytania dotyczące przetwarzania danych osobowych prosimy kierować na adres: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></p>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-[var(--border)] py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-2">
+      <img src="logo.png" alt="Recomly" class="h-6 w-auto"/>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-[var(--muted)]">
+      <a href="privacy.html" class="hover:text-primary transition-colors" data-i18n="footer.privacy">Polityka prywatności</a>
+      <a href="terms.html" class="hover:text-primary transition-colors" data-i18n="footer.terms">Regulamin</a>
+    </div>
+    <div class="text-sm text-[var(--muted)]">© 2026 Recomly</div>
+  </div>
+</footer>
+
+<script>
+  const T = {
+    pl: {
+      "nav.back": "← Powrót",
+      "footer.privacy": "Polityka prywatności",
+      "footer.terms": "Regulamin"
+    },
+    en: {
+      "nav.back": "← Back",
+      "footer.privacy": "Privacy policy",
+      "footer.terms": "Terms",
+      "meta": "Last updated: April 25, 2026",
+      "title": "Privacy Policy",
+      "intro": "This Privacy Policy describes how Recomly sp. z o.o. processes personal data of users of the recomly.app website and persons signing up for the waiting list (waitlist). The document has been prepared in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR) and Polish data protection regulations.",
+      "s1.h": "§1. Data Controller",
+      "s1.p1": "The controller of your personal data is:",
+      "s1.p2": "<strong>Recomly sp. z o.o.</strong><br/> Kasprzaka 31A St., Warsaw, Poland<br/> Tax ID (NIP): 5273199463<br/> Court Register (KRS): 0001214798<br/> District Court for the Capital City of Warsaw, 12th Commercial Division of the National Court Register<br/> Email: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>",
+      "s1.p3": "A Data Protection Officer has not been appointed. For all matters related to the processing of personal data, please contact us at the email address indicated above.",
+      "s2.h": "§2. What data we collect",
+      "s2.p1": "As part of the waitlist signup, we collect the following data:",
+      "s2.l1": "<strong>Email address</strong> — required to sign up for the waiting list",
+      "s2.l2": "<strong>Instagram username</strong> — optional, provided voluntarily by the user",
+      "s2.l3": "<strong>Date of consent</strong> — automatically recorded at the time of signup",
+      "s2.p2": "We apply the data minimization principle (Article 5(1)(c) GDPR) — we collect only the data necessary to achieve the purposes indicated in this policy.",
+      "s3.h": "§3. Purposes and legal bases of processing",
+      "s3.p1": "Your personal data is processed for the following purposes:",
+      "s3.l1": "<strong>Signing up and maintaining the waiting list</strong> — legal basis: consent of the data subject (Article 6(1)(a) GDPR)",
+      "s3.l2": "<strong>Sending information about the launch of the Recomly application</strong> — legal basis: consent (Article 6(1)(a) GDPR)",
+      "s3.l3": "<strong>Website traffic statistics and analysis</strong> — legal basis: legitimate interest of the controller (Article 6(1)(f) GDPR), consisting of monitoring product interest",
+      "s3.l4": "<strong>Realization of data subject rights</strong> — legal basis: legal obligation (Article 6(1)(c) GDPR)",
+      "s3.l5": "<strong>Pursuing or defending against claims</strong> — legal basis: legitimate interest (Article 6(1)(f) GDPR)",
+      "s3.p2": "We do not make decisions based solely on automated processing of data, including profiling, that produce legal effects or similarly significantly affect the data subject.",
+      "s4.h": "§4. Data retention period",
+      "s4.p1": "We store the data for the following periods:",
+      "s4.l1": "<strong>Waitlist data</strong> — until the application is launched and access information is sent, but no longer than 24 months from the date of signup. After this period, data is automatically deleted.",
+      "s4.l2": "<strong>After consent withdrawal</strong> — we delete the data without delay, no later than within 30 days",
+      "s4.l3": "<strong>Data retained for evidentiary purposes</strong> — until the expiry of the limitation period for claims (in accordance with the Polish Civil Code)",
+      "s5.h": "§5. Data recipients",
+      "s5.p1": "Your data may be transferred to the following categories of recipients:",
+      "s5.l1": "<strong>Supabase Inc.</strong> — database infrastructure provider. Data is stored in the Frankfurt region (Germany), within the European Economic Area.",
+      "s5.l2": "<strong>Vercel Inc.</strong> — website hosting provider. Technical data (server logs, traffic statistics) is processed in accordance with Vercel's privacy policy.",
+      "s5.l3": "<strong>Mailing service provider</strong> — at the time of sending information emails, data may be transferred to the selected provider. The list of providers will be updated in this document before the first mailing.",
+      "s5.l4": "<strong>State authorities</strong> — in cases required by law (e.g. court order, prosecutor's request)",
+      "s5.p2": "We do not sell or share your data with third parties for marketing purposes.",
+      "s6.h": "§6. Data transfer outside the EEA",
+      "s6.p1": "As a rule, personal data is not transferred outside the European Economic Area (EEA). The main Recomly database is maintained on Supabase servers in the Frankfurt region (Germany).",
+      "s6.p2": "If a particular sub-processor (e.g. mailing provider) requires transfer outside the EEA, the transfer will only take place to countries for which the European Commission has issued an adequacy decision, or on the basis of standard contractual clauses approved by the European Commission (Article 46 GDPR).",
+      "s7.h": "§7. Your rights",
+      "s7.p1": "Under GDPR, you have the following rights:",
+      "s7.l1": "<strong>Right of access</strong> (Article 15 GDPR) — you may request information about what data we process about you",
+      "s7.l2": "<strong>Right to rectification</strong> (Article 16 GDPR) — you may request correction of incorrect or outdated data",
+      "s7.l3": "<strong>Right to erasure (right to be forgotten)</strong> (Article 17 GDPR) — you may request deletion of your data",
+      "s7.l4": "<strong>Right to restriction of processing</strong> (Article 18 GDPR)",
+      "s7.l5": "<strong>Right to data portability</strong> (Article 20 GDPR) — you may receive your data in a format enabling transfer to another controller",
+      "s7.l6": "<strong>Right to object</strong> (Article 21 GDPR) — to processing based on legitimate interest",
+      "s7.l7": "<strong>Right to withdraw consent</strong> (Article 7(3) GDPR) — at any time, without affecting the lawfulness of processing carried out before withdrawal",
+      "s7.l8": "<strong>Right to lodge a complaint with a supervisory authority</strong> — the President of the Personal Data Protection Office (Stawki 2 St., 00-193 Warsaw, <a href=\"https://uodo.gov.pl\">uodo.gov.pl</a>)",
+      "s7.p2": "To exercise any of the above rights, contact us at kontakt@recomly.app. You will receive a response within 30 days of receiving the request. In justified cases, this period may be extended by a further 60 days, of which you will be informed.",
+      "s8.h": "§8. Cookies",
+      "s8.p1": "The recomly.app website uses cookies — small text files saved in your browser's memory. We only use cookies that are necessary for the proper functioning of the website — in accordance with Article 173 of the Polish Telecommunications Law, they do not require your consent.",
+      "s8.h2": "Types of cookies used on the site:",
+      "s8.t.col1": "Name",
+      "s8.t.col2": "Purpose",
+      "s8.t.col3": "Storage time",
+      "s8.t.r1": "Remembering the selected language (PL/EN)",
+      "s8.t.r1.dur": "12 months",
+      "s8.t.r2": "Remembering cookie banner confirmation",
+      "s8.t.r2.dur": "12 months",
+      "s8.p2": "For website traffic analysis we use Vercel Analytics — a tool that does not use cookies, does not create user profiles and does not transfer data outside the EEA. For this reason, it does not require consent within the meaning of GDPR or the Telecommunications Law.",
+      "s8.p3": "You can block the saving of cookies in your browser settings — however, this may affect the functioning of some features of the site.",
+      "s9.h": "§9. Data security",
+      "s9.p1": "We apply appropriate technical and organizational measures to ensure the security of your data:",
+      "s9.l1": "SSL/TLS encryption of the connection",
+      "s9.l2": "Encryption of data at rest on the Supabase infrastructure side",
+      "s9.l3": "Limited access to the database — only for authorized persons",
+      "s9.l4": "Regular backups performed by the infrastructure provider",
+      "s9.l5": "Strong password policy and multi-factor authentication for administrative accounts",
+      "s9.l6": "Application of the principle of least privilege",
+      "s10.h": "§10. Personal data breach",
+      "s10.p1": "In the event of a personal data breach, Recomly will take the following actions:",
+      "s10.l1": "Without undue delay, no later than within 72 hours of becoming aware of the breach, report it to the President of the Personal Data Protection Office (in accordance with Article 33 GDPR)",
+      "s10.l2": "If the breach is likely to result in a high risk to the rights or freedoms of natural persons, notify those persons without undue delay (Article 34 GDPR)",
+      "s10.l3": "Take all necessary action to remedy the breach and prevent its consequences",
+      "s11.h": "§11. Changes to the Privacy Policy",
+      "s11.p1": "Recomly reserves the right to amend this Privacy Policy at any time, in particular in the event of changes in legal regulations or changes in the manner of providing services. We will inform you of any changes by updating the \"last updated\" date at the beginning of the document, and in the case of significant changes — also by email.",
+      "s12.h": "§12. Final provisions",
+      "s12.p1": "In matters not covered by this Privacy Policy, the provisions of GDPR and the Polish Personal Data Protection Act of 10 May 2018 apply.",
+      "s12.p2": "If any provision of this Policy proves to be invalid or unenforceable, this does not affect the validity of the remaining provisions (severability clause).",
+      "s12.p3": "Please direct all questions regarding the processing of personal data to: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>"
+    }
+  };
+
+  let currentLang = 'pl';
+  function applyLang(lang) {
+    const dict = T[lang] || T.pl;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key]) el.innerHTML = dict[key];
+    });
+    document.documentElement.lang = lang;
+    const label = document.getElementById('lang-label');
+    if (label) label.textContent = lang === 'pl' ? 'EN' : 'PL';
+    currentLang = lang;
+    try { localStorage.setItem('recomly-lang', lang); } catch(e) {}
+  }
+  try {
+    const saved = localStorage.getItem('recomly-lang');
+    if (saved === 'pl' || saved === 'en') currentLang = saved;
+  } catch(e) {}
+  applyLang(currentLang);
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    applyLang(currentLang === 'pl' ? 'en' : 'pl');
+  });
+</script>
+</body>
+</html>
