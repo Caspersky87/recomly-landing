@@ -1,0 +1,932 @@
+<!-- Recomly Landing Page -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+<style>
+  :root {
+    --primary: #6938ef;
+    --primary-dark: #5a2dd6;
+    --primary-light: #f3efff;
+    --text: #0f0b1f;
+    --muted: #6b6580;
+    --border: #ece8f5;
+    --bg-soft: #fafaff;
+  }
+  * { font-family: 'Poppins', system-ui, sans-serif; }
+  html { scroll-behavior: smooth; }
+  body { color: var(--text); background: #ffffff; overflow-x: hidden; }
+  .font-logo { font-family: 'Outfit', sans-serif; font-weight: 500; letter-spacing: -0.02em; }
+  .text-primary { color: var(--primary); }
+  .bg-primary { background-color: var(--primary); }
+  .hover\:bg-primary-dark:hover { background-color: var(--primary-dark); }
+
+  .phone-slot {
+    filter: drop-shadow(0 25px 40px rgba(107, 33, 232, 0.1)) drop-shadow(0 12px 20px rgba(107, 33, 232, 0.06));
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  .phone-slot:hover { transform: translateY(-4px); }
+  .phone-slot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 680px;
+    object-fit: contain;
+  }
+  .phone-placeholder {
+    width: 280px;
+    height: 580px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border-radius: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #9ca3af;
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed rgba(255,255,255,0.15);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .phone-placeholder:hover {
+    border-color: var(--primary);
+    background: linear-gradient(135deg, #1a1428 0%, #0a0a0a 100%);
+  }
+  .phone-placeholder svg { opacity: 0.6; }
+  .phone-placeholder .label { font-size: 13px; font-weight: 600; color: #fff; }
+  .phone-placeholder .hint { font-size: 11px; color: #6b7280; }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .fade-up.in { opacity: 1; transform: translateY(0); }
+  .fade-up-delay-1 { transition-delay: 0.1s; }
+  .fade-up-delay-2 { transition-delay: 0.2s; }
+  .fade-up-delay-3 { transition-delay: 0.3s; }
+
+  @keyframes float-a { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
+  @keyframes float-b { 0%,100% { transform: translateY(-10px) } 50% { transform: translateY(0) } }
+  .float-a { animation: float-a 6s ease-in-out infinite; }
+  .float-b { animation: float-b 6s ease-in-out infinite; }
+  .float-a:hover, .float-b:hover { animation-play-state: paused; }
+
+  @keyframes pulse-soft { 0%,100% { opacity: 1 } 50% { opacity: 0.7 } }
+  .pulse-soft { animation: pulse-soft 2.5s ease-in-out infinite; }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .custom-check {
+    appearance: none;
+    width: 20px; height: 20px;
+    border: 2px solid #d1cce0;
+    border-radius: 5px;
+    flex-shrink: 0; cursor: pointer;
+    position: relative; transition: all 0.2s;
+    margin-top: 2px;
+  }
+  .custom-check:checked { background: var(--primary); border-color: var(--primary); }
+  .custom-check:checked::after {
+    content: ''; position: absolute;
+    left: 5px; top: 1px; width: 6px; height: 11px;
+    border: solid white; border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(107,33,232,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(107,33,232,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 80%);
+  }
+</style>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-[var(--border)]">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2 ml-[1.3cm]">
+      <img src="logo.png" alt="Recomly" class="h-8 w-auto"/>
+    </a>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <button id="lang-toggle" class="flex items-center gap-1 px-3 py-2 rounded-full border border-[var(--border)] hover:border-primary text-sm font-semibold text-[var(--text)] transition-all" aria-label="Change language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <span id="lang-label">EN</span>
+      </button>
+      <a href="#waitlist" class="hidden sm:inline-flex items-center bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-[rgba(107,33,232,0.3)]" data-i18n="nav.cta">
+        Dołącz do waitlisty
+      </a>
+      <a href="#waitlist" class="sm:hidden bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold" data-i18n="nav.cta-short">Dołącz</a>
+    </div>
+  </div>
+</nav>
+
+<!-- UPLOAD PANEL -->
+<div id="upload-panel" class="fixed bottom-4 right-4 z-[100] bg-white rounded-2xl shadow-2xl border border-[var(--border)] p-4 w-72 transition-all">
+  <div class="flex items-center justify-between mb-3">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-lg bg-[var(--primary-light)] flex items-center justify-center">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      </div>
+      <div>
+        <div class="text-sm font-semibold">Wgraj pliki</div>
+        <div class="text-[10px] text-[var(--muted)]" id="upload-progress">0 / 5</div>
+      </div>
+    </div>
+    <button id="panel-toggle" class="text-[var(--muted)] hover:text-[var(--text)] transition-colors p-1">
+      <svg id="chev-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+  </div>
+
+  <div id="panel-body" class="space-y-2">
+    <label class="flex items-center gap-3 p-2.5 rounded-xl border border-[var(--border)] cursor-pointer hover:bg-[var(--bg-soft)] hover:border-primary transition-all" data-upload="logo">
+      <div class="w-10 h-10 rounded-lg bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+        <svg class="pending" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h12a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/><path d="M14 2v6h6M8 13h2m-2 4h8"/></svg>
+        <svg class="done hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-xs font-semibold">Logo Recomly</div>
+        <div class="text-[10px] text-[var(--muted)] truncate filename">PNG / SVG</div>
+      </div>
+      <input type="file" accept="image/*" class="hidden" data-panel-target="logo"/>
+    </label>
+
+    <label class="flex items-center gap-3 p-2.5 rounded-xl border border-[var(--border)] cursor-pointer hover:bg-[var(--bg-soft)] hover:border-primary transition-all" data-upload="feed">
+      <div class="w-10 h-10 rounded-lg bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+        <svg class="pending" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+        <svg class="done hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-xs font-semibold">Ekran Feed / Start</div>
+        <div class="text-[10px] text-[var(--muted)] truncate filename">w hero</div>
+      </div>
+      <input type="file" accept="image/*" class="hidden" data-panel-target="feed"/>
+    </label>
+
+    <label class="flex items-center gap-3 p-2.5 rounded-xl border border-[var(--border)] cursor-pointer hover:bg-[var(--bg-soft)] hover:border-primary transition-all" data-upload="ai">
+      <div class="w-10 h-10 rounded-lg bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+        <svg class="pending" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10l-4.8 3.5L17 20l-5-3.5L7 20l1.8-6.5L4 10l6.1-1.2z"/></svg>
+        <svg class="done hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-xs font-semibold">Ekran AI Asystent</div>
+        <div class="text-[10px] text-[var(--muted)] truncate filename">w sekcji AI</div>
+      </div>
+      <input type="file" accept="image/*" class="hidden" data-panel-target="ai"/>
+    </label>
+
+    <label class="flex items-center gap-3 p-2.5 rounded-xl border border-[var(--border)] cursor-pointer hover:bg-[var(--bg-soft)] hover:border-primary transition-all" data-upload="map">
+      <div class="w-10 h-10 rounded-lg bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+        <svg class="pending" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <svg class="done hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-xs font-semibold">Ekran Mapa</div>
+        <div class="text-[10px] text-[var(--muted)] truncate filename">w showcase</div>
+      </div>
+      <input type="file" accept="image/*" class="hidden" data-panel-target="map"/>
+    </label>
+
+    <label class="flex items-center gap-3 p-2.5 rounded-xl border border-[var(--border)] cursor-pointer hover:bg-[var(--bg-soft)] hover:border-primary transition-all" data-upload="profile">
+      <div class="w-10 h-10 rounded-lg bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+        <svg class="pending" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+        <svg class="done hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-xs font-semibold">Ekran Profil</div>
+        <div class="text-[10px] text-[var(--muted)] truncate filename">w showcase</div>
+      </div>
+      <input type="file" accept="image/*" class="hidden" data-panel-target="profile"/>
+    </label>
+  </div>
+</div>
+
+<script>
+  // Upload panel logic
+  let uploadCount = 0;
+  const progressEl = document.getElementById('upload-progress');
+
+  function markDone(slot, filename) {
+    const label = document.querySelector('[data-upload="' + slot + '"]');
+    if (!label) return;
+    const pending = label.querySelector('.pending');
+    const done = label.querySelector('.done');
+    const fnEl = label.querySelector('.filename');
+    if (pending && !pending.classList.contains('hidden')) {
+      pending.classList.add('hidden');
+      done.classList.remove('hidden');
+      uploadCount++;
+      progressEl.textContent = uploadCount + ' / 5';
+    }
+    if (fnEl && filename) fnEl.textContent = filename;
+  }
+
+  document.querySelectorAll('input[data-panel-target]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const slot = input.dataset.panelTarget;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        if (slot === 'logo') {
+          applyLogo(ev.target.result);
+        } else {
+          setSlotImage(slot, ev.target.result);
+        }
+        markDone(slot, file.name);
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+
+  // Panel collapse
+  const panel = document.getElementById('upload-panel');
+  const panelBody = document.getElementById('panel-body');
+  const chev = document.getElementById('chev-down');
+  let collapsed = false;
+  document.getElementById('panel-toggle').addEventListener('click', () => {
+    collapsed = !collapsed;
+    panelBody.style.display = collapsed ? 'none' : '';
+    chev.style.transform = collapsed ? 'rotate(180deg)' : 'rotate(0deg)';
+  });
+
+  // ===== Persistent storage =====
+  const STORAGE_KEYS = { feed: 'rec_feed', ai: 'rec_ai', map: 'rec_map', profile: 'rec_profile', logo: 'rec_logo' };
+
+  // Compress image to fit storage limits (max ~3MB after base64)
+  async function compressImage(dataUrl, isLogo) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        const maxWidth = isLogo ? 600 : 900;
+        const canvas = document.createElement('canvas');
+        const scale = Math.min(1, maxWidth / img.width);
+        canvas.width = Math.round(img.width * scale);
+        canvas.height = Math.round(img.height * scale);
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        // PNG for logo (transparency), JPEG for screenshots (smaller)
+        const compressed = isLogo
+          ? canvas.toDataURL('image/png')
+          : canvas.toDataURL('image/jpeg', 0.85);
+        resolve(compressed);
+      };
+      img.onerror = () => resolve(dataUrl); // fallback to original
+      img.src = dataUrl;
+    });
+  }
+
+  function setSlotStatus(slot, status, msg) {
+    const label = document.querySelector('[data-upload="' + slot + '"]');
+    if (!label) return;
+    const fnEl = label.querySelector('.filename');
+    if (fnEl) fnEl.textContent = msg;
+    label.style.borderColor = status === 'saved' ? '#22c55e' : status === 'error' ? '#ef4444' : '';
+  }
+
+  async function saveToStorage(key, dataUrl) {
+    if (!window.storage) {
+      setSlotStatus(key, 'error', '⚠ storage niedostępny');
+      return false;
+    }
+    setSlotStatus(key, 'saving', 'Zapisywanie...');
+    try {
+      const compressed = await compressImage(dataUrl, key === 'logo');
+      const sizeMB = (compressed.length / (1024 * 1024)).toFixed(2);
+      if (compressed.length > 4.8 * 1024 * 1024) {
+        setSlotStatus(key, 'error', '⚠ za duży plik (' + sizeMB + ' MB)');
+        return false;
+      }
+      await window.storage.set(STORAGE_KEYS[key], compressed);
+      setSlotStatus(key, 'saved', '✓ zapisane (' + sizeMB + ' MB)');
+      return true;
+    } catch(e) {
+      console.warn('storage save failed for ' + key, e);
+      setSlotStatus(key, 'error', '⚠ ' + (e.message || 'błąd zapisu'));
+      return false;
+    }
+  }
+
+  async function loadFromStorage(key) {
+    if (!window.storage) return null;
+    try {
+      const r = await window.storage.get(STORAGE_KEYS[key]);
+      return r ? r.value : null;
+    } catch(e) { return null; }
+  }
+
+  // Save uploaded files automatically (additional listener on each input)
+  document.querySelectorAll('input[data-panel-target]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const slot = input.dataset.panelTarget;
+      const reader = new FileReader();
+      reader.onload = (ev) => saveToStorage(slot, ev.target.result);
+      reader.readAsDataURL(file);
+    });
+  });
+
+  // Restore saved files on page load
+  (async () => {
+    if (!window.storage) {
+      console.warn('window.storage not available');
+      return;
+    }
+    let restored = 0;
+    for (const slot of ['feed', 'ai', 'map', 'profile']) {
+      const data = await loadFromStorage(slot);
+      if (data) {
+        setSlotImage(slot, data);
+        markDone(slot, '✓ zapisane');
+        restored++;
+      }
+    }
+    const logoData = await loadFromStorage('logo');
+    if (logoData) {
+      applyLogo(logoData);
+      markDone('logo', '✓ zapisane');
+      restored++;
+    }
+    if (restored === 5) {
+      panelBody.style.display = 'none';
+      collapsed = true;
+      chev.style.transform = 'rotate(180deg)';
+      const titleText = document.querySelector('#upload-panel .text-sm.font-semibold');
+      if (titleText) titleText.textContent = 'Pliki zapisane';
+    }
+  })();
+</script>
+<section id="top" class="relative pt-24 pb-12 overflow-hidden">
+  <div class="absolute inset-0 hero-grid"></div>
+  <div class="blob" style="background:#6938ef; opacity:0.12; width:500px; height:500px; top:-100px; right:-100px;"></div>
+  <div class="blob" style="background:#a855f7; opacity:0.08; width:400px; height:400px; bottom:0; left:-100px;"></div>
+
+  <div class="relative max-w-5xl mx-auto px-6 text-center">
+    <h1 class="fade-up text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-6" data-i18n-html="hero.title">
+      Wszystkie rekomendacje<br class="hidden sm:block"/>
+      od znajomych, twórców<br class="hidden sm:block"/>
+      i społeczności<br/>
+      <span class="text-primary">w jednym miejscu.</span>
+    </h1>
+
+    <p class="fade-up fade-up-delay-2 text-lg sm:text-xl text-[var(--muted)] max-w-2xl mx-auto mb-12" data-i18n="hero.subtitle">
+      Zebrane i uporządkowane — AI pomaga znaleźć i wybrać właściwe.
+    </p>
+
+    <form id="hero-form" onsubmit="return false" class="fade-up fade-up-delay-3 max-w-md mx-auto flex flex-col sm:flex-row gap-3 mb-4">
+      <input type="email" id="hero-email" placeholder="Twój adres email"
+        data-i18n-placeholder="hero.email-placeholder"
+        class="flex-1 px-5 py-3.5 rounded-full border border-[var(--border)] bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-[rgba(107,33,232,0.1)] transition-all"/>
+      <button type="button" id="hero-submit" class="bg-primary hover:bg-primary-dark text-white px-7 py-3.5 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-[rgba(107,33,232,0.35)] whitespace-nowrap" data-i18n="hero.cta">
+        Dołącz do waitlisty
+      </button>
+    </form>
+
+    <p class="fade-up fade-up-delay-3 text-sm text-primary font-semibold" data-i18n="hero.helper">
+      Zapisz się i uzyskaj dostęp przed premierą.
+    </p>
+  </div>
+</section>
+
+<!-- HERO PHONE -->
+<section class="relative py-12 overflow-hidden">
+  <div class="max-w-4xl mx-auto px-6 flex justify-center">
+    <div class="float-a">
+      <label class="phone-slot" data-slot="feed">
+        <img src="feed.png" alt="Feed / Start" style="max-width: 320px; display: block;"/>
+        <input type="file" accept="image/*" class="hidden" data-target="feed"/>
+      </label>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO BRIDGE -->
+<section class="pt-10 pb-4 text-center">
+  <div class="max-w-3xl mx-auto px-6 fade-up">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-[1.15] mb-5" data-i18n-html="bridge.title">
+      Najlepsze miejsca krążą między ludźmi.<br/>
+      <span class="text-primary">Tutaj je znajdziesz.</span>
+    </h2>
+    <p class="text-lg text-[var(--muted)] max-w-xl mx-auto" data-i18n="bridge.subtitle">
+      Bez przeglądania setek opinii. Bez przypadku. Po prostu wiesz, gdzie iść.
+    </p>
+  </div>
+</section>
+
+<!-- SHOWCASE (przeniesione na miejsce Features) -->
+<section class="bg-[var(--bg-soft)] py-24 mt-8 relative overflow-hidden">
+  <div class="blob" style="background:#6938ef; opacity:0.07; width:500px; height:500px; top:50%; left:-200px; transform:translateY(-50%);"></div>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <div class="fade-up grid grid-cols-2 gap-4 justify-items-center">
+        <div class="mt-10">
+          <label class="phone-slot" data-slot="map">
+            <img src="map.png" alt="Mapa" style="max-width: 240px; display: block;"/>
+            <input type="file" accept="image/*" class="hidden" data-target="map"/>
+          </label>
+        </div>
+        <div class="-mt-4">
+          <label class="phone-slot" data-slot="profile">
+            <img src="profile.png" alt="Profil" style="max-width: 240px; display: block;"/>
+            <input type="file" accept="image/*" class="hidden" data-target="profile"/>
+          </label>
+        </div>
+      </div>
+
+      <div class="fade-up fade-up-delay-1">
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6 leading-tight text-center" data-i18n="showcase.title">Odkrywaj i zapisuj swoje ulubione miejsca</h2>
+        <p class="text-lg text-[var(--muted)] mb-8" data-i18n="showcase.subtitle">Wszystko, co lubisz, zawsze pod ręką — zebrane i uporządkowane.</p>
+
+        <ul class="space-y-5">
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1" data-i18n="showcase.point1.title">Zobacz gdzie chodzą inni</h4>
+              <p class="text-[var(--muted)] leading-relaxed" data-i18n="showcase.point1.desc">Odkrywaj miejsca polecane przez znajomych, twórców i społeczność.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1" data-i18n="showcase.point2.title">Zbieraj i polecaj swoje miejsca</h4>
+              <p class="text-[var(--muted)] leading-relaxed" data-i18n="showcase.point2.desc">Zapisuj to, co Ci się podoba, układaj w listy i dziel się tym z innymi.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[var(--primary-light)] flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-lg mb-1" data-i18n="showcase.point3.title">Decyduj szybciej</h4>
+              <p class="text-[var(--muted)] leading-relaxed" data-i18n="showcase.point3.desc">Znajdź dokładnie to, czego szukasz — dzięki zaawansowanym filtrom i AI dopasowanemu do Ciebie.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI ASSISTANT -->
+<section class="py-24 relative overflow-hidden">
+  <div class="blob" style="background:#a855f7; opacity:0.09; width:500px; height:500px; top:50%; right:-200px; transform:translateY(-50%);"></div>
+  <div class="blob" style="background:#6938ef; opacity:0.06; width:400px; height:400px; top:10%; left:-100px;"></div>
+  <div class="max-w-4xl mx-auto px-6 relative">
+
+    <div class="text-center mb-12 fade-up">
+      <div class="inline-flex items-center gap-2 bg-[var(--primary-light)] text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 10l-4.8 3.5L17 20l-5-3.5L7 20l1.8-6.5L4 10l6.1-1.2z"/></svg>
+        <span data-i18n="ai.badge">AI Asystent</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-5 leading-tight" data-i18n-html="ai.title">
+        Znajdź <span class="text-primary">właściwe miejsce</span> w kilka sekund
+      </h2>
+      <p class="text-lg text-[var(--muted)] max-w-2xl mx-auto" data-i18n="ai.subtitle">
+        Powiedz czego szukasz — AI przeszuka rekomendacje od zaufanej społeczności i dopasuje je do Ciebie.
+      </p>
+    </div>
+
+    <div class="fade-up fade-up-delay-1 flex justify-center mb-12">
+      <div class="float-a">
+        <label class="phone-slot" data-slot="ai">
+          <div class="phone-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l1.9 5.8L20 10l-4.8 3.5L17 20l-5-3.5L7 20l1.8-6.5L4 10l6.1-1.2z"/></svg>
+            <div class="label">AI Asystent</div>
+            <div class="hint">Kliknij, żeby wgrać PNG</div>
+          </div>
+          <input type="file" accept="image/*" class="hidden" data-target="ai"/>
+        </label>
+      </div>
+    </div>
+
+    <div class="fade-up fade-up-delay-2 grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+
+      <div class="relative bg-white border border-[var(--border)] rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-[rgba(107,33,232,0.1)] transition-all group overflow-hidden">
+        <span class="absolute top-3 right-5 text-5xl font-bold text-primary opacity-10 select-none">01</span>
+        <div class="w-12 h-12 rounded-xl bg-[var(--primary-light)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+          </svg>
+        </div>
+        <p class="text-[15px] font-medium leading-snug relative" data-i18n="ai.bullet1">Dopasowane do tego, na co masz ochotę tu i teraz</p>
+      </div>
+
+      <div class="relative bg-white border border-[var(--border)] rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-[rgba(107,33,232,0.1)] transition-all group overflow-hidden">
+        <span class="absolute top-3 right-5 text-5xl font-bold text-primary opacity-10 select-none">02</span>
+        <div class="w-12 h-12 rounded-xl bg-[var(--primary-light)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <p class="text-[15px] font-medium leading-snug relative" data-i18n="ai.bullet2">Oparte na miejscach polecanych przez społeczność</p>
+      </div>
+
+      <div class="relative bg-white border border-[var(--border)] rounded-2xl p-6 hover:-translate-y-1 hover:shadow-xl hover:shadow-[rgba(107,33,232,0.1)] transition-all group overflow-hidden">
+        <span class="absolute top-3 right-5 text-5xl font-bold text-primary opacity-10 select-none">03</span>
+        <div class="w-12 h-12 rounded-xl bg-[var(--primary-light)] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
+        <p class="text-[15px] font-medium leading-snug relative" data-i18n="ai.bullet3">Bez scrollowania i zgadywania</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section id="waitlist" class="bg-gradient-to-b from-[var(--bg-soft)] to-[#f3efff] py-24">
+  <div class="max-w-2xl mx-auto px-6">
+    <div class="text-center mb-10 fade-up">
+      <div class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 shadow-sm">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3l1.9 5.8L20 10l-4.8 3.5L17 20l-5-3.5L7 20l1.8-6.5L4 10l6.1-1.2z"/></svg>
+        <span data-i18n="waitlist.badge">Ograniczona liczba miejsc</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-4" data-i18n="waitlist.title">Dołącz do waitlisty</h2>
+      <p class="text-lg text-[var(--muted)]" data-i18n="waitlist.subtitle">Bądź wśród pierwszych, którzy odkryją nową jakość rekomendacji.</p>
+    </div>
+
+    <div id="waitlist-card" class="fade-up bg-white rounded-3xl shadow-sm border border-[var(--border)] p-8 sm:p-10">
+      <form id="waitlist-form" onsubmit="return false" class="space-y-5">
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n-html="waitlist.email-label">Adres email <span class="text-primary">*</span></label>
+          <input type="email" id="wl-email" placeholder="twoj@email.com" data-i18n-placeholder="waitlist.email-placeholder" class="w-full px-5 py-3.5 rounded-full border border-[var(--border)] focus:outline-none focus:border-primary focus:ring-4 focus:ring-[rgba(107,33,232,0.1)] transition-all"/>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold mb-2" data-i18n-html="waitlist.ig-label">Instagram <span class="text-[var(--muted)] font-normal">(opcjonalnie)</span></label>
+          <input type="text" id="wl-ig" placeholder="@twojnick" data-i18n-placeholder="waitlist.ig-placeholder" class="w-full px-5 py-3.5 rounded-full border border-[var(--border)] focus:outline-none focus:border-primary focus:ring-4 focus:ring-[rgba(107,33,232,0.1)] transition-all"/>
+        </div>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input type="checkbox" id="wl-consent" class="custom-check"/>
+          <span class="text-sm text-[var(--muted)]" data-i18n-html="waitlist.consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisu do waitlisty, zgodnie z <a href="#" class="text-primary underline">polityką prywatności</a>.</span>
+        </label>
+        <button type="button" id="wl-btn" disabled class="w-full bg-primary hover:bg-primary-dark disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-4 rounded-full font-semibold transition-all disabled:hover:scale-100 hover:scale-[1.02] hover:shadow-lg hover:shadow-[rgba(107,33,232,0.35)]" data-i18n="waitlist.submit">Dołączam</button>
+        <p class="text-xs text-[var(--muted)] text-center" data-i18n="waitlist.disclaimer">Nie wysyłamy spamu. Możesz wypisać się w każdej chwili.</p>
+      </form>
+    </div>
+
+    <div id="success-card" class="hidden fade-up bg-white rounded-3xl shadow-sm border border-[var(--border)] p-10 text-center">
+      <div class="w-16 h-16 mx-auto rounded-full bg-[var(--primary-light)] flex items-center justify-center mb-5">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 class="text-2xl font-bold mb-2" data-i18n="success.title">Jesteś na liście! 🎉</h3>
+      <p class="text-[var(--muted)]" data-i18n="success.text">Dziękujemy. Dostaniesz od nas wiadomość, gdy tylko otworzymy dostęp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-[var(--border)] py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-2">
+      <img src="logo.png" alt="Recomly" class="h-6 w-auto"/>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-[var(--muted)]">
+      <a href="#" class="hover:text-primary transition-colors" data-i18n="footer.privacy">Polityka prywatności</a>
+      <a href="#" class="hover:text-primary transition-colors" data-i18n="footer.terms">Regulamin</a>
+      <a href="#" aria-label="Instagram" class="hover:text-primary transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+      </a>
+    </div>
+    <div class="text-sm text-[var(--muted)]">© 2026 Recomly</div>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-[var(--border)] shadow-lg translate-y-full transition-transform duration-500">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <p class="text-sm text-[var(--muted)] text-center sm:text-left" data-i18n="cookie.text">Ta strona wykorzystuje pliki cookies w celach analitycznych i marketingowych.</p>
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <a href="#" class="text-sm text-primary underline px-3 py-2" data-i18n="cookie.more">Dowiedz się więcej</a>
+      <button id="cookie-ok" class="text-sm bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-primary-dark transition-colors" data-i18n="cookie.ok">OK</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ===== i18n =====
+  const TRANSLATIONS = {
+    pl: {
+      "nav.cta": "Dołącz do waitlisty",
+      "nav.cta-short": "Dołącz",
+      "hero.title": 'Wszystkie rekomendacje<br class="hidden sm:block"/> od znajomych, twórców<br class="hidden sm:block"/> i społeczności<br/> <span class="text-primary">w jednym miejscu.</span>',
+      "hero.subtitle": "Zebrane i uporządkowane — AI pomaga znaleźć i wybrać właściwe.",
+      "hero.email-placeholder": "Twój adres email",
+      "hero.cta": "Dołącz do waitlisty",
+      "hero.helper": "Zapisz się i uzyskaj dostęp przed premierą.",
+      "bridge.title": 'Najlepsze miejsca krążą między ludźmi.<br/> <span class="text-primary">Tutaj je znajdziesz.</span>',
+      "bridge.subtitle": "Bez przeglądania setek opinii. Bez przypadku. Po prostu wiesz, gdzie iść.",
+      "showcase.title": "Odkrywaj i zapisuj swoje ulubione miejsca",
+      "showcase.subtitle": "Wszystko, co lubisz, zawsze pod ręką — zebrane i uporządkowane.",
+      "showcase.point1.title": "Zobacz gdzie chodzą inni",
+      "showcase.point1.desc": "Odkrywaj miejsca polecane przez znajomych, twórców i społeczność.",
+      "showcase.point2.title": "Zbieraj i polecaj swoje miejsca",
+      "showcase.point2.desc": "Zapisuj to, co Ci się podoba, układaj w listy i dziel się tym z innymi.",
+      "showcase.point3.title": "Decyduj szybciej",
+      "showcase.point3.desc": "Znajdź dokładnie to, czego szukasz — dzięki zaawansowanym filtrom i AI dopasowanemu do Ciebie.",
+      "ai.badge": "AI Asystent",
+      "ai.title": 'Znajdź <span class="text-primary">właściwe miejsce</span> w kilka sekund',
+      "ai.subtitle": "Powiedz czego szukasz — AI przeszuka rekomendacje od zaufanej społeczności i dopasuje je do Ciebie.",
+      "ai.bullet1": "Dopasowane do tego, na co masz ochotę tu i teraz",
+      "ai.bullet2": "Oparte na miejscach polecanych przez społeczność",
+      "ai.bullet3": "Bez scrollowania i zgadywania",
+      "waitlist.badge": "Ograniczona liczba miejsc",
+      "waitlist.title": "Dołącz do waitlisty",
+      "waitlist.subtitle": "Bądź wśród pierwszych, którzy odkryją nową jakość rekomendacji.",
+      "waitlist.email-label": 'Adres email <span class="text-primary">*</span>',
+      "waitlist.email-placeholder": "twoj@email.com",
+      "waitlist.ig-label": 'Instagram <span class="text-[var(--muted)] font-normal">(opcjonalnie)</span>',
+      "waitlist.ig-placeholder": "@twojnick",
+      "waitlist.consent": 'Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisu do waitlisty, zgodnie z <a href="#" class="text-primary underline">polityką prywatności</a>.',
+      "waitlist.submit": "Dołączam",
+      "waitlist.disclaimer": "Nie wysyłamy spamu. Możesz wypisać się w każdej chwili.",
+      "success.title": "Jesteś na liście! 🎉",
+      "success.text": "Dziękujemy. Dostaniesz od nas wiadomość, gdy tylko otworzymy dostęp.",
+      "footer.privacy": "Polityka prywatności",
+      "footer.terms": "Regulamin",
+      "cookie.text": "Ta strona wykorzystuje pliki cookies w celach analitycznych i marketingowych.",
+      "cookie.more": "Dowiedz się więcej",
+      "cookie.ok": "OK"
+    },
+    en: {
+      "nav.cta": "Join the waitlist",
+      "nav.cta-short": "Join",
+      "hero.title": 'All recommendations<br class="hidden sm:block"/> from friends, creators<br class="hidden sm:block"/> and the community<br/> <span class="text-primary">in one place.</span>',
+      "hero.subtitle": "Curated and organized — AI helps you find and pick the right one.",
+      "hero.email-placeholder": "Your email address",
+      "hero.cta": "Join the waitlist",
+      "hero.helper": "Sign up and get access before everyone else.",
+      "bridge.title": 'The best places travel by word of mouth.<br/> <span class="text-primary">Find them here.</span>',
+      "bridge.subtitle": "No scrolling through hundreds of reviews. No guessing. You just know where to go.",
+      "showcase.title": "Discover and save your favorite places",
+      "showcase.subtitle": "Everything you love, always at hand — curated and organized.",
+      "showcase.point1.title": "See where others go",
+      "showcase.point1.desc": "Discover places recommended by friends, creators and the community.",
+      "showcase.point2.title": "Collect and share your places",
+      "showcase.point2.desc": "Save what you love, organize it into lists and share it with others.",
+      "showcase.point3.title": "Decide faster",
+      "showcase.point3.desc": "Find exactly what you're looking for — with advanced filters and AI tailored to you.",
+      "ai.badge": "AI Assistant",
+      "ai.title": 'Find <span class="text-primary">the right place</span> in seconds',
+      "ai.subtitle": "Tell us what you want — AI searches recommendations from a trusted community and matches them to you.",
+      "ai.bullet1": "Tailored to what you're craving right now",
+      "ai.bullet2": "Based on places recommended by the community",
+      "ai.bullet3": "No scrolling, no guessing",
+      "waitlist.badge": "Limited spots available",
+      "waitlist.title": "Join the waitlist",
+      "waitlist.subtitle": "Be among the first to discover a new way to find places.",
+      "waitlist.email-label": 'Email address <span class="text-primary">*</span>',
+      "waitlist.email-placeholder": "your@email.com",
+      "waitlist.ig-label": 'Instagram <span class="text-[var(--muted)] font-normal">(optional)</span>',
+      "waitlist.ig-placeholder": "@yourhandle",
+      "waitlist.consent": 'I agree to the processing of my personal data for the purpose of joining the waitlist, in accordance with the <a href="#" class="text-primary underline">privacy policy</a>.',
+      "waitlist.submit": "Join",
+      "waitlist.disclaimer": "No spam. You can unsubscribe anytime.",
+      "success.title": "You're on the list! 🎉",
+      "success.text": "Thank you. We'll send you a message as soon as we open access.",
+      "footer.privacy": "Privacy policy",
+      "footer.terms": "Terms",
+      "cookie.text": "This site uses cookies for analytics and marketing purposes.",
+      "cookie.more": "Learn more",
+      "cookie.ok": "OK"
+    }
+  };
+
+  function applyLang(lang) {
+    const dict = TRANSLATIONS[lang] || TRANSLATIONS.pl;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key]) el.innerHTML = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (dict[key]) el.placeholder = dict[key];
+    });
+    document.documentElement.lang = lang;
+    const label = document.getElementById('lang-label');
+    if (label) label.textContent = lang === 'pl' ? 'EN' : 'PL';
+    try { localStorage.setItem('recomly-lang', lang); } catch(e) {}
+  }
+
+  // Initialize language on load
+  let currentLang = 'pl';
+  try {
+    const saved = localStorage.getItem('recomly-lang');
+    if (saved === 'pl' || saved === 'en') currentLang = saved;
+    else if (navigator.language && !navigator.language.toLowerCase().startsWith('pl')) currentLang = 'en';
+  } catch(e) {}
+  applyLang(currentLang);
+
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    currentLang = currentLang === 'pl' ? 'en' : 'pl';
+    applyLang(currentLang);
+  });
+</script>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+  document.getElementById('hero-submit').addEventListener('click', () => {
+    document.getElementById('wl-email').value = document.getElementById('hero-email').value;
+    document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // ===== Supabase init =====
+  const SUPABASE_URL = 'https://apzzzvfumnnzdgnsdqdy.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwenp6dmZ1bW5uemRnbnNkcWR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcwNzM1NjksImV4cCI6MjA5MjY0OTU2OX0.xxuwmzBoKb9UqsIipzE9jy5WmAR2nCrp8hPsn0Cifos';
+  let sb = null;
+  try {
+    if (window.supabase && window.supabase.createClient) {
+      sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      console.log('✓ Supabase ready');
+    } else {
+      console.error('✗ Supabase library not loaded');
+    }
+  } catch (err) {
+    console.error('✗ Supabase init failed:', err);
+  }
+
+  const consent = document.getElementById('wl-consent');
+  const emailField = document.getElementById('wl-email');
+  const igField = document.getElementById('wl-ig');
+  const btn = document.getElementById('wl-btn');
+  const updateBtn = () => btn.disabled = !(consent.checked && emailField.value);
+  consent.addEventListener('change', updateBtn);
+  emailField.addEventListener('input', updateBtn);
+
+  // Add error display element under the form
+  let errorEl = document.getElementById('wl-error');
+  if (!errorEl) {
+    errorEl = document.createElement('p');
+    errorEl.id = 'wl-error';
+    errorEl.className = 'text-sm text-red-600 text-center mt-2';
+    errorEl.style.display = 'none';
+    btn.parentElement.insertBefore(errorEl, btn.nextSibling);
+  }
+
+  document.getElementById('wl-btn').addEventListener('click', async () => {
+    console.log('→ Submit clicked');
+    if (!consent.checked || !emailField.value) {
+      console.log('✗ Missing email or consent');
+      return;
+    }
+
+    if (!sb) {
+      errorEl.textContent = '⚠ Biblioteka nie załadowana. Odśwież stronę i spróbuj ponownie.';
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    btn.disabled = true;
+    const originalLabel = btn.textContent;
+    btn.textContent = 'Zapisuję...';
+    errorEl.style.display = 'none';
+
+    console.log('→ Sending to Supabase:', emailField.value);
+
+    const { data, error } = await sb.from('waitlist').insert({
+      email: emailField.value.trim().toLowerCase(),
+      instagram: igField.value.trim() || null
+    });
+
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+
+    if (error) {
+      console.error('✗ Supabase error:', error);
+      if (error.code === '23505') {
+        document.getElementById('waitlist-card').classList.add('hidden');
+        document.getElementById('success-card').classList.remove('hidden');
+        document.getElementById('success-card').classList.add('in');
+        return;
+      }
+      errorEl.textContent = '⚠ ' + (error.message || 'Coś poszło nie tak. Spróbuj ponownie.');
+      errorEl.style.display = 'block';
+      return;
+    }
+
+    console.log('✓ Saved to Supabase');
+    document.getElementById('waitlist-card').classList.add('hidden');
+    document.getElementById('success-card').classList.remove('hidden');
+    document.getElementById('success-card').classList.add('in');
+  });
+
+  const banner = document.getElementById('cookie-banner');
+  setTimeout(() => banner.classList.remove('translate-y-full'), 1200);
+  document.getElementById('cookie-ok').addEventListener('click', () => banner.classList.add('translate-y-full'));
+
+  // Phone screen upload
+  const FILE_MAP = {
+    feed: ['iPhone_(37)_1776702983950.png', 'iPhone (37).png', 'feedScreen.png'],
+    map:  ['iPhone_(34)_1776702983949.png', 'iPhone (34).png', 'mapScreen.png'],
+    ai:   ['iPhone_1776702983949.png', 'iPhone.png', 'aiScreen.png'],
+    profile: ['iPhone-1_1776702983950.png', 'iPhone-1.png', 'profileScreen.png'],
+  };
+
+  function setSlotImage(slot, src) {
+    const containers = document.querySelectorAll('.phone-slot[data-slot="' + slot + '"]');
+    containers.forEach(container => {
+      const placeholder = container.querySelector('.phone-placeholder');
+      if (placeholder) placeholder.remove();
+      let img = container.querySelector('img.uploaded');
+      if (!img) {
+        img = document.createElement('img');
+        img.className = 'uploaded';
+        img.style.maxWidth = '320px';
+        img.alt = slot;
+        container.insertBefore(img, container.querySelector('input'));
+      }
+      img.src = src;
+    });
+  }
+
+  (async () => {
+    if (!window.fs || !window.fs.readFile) return;
+    for (const [slot, names] of Object.entries(FILE_MAP)) {
+      for (const name of names) {
+        try {
+          const data = await window.fs.readFile(name);
+          const blob = new Blob([data], { type: 'image/png' });
+          setSlotImage(slot, URL.createObjectURL(blob));
+          break;
+        } catch(e) {}
+      }
+    }
+  })();
+
+  document.querySelectorAll('input[type="file"][data-target]').forEach(input => {
+    input.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => setSlotImage(input.dataset.target, ev.target.result);
+      reader.readAsDataURL(file);
+    });
+  });
+
+  // Logo upload
+  function applyLogo(src) {
+    const navImg = document.getElementById('nav-logo-img');
+    const navFb = document.getElementById('nav-logo-fallback');
+    const footImg = document.getElementById('footer-logo-img');
+    const footFb = document.getElementById('footer-logo-fallback');
+    navImg.src = src; navImg.classList.remove('hidden'); navFb.classList.add('hidden');
+    footImg.src = src; footImg.classList.remove('hidden'); footFb.classList.add('hidden');
+  }
+
+  (async () => {
+    if (!window.fs || !window.fs.readFile) return;
+    const candidates = ['recomly_logo.png', 'recomly_logo.svg', 'Recomly_logo.png', 'logo.png', 'logo.svg'];
+    for (const name of candidates) {
+      try {
+        const data = await window.fs.readFile(name);
+        const ext = name.split('.').pop().toLowerCase();
+        const mime = ext === 'svg' ? 'image/svg+xml' : 'image/png';
+        const blob = new Blob([data], { type: mime });
+        applyLogo(URL.createObjectURL(blob));
+        break;
+      } catch(e) {}
+    }
+  })();
+
+  document.getElementById('logo-upload').addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => applyLogo(ev.target.result);
+    reader.readAsDataURL(file);
+  });
+</script>
