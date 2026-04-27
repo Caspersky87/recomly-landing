@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Regulamin - Recomly</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --primary: #6938ef;
+    --primary-dark: #5a2dd6;
+    --primary-light: #f3efff;
+    --text: #0f0b1f;
+    --muted: #6b6580;
+    --border: #ece8f5;
+  }
+  * { font-family: 'Poppins', system-ui, sans-serif; }
+  body { color: var(--text); background: #fff; }
+  .font-logo { font-family: 'Outfit', sans-serif; font-weight: 500; letter-spacing: -0.02em; }
+  .text-primary { color: var(--primary); }
+  .bg-primary { background-color: var(--primary); }
+  .hover\:bg-primary-dark:hover { background-color: var(--primary-dark); }
+  .prose-doc h2 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; }
+  .prose-doc h3 { font-size: 1.125rem; font-weight: 600; color: var(--text); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+  .prose-doc p { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+  .prose-doc ul { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: disc; }
+  .prose-doc ol { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: decimal; }
+  .prose-doc li { margin-bottom: 0.5rem; }
+  .prose-doc strong { color: var(--text); }
+  .prose-doc a { color: var(--primary); text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-[var(--border)]">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 ml-[1.3cm]">
+      <img src="logo.png" alt="Recomly" class="h-8 w-auto"/>
+    </a>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <button id="lang-toggle" class="flex items-center gap-1 px-3 py-2 rounded-full border border-[var(--border)] hover:border-primary text-sm font-semibold text-[var(--text)] transition-all">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <span id="lang-label">EN</span>
+      </button>
+      <a href="/" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-i18n="nav.back">← Powrót</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
+  <div class="prose-doc">
+    <p class="text-sm" data-i18n="meta">Ostatnia aktualizacja: 25 kwietnia 2026 r.</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6" data-i18n="title">Regulamin</h1>
+    <p data-i18n="intro">Niniejszy Regulamin określa zasady korzystania ze strony internetowej recomly.app oraz uczestnictwa w liście oczekujących (waitliście) prowadzonej przez Recomly sp. z o.o.</p>
+
+    <!-- §1 Definicje -->
+    <h2 data-i18n="s1.h">§1. Definicje</h2>
+    <p data-i18n="s1.p1">Użyte w Regulaminie pojęcia oznaczają:</p>
+    <ul>
+      <li data-i18n-html="s1.l1"><strong>Recomly</strong> - Recomly sp. z o.o. z siedzibą w Warszawie, ul. Kasprzaka 31A, NIP: 5273199463, KRS: 0001214798, wpisana do rejestru przedsiębiorców prowadzonego przez Sąd Rejonowy dla m.st. Warszawy w Warszawie, XII Wydział Gospodarczy KRS</li>
+      <li data-i18n-html="s1.l2"><strong>Serwis</strong> - strona internetowa dostępna pod adresem recomly.app</li>
+      <li data-i18n-html="s1.l3"><strong>Aplikacja</strong> - przyszła aplikacja mobilna Recomly, której uruchomienie planowane jest po zakończeniu fazy waitlisty</li>
+      <li data-i18n-html="s1.l4"><strong>Waitlista</strong> - lista oczekujących na uruchomienie Aplikacji, prowadzona w celach informacyjnych i marketingowych</li>
+      <li data-i18n-html="s1.l5"><strong>Użytkownik</strong> - osoba fizyczna, która korzysta z Serwisu lub zapisuje się na Waitlistę</li>
+      <li data-i18n-html="s1.l6"><strong>Regulamin</strong> - niniejszy dokument</li>
+    </ul>
+
+    <!-- §2 Postanowienia ogólne -->
+    <h2 data-i18n="s2.h">§2. Postanowienia ogólne</h2>
+    <ol>
+      <li data-i18n="s2.l1">Regulamin określa zasady świadczenia bezpłatnych usług drogą elektroniczną przez Recomly w ramach Serwisu, w szczególności zasady zapisu na Waitlistę.</li>
+      <li data-i18n="s2.l2">Korzystanie z Serwisu jest dobrowolne i bezpłatne.</li>
+      <li data-i18n="s2.l3">Każdy Użytkownik zobowiązany jest do zapoznania się z Regulaminem przed rozpoczęciem korzystania z Serwisu. Korzystanie z Serwisu i zapis na Waitlistę oznacza akceptację Regulaminu.</li>
+      <li data-i18n="s2.l4">Aktualna wersja Regulaminu jest zawsze dostępna pod adresem recomly.app/terms.html.</li>
+    </ol>
+
+    <!-- §3 Charakter waitlisty -->
+    <h2 data-i18n="s3.h">§3. Charakter Waitlisty</h2>
+    <ol>
+      <li data-i18n="s3.l1">Waitlista ma charakter pre-launchowy, informacyjny i marketingowy. Zapis na Waitlistę nie stanowi zawarcia umowy w rozumieniu Kodeksu cywilnego, ani nie nakłada na Recomly obowiązku świadczenia jakichkolwiek usług.</li>
+      <li data-i18n="s3.l2">Recomly nie gwarantuje, że Aplikacja zostanie uruchomiona w jakimkolwiek terminie ani że zostanie uruchomiona w ogóle. Decyzja o uruchomieniu Aplikacji, jej zakresie funkcjonalnym oraz warunkach dostępu należy wyłącznie do Recomly.</li>
+      <li data-i18n="s3.l3">Zapis na Waitlistę nie gwarantuje uzyskania dostępu do Aplikacji w pierwszej kolejności ani na preferencyjnych warunkach. Recomly zastrzega sobie pełną swobodę w decydowaniu o kolejności i warunkach udostępniania Aplikacji.</li>
+      <li data-i18n="s3.l4">Recomly zastrzega sobie prawo do zamknięcia Waitlisty w dowolnym momencie, bez uprzedzenia i bez konieczności podania przyczyny. Zamknięcie Waitlisty nie rodzi po stronie Użytkowników żadnych roszczeń.</li>
+    </ol>
+
+    <!-- §4 Wymagania techniczne -->
+    <h2 data-i18n="s4.h">§4. Wymagania techniczne</h2>
+    <p data-i18n="s4.p1">Korzystanie z Serwisu wymaga:</p>
+    <ul>
+      <li data-i18n="s4.l1">Urządzenia z dostępem do Internetu</li>
+      <li data-i18n="s4.l2">Aktualnej wersji jednej z popularnych przeglądarek (Chrome, Safari, Firefox, Edge, Opera) z włączoną obsługą JavaScript i plików cookies</li>
+      <li data-i18n="s4.l3">Aktywnego adresu poczty elektronicznej</li>
+    </ul>
+    <p data-i18n="s4.p2">Recomly nie odpowiada za nieprawidłowe działanie Serwisu wynikające z niespełnienia powyższych wymagań technicznych przez Użytkownika.</p>
+
+    <!-- §5 Zapis na waitlistę -->
+    <h2 data-i18n="s5.h">§5. Zasady zapisu na Waitlistę</h2>
+    <ol>
+      <li data-i18n="s5.l1">Zapis na Waitlistę odbywa się poprzez wypełnienie formularza dostępnego w Serwisie i wyrażenie zgody na przetwarzanie danych osobowych w celach związanych z prowadzeniem Waitlisty.</li>
+      <li data-i18n="s5.l2">Zapis wymaga podania prawidłowego, aktywnego adresu email. Podanie nazwy użytkownika Instagram jest dobrowolne.</li>
+      <li data-i18n="s5.l3">Użytkownik jest odpowiedzialny za prawdziwość i aktualność podanych danych. Recomly nie odpowiada za skutki podania nieprawdziwych lub nieaktualnych danych.</li>
+      <li data-i18n="s5.l4">Recomly zastrzega sobie prawo do odmowy zapisu na Waitlistę oraz do usunięcia z niej Użytkownika w dowolnym momencie, bez podania przyczyny, w szczególności w przypadku podejrzenia naruszenia Regulaminu lub przepisów prawa.</li>
+      <li data-i18n="s5.l5">Użytkownik może w każdej chwili zrezygnować z udziału w Waitliście poprzez wysłanie wiadomości email na adres kontakt@recomly.app z prośbą o usunięcie danych.</li>
+    </ol>
+
+    <!-- §6 Zakaz nadużyć -->
+    <h2 data-i18n="s6.h">§6. Zakaz nadużyć</h2>
+    <p data-i18n="s6.p1">Korzystając z Serwisu, Użytkownik zobowiązany jest do:</p>
+    <ul>
+      <li data-i18n="s6.l1">Niepodejmowania działań zakłócających prawidłowe funkcjonowanie Serwisu</li>
+      <li data-i18n="s6.l2">Niewykorzystywania Serwisu w sposób sprzeczny z prawem, dobrymi obyczajami lub naruszający prawa osób trzecich</li>
+      <li data-i18n="s6.l3">Niezapisywania się na Waitlistę za pomocą fałszywych, nieistniejących lub cudzych adresów email</li>
+      <li data-i18n="s6.l4">Niestosowania zautomatyzowanych narzędzi (botów, skryptów) do interakcji z Serwisem bez wyraźnej zgody Recomly</li>
+      <li data-i18n="s6.l5">Niepodejmowania prób uzyskania nieautoryzowanego dostępu do infrastruktury Serwisu lub danych innych Użytkowników</li>
+      <li data-i18n="s6.l6">Niepodejmowania działań mających na celu pobranie, kopiowanie lub powielanie zawartości Serwisu (w tym scrapingu) bez zgody Recomly</li>
+    </ul>
+    <p data-i18n="s6.p2">Naruszenie powyższych zasad uprawnia Recomly do natychmiastowego usunięcia Użytkownika z Waitlisty oraz dochodzenia roszczeń na drodze prawnej.</p>
+
+    <!-- §7 Własność intelektualna -->
+    <h2 data-i18n="s7.h">§7. Własność intelektualna</h2>
+    <ol>
+      <li data-i18n="s7.l1">Wszelkie prawa do Serwisu, w tym do jego nazwy, logotypu, treści, grafik, układu, kodu źródłowego oraz innych elementów, przysługują wyłącznie Recomly lub podmiotom, z którymi Recomly zawarło stosowne umowy.</li>
+      <li data-i18n="s7.l2">Korzystanie z Serwisu nie powoduje przeniesienia jakichkolwiek praw własności intelektualnej na Użytkownika.</li>
+      <li data-i18n="s7.l3">Zabrania się kopiowania, modyfikowania, rozpowszechniania, publikowania lub wykorzystywania w jakikolwiek sposób treści Serwisu bez uprzedniej, pisemnej zgody Recomly, z wyjątkiem dozwolonego użytku osobistego.</li>
+      <li data-i18n="s7.l4">Znak towarowy „Recomly" oraz logotyp Recomly są chronione prawem.</li>
+    </ol>
+
+    <!-- §8 Odpowiedzialność -->
+    <h2 data-i18n="s8.h">§8. Odpowiedzialność</h2>
+    <ol>
+      <li data-i18n="s8.l1">Recomly dokłada starań, aby Serwis działał prawidłowo, jednak nie gwarantuje jego nieprzerwanego, wolnego od błędów i bezpiecznego działania.</li>
+      <li data-i18n="s8.l2">W maksymalnym zakresie dopuszczalnym przez prawo, Recomly nie ponosi odpowiedzialności za:</li>
+    </ol>
+    <ul>
+      <li data-i18n="s8.l2.a">Czasowe lub trwałe zakłócenia, przerwy lub niedostępność Serwisu</li>
+      <li data-i18n="s8.l2.b">Skutki działania siły wyższej (m.in. awarie infrastruktury dostawców usług, ataki cybernetyczne, działania wojenne, klęski żywiołowe, decyzje organów państwowych)</li>
+      <li data-i18n="s8.l2.c">Niedostarczenie wiadomości email z przyczyn niezależnych od Recomly (np. filtry antyspamowe, błędnie podany adres email, awarie serwerów pocztowych)</li>
+      <li data-i18n="s8.l2.d">Działania osób trzecich, w tym nieautoryzowane przejęcie konta email Użytkownika</li>
+      <li data-i18n="s8.l2.e">Decyzje Użytkownika podjęte na podstawie informacji zawartych w Serwisie</li>
+      <li data-i18n="s8.l2.f">Utracone korzyści (lucrum cessans) Użytkownika</li>
+    </ul>
+    <ol start="3">
+      <li data-i18n="s8.l3">Odpowiedzialność Recomly wobec Użytkownika ograniczona jest do szkód rzeczywistych (damnum emergens) wynikłych z winy umyślnej lub rażącego niedbalstwa Recomly. Powyższe ograniczenie nie dotyczy konsumentów w zakresie, w jakim ograniczenie odpowiedzialności jest niedopuszczalne na podstawie przepisów o ochronie praw konsumentów.</li>
+      <li data-i18n="s8.l4">Recomly nie odpowiada za działania ani decyzje Użytkownika podjęte na podstawie treści zawartych w Serwisie. Treści w Serwisie mają charakter informacyjny i marketingowy.</li>
+    </ol>
+
+    <!-- §9 Reklamacje -->
+    <h2 data-i18n="s9.h">§9. Reklamacje</h2>
+    <ol>
+      <li data-i18n="s9.l1">Wszelkie reklamacje dotyczące funkcjonowania Serwisu lub Waitlisty można zgłaszać na adres email: kontakt@recomly.app</li>
+      <li data-i18n="s9.l2">Reklamacja powinna zawierać: imię i nazwisko (lub nazwę firmy) Użytkownika, adres email, opis problemu oraz oczekiwany sposób jego rozwiązania.</li>
+      <li data-i18n="s9.l3">Recomly rozpatruje reklamacje w terminie 14 dni roboczych od daty otrzymania kompletnego zgłoszenia. Odpowiedź zostanie wysłana na adres email wskazany w reklamacji.</li>
+      <li data-i18n="s9.l4">Brak odpowiedzi w terminie 14 dni roboczych nie oznacza uznania reklamacji.</li>
+    </ol>
+
+    <!-- §10 ADR/ODR -->
+    <h2 data-i18n="s10.h">§10. Pozasądowe rozwiązywanie sporów</h2>
+    <ol>
+      <li data-i18n="s10.l1">Użytkownik będący konsumentem ma możliwość skorzystania z pozasądowych sposobów rozpatrywania reklamacji i dochodzenia roszczeń, w szczególności:</li>
+    </ol>
+    <ul>
+      <li data-i18n-html="s10.l1.a">Platformy ODR (Online Dispute Resolution) Komisji Europejskiej, dostępnej pod adresem: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a></li>
+      <li data-i18n="s10.l1.b">Mediacji prowadzonej przez Wojewódzkie Inspektoraty Inspekcji Handlowej</li>
+      <li data-i18n="s10.l1.c">Pomocy stałych polubownych sądów konsumenckich</li>
+    </ul>
+    <p data-i18n="s10.p1">Skorzystanie z pozasądowych sposobów rozpatrywania reklamacji ma charakter dobrowolny.</p>
+
+    <!-- §11 Zmiany regulaminu -->
+    <h2 data-i18n="s11.h">§11. Zmiany Regulaminu</h2>
+    <ol>
+      <li data-i18n="s11.l1">Recomly zastrzega sobie prawo do zmiany Regulaminu w każdym czasie, w szczególności w przypadku zmian w przepisach prawa, zmian w sposobie działania Serwisu lub z innych ważnych przyczyn.</li>
+      <li data-i18n="s11.l2">O każdej zmianie Regulaminu Użytkownicy zapisani na Waitlistę zostaną poinformowani drogą emailową na co najmniej 14 dni przed wejściem zmian w życie.</li>
+      <li data-i18n="s11.l3">Brak zgłoszenia rezygnacji z Waitlisty w terminie 14 dni od poinformowania o zmianach oznacza akceptację nowej wersji Regulaminu.</li>
+      <li data-i18n="s11.l4">W przypadku braku akceptacji zmian, Użytkownik powinien wysłać wiadomość email z prośbą o usunięcie danych z Waitlisty.</li>
+    </ol>
+
+    <!-- §12 Dane osobowe -->
+    <h2 data-i18n="s12.h">§12. Dane osobowe</h2>
+    <p data-i18n-html="s12.p1">Zasady przetwarzania danych osobowych Użytkowników reguluje odrębny dokument - <a href="privacy">Polityka prywatności</a>, dostępny w Serwisie. Polityka prywatności stanowi integralną część niniejszego Regulaminu.</p>
+
+    <!-- §13 Postanowienia końcowe -->
+    <h2 data-i18n="s13.h">§13. Postanowienia końcowe</h2>
+    <ol>
+      <li data-i18n="s13.l1">Prawem właściwym dla niniejszego Regulaminu jest prawo polskie.</li>
+      <li data-i18n="s13.l2">W sprawach nieuregulowanych Regulaminem zastosowanie mają przepisy Kodeksu cywilnego, Ustawy o świadczeniu usług drogą elektroniczną, Ustawy o prawach konsumenta oraz inne właściwe przepisy prawa polskiego.</li>
+      <li data-i18n="s13.l3">Wszelkie spory wynikające z Regulaminu rozstrzygane będą przez sąd właściwy dla siedziby Recomly. Postanowienie to nie dotyczy konsumentów - w ich przypadku właściwość sądu określają powszechnie obowiązujące przepisy prawa.</li>
+      <li data-i18n="s13.l4">Jeżeli którekolwiek z postanowień Regulaminu okaże się nieważne lub niewykonalne, pozostałe postanowienia zachowują pełną moc obowiązującą (klauzula salwatoryjna). Postanowienie nieważne zostanie zastąpione postanowieniem najbliższym celem postanowienia nieważnego.</li>
+      <li data-i18n="s13.l5">Regulamin obowiązuje od dnia 25 kwietnia 2026 r.</li>
+      <li data-i18n-html="s13.l6">Kontakt: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></li>
+    </ol>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-[var(--border)] py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-2">
+      <img src="logo.png" alt="Recomly" class="h-6 w-auto"/>
+    </div>
+    <div class="flex items-center gap-6 text-sm text-[var(--muted)]">
+      <a href="privacy" class="hover:text-primary transition-colors" data-i18n="footer.privacy">Polityka prywatności</a>
+      <a href="terms" class="hover:text-primary transition-colors" data-i18n="footer.terms">Regulamin</a>
+    </div>
+    <div class="text-sm text-[var(--muted)]">© 2026 Recomly</div>
+  </div>
+</footer>
+
+<script>
+  const T = {
+    pl: {
+      "nav.back": "← Powrót",
+      "footer.privacy": "Polityka prywatności",
+      "footer.terms": "Regulamin"
+    },
+    en: {
+      "nav.back": "← Back",
+      "footer.privacy": "Privacy policy",
+      "footer.terms": "Terms",
+      "meta": "Last updated: April 25, 2026",
+      "title": "Terms of Service",
+      "intro": "These Terms of Service set forth the rules for using the recomly.app website and participating in the waiting list (waitlist) operated by Recomly sp. z o.o.",
+      "s1.h": "§1. Definitions",
+      "s1.p1": "Terms used in the Regulations mean:",
+      "s1.l1": "<strong>Recomly</strong> - Recomly sp. z o.o. with its registered office in Warsaw, Kasprzaka 31A St., Tax ID (NIP): 5273199463, Court Register (KRS): 0001214798, entered into the entrepreneurs' register kept by the District Court for the Capital City of Warsaw, 12th Commercial Division of the National Court Register",
+      "s1.l2": "<strong>Service</strong> - the website available at recomly.app",
+      "s1.l3": "<strong>Application</strong> - the future Recomly mobile application, the launch of which is planned after the completion of the waitlist phase",
+      "s1.l4": "<strong>Waitlist</strong> - the list of persons awaiting the launch of the Application, maintained for informational and marketing purposes",
+      "s1.l5": "<strong>User</strong> - a natural person who uses the Service or signs up for the Waitlist",
+      "s1.l6": "<strong>Regulations</strong> - this document",
+      "s2.h": "§2. General provisions",
+      "s2.l1": "The Regulations set forth the rules for the provision of free electronic services by Recomly within the Service, in particular the rules for signing up for the Waitlist.",
+      "s2.l2": "Use of the Service is voluntary and free of charge.",
+      "s2.l3": "Each User is obliged to read the Regulations before starting to use the Service. Using the Service and signing up for the Waitlist constitutes acceptance of the Regulations.",
+      "s2.l4": "The current version of the Regulations is always available at recomly.app/terms.html.",
+      "s3.h": "§3. Nature of the Waitlist",
+      "s3.l1": "The Waitlist is pre-launch, informational and marketing in nature. Signing up for the Waitlist does not constitute the conclusion of an agreement within the meaning of the Polish Civil Code, nor does it impose on Recomly any obligation to provide any services.",
+      "s3.l2": "Recomly does not guarantee that the Application will be launched at any specific time, nor that it will be launched at all. The decision on the launch of the Application, its functional scope and access conditions belongs solely to Recomly.",
+      "s3.l3": "Signing up for the Waitlist does not guarantee priority access to the Application or access on preferential terms. Recomly reserves full discretion in deciding the order and conditions of providing access to the Application.",
+      "s3.l4": "Recomly reserves the right to close the Waitlist at any time, without prior notice and without giving any reason. Closing the Waitlist does not give rise to any claims on the part of Users.",
+      "s4.h": "§4. Technical requirements",
+      "s4.p1": "Use of the Service requires:",
+      "s4.l1": "A device with Internet access",
+      "s4.l2": "An up-to-date version of one of the popular browsers (Chrome, Safari, Firefox, Edge, Opera) with JavaScript and cookies enabled",
+      "s4.l3": "An active email address",
+      "s4.p2": "Recomly is not responsible for the malfunctioning of the Service resulting from the User's failure to meet the above technical requirements.",
+      "s5.h": "§5. Rules for signing up for the Waitlist",
+      "s5.l1": "Signing up for the Waitlist takes place by completing the form available in the Service and giving consent to the processing of personal data for purposes related to maintaining the Waitlist.",
+      "s5.l2": "Signing up requires providing a valid, active email address. Providing the Instagram username is voluntary.",
+      "s5.l3": "The User is responsible for the truthfulness and timeliness of the data provided. Recomly is not responsible for the consequences of providing untrue or outdated data.",
+      "s5.l4": "Recomly reserves the right to refuse signup for the Waitlist and to remove the User from it at any time, without giving any reason, in particular in the event of suspected violation of the Regulations or legal provisions.",
+      "s5.l5": "The User may opt out of participation in the Waitlist at any time by sending an email to kontakt@recomly.app requesting deletion of data.",
+      "s6.h": "§6. Prohibition of abuse",
+      "s6.p1": "When using the Service, the User is obliged to:",
+      "s6.l1": "Not take actions that disrupt the proper functioning of the Service",
+      "s6.l2": "Not use the Service in a manner contrary to law, good practice or violating the rights of third parties",
+      "s6.l3": "Not sign up for the Waitlist using false, non-existent or third-party email addresses",
+      "s6.l4": "Not use automated tools (bots, scripts) to interact with the Service without express consent of Recomly",
+      "s6.l5": "Not attempt to gain unauthorized access to the Service infrastructure or data of other Users",
+      "s6.l6": "Not undertake actions aimed at downloading, copying or duplicating the content of the Service (including scraping) without Recomly's consent",
+      "s6.p2": "Violation of the above rules entitles Recomly to immediately remove the User from the Waitlist and to pursue claims through legal means.",
+      "s7.h": "§7. Intellectual property",
+      "s7.l1": "All rights to the Service, including its name, logo, content, graphics, layout, source code and other elements, belong exclusively to Recomly or entities with which Recomly has concluded relevant agreements.",
+      "s7.l2": "Use of the Service does not transfer any intellectual property rights to the User.",
+      "s7.l3": "It is forbidden to copy, modify, distribute, publish or use in any way the content of the Service without prior written consent of Recomly, except for permitted personal use.",
+      "s7.l4": "The trademark \"Recomly\" and the Recomly logo are protected by law.",
+      "s8.h": "§8. Liability",
+      "s8.l1": "Recomly makes every effort to ensure that the Service operates properly, but does not guarantee its uninterrupted, error-free and secure operation.",
+      "s8.l2": "To the maximum extent permitted by law, Recomly shall not be liable for:",
+      "s8.l2.a": "Temporary or permanent disruptions, interruptions or unavailability of the Service",
+      "s8.l2.b": "Effects of force majeure (including failures of service providers' infrastructure, cyber attacks, acts of war, natural disasters, decisions of state authorities)",
+      "s8.l2.c": "Failure to deliver email messages for reasons beyond Recomly's control (e.g. spam filters, incorrectly provided email address, email server failures)",
+      "s8.l2.d": "Actions of third parties, including unauthorized takeover of the User's email account",
+      "s8.l2.e": "Decisions made by the User based on information contained in the Service",
+      "s8.l2.f": "Lost benefits (lucrum cessans) of the User",
+      "s8.l3": "Recomly's liability towards the User is limited to actual damages (damnum emergens) arising from Recomly's intentional fault or gross negligence. The above limitation does not apply to consumers to the extent that limitation of liability is impermissible under consumer protection regulations.",
+      "s8.l4": "Recomly is not responsible for the actions or decisions of the User taken on the basis of content contained in the Service. Content in the Service is informational and marketing in nature.",
+      "s9.h": "§9. Complaints",
+      "s9.l1": "All complaints regarding the functioning of the Service or the Waitlist may be submitted to: kontakt@recomly.app",
+      "s9.l2": "The complaint should contain: the User's name and surname (or company name), email address, description of the problem and expected method of its resolution.",
+      "s9.l3": "Recomly considers complaints within 14 working days from the date of receipt of the complete report. The response will be sent to the email address indicated in the complaint.",
+      "s9.l4": "Failure to respond within 14 working days does not mean recognition of the complaint.",
+      "s10.h": "§10. Out-of-court dispute resolution",
+      "s10.l1": "A User who is a consumer has the option of using out-of-court means of considering complaints and pursuing claims, in particular:",
+      "s10.l1.a": "The European Commission's ODR (Online Dispute Resolution) platform, available at: <a href=\"https://ec.europa.eu/consumers/odr\" target=\"_blank\" rel=\"noopener\">https://ec.europa.eu/consumers/odr</a>",
+      "s10.l1.b": "Mediation conducted by the Voivodeship Inspectorates of Trade Inspection",
+      "s10.l1.c": "Assistance from permanent amicable consumer courts",
+      "s10.p1": "The use of out-of-court means of considering complaints is voluntary.",
+      "s11.h": "§11. Changes to the Regulations",
+      "s11.l1": "Recomly reserves the right to amend the Regulations at any time, in particular in the event of changes in legal regulations, changes in the operation of the Service or for other important reasons.",
+      "s11.l2": "Users registered on the Waitlist will be informed of any change to the Regulations by email at least 14 days before the changes take effect.",
+      "s11.l3": "Failure to opt out of the Waitlist within 14 days of being notified of changes constitutes acceptance of the new version of the Regulations.",
+      "s11.l4": "If changes are not accepted, the User should send an email requesting deletion of data from the Waitlist.",
+      "s12.h": "§12. Personal data",
+      "s12.p1": "The rules for processing Users' personal data are governed by a separate document - <a href=\"privacy\">Privacy Policy</a>, available in the Service. The Privacy Policy is an integral part of these Regulations.",
+      "s13.h": "§13. Final provisions",
+      "s13.l1": "The law applicable to these Regulations is Polish law.",
+      "s13.l2": "In matters not regulated by the Regulations, the provisions of the Polish Civil Code, the Act on Providing Electronic Services, the Consumer Rights Act and other relevant provisions of Polish law shall apply.",
+      "s13.l3": "Any disputes arising from the Regulations will be settled by the court competent for the registered office of Recomly. This provision does not apply to consumers - in their case, the jurisdiction of the court is determined by generally applicable provisions of law.",
+      "s13.l4": "If any provision of the Regulations turns out to be invalid or unenforceable, the remaining provisions retain full binding force (severability clause). The invalid provision will be replaced by a provision closest to the purpose of the invalid provision.",
+      "s13.l5": "The Regulations are effective as of April 25, 2026.",
+      "s13.l6": "Contact: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>"
+    }
+  };
+
+  let currentLang = 'pl';
+  function applyLang(lang) {
+    const dict = T[lang] || T.pl;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) el.textContent = dict[key];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key]) el.innerHTML = dict[key];
+    });
+    document.documentElement.lang = lang;
+    const label = document.getElementById('lang-label');
+    if (label) label.textContent = lang === 'pl' ? 'EN' : 'PL';
+    currentLang = lang;
+    try { localStorage.setItem('recomly-lang', lang); } catch(e) {}
+  }
+  try {
+    const saved = localStorage.getItem('recomly-lang');
+    if (saved === 'pl' || saved === 'en') currentLang = saved;
+  } catch(e) {}
+  applyLang(currentLang);
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    applyLang(currentLang === 'pl' ? 'en' : 'pl');
+  });
+</script>
+</body>
+</html>
