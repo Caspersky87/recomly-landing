@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Standardy bezpieczeństwa dzieci - Recomly</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --primary: #6938ef; --primary-dark: #5a2dd6; --text: #0f0b1f; --muted: #6b6580; --border: #ece8f5; }
+  * { font-family: 'Poppins', system-ui, sans-serif; }
+  body { color: var(--text); background: #fff; }
+  .prose-doc h2 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-top: 2.5rem; margin-bottom: 1rem; }
+  .prose-doc p { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
+  .prose-doc ul { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: disc; }
+  .prose-doc li { margin-bottom: 0.5rem; }
+  .prose-doc strong { color: var(--text); }
+  .prose-doc a { color: var(--primary); text-decoration: underline; }
+</style>
+</head>
+<body>
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-[var(--border)]">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2 ml-[1.3cm]"><img src="logo.png" alt="Recomly" class="h-8 w-auto"/></a>
+    <div class="flex items-center gap-2 sm:gap-3">
+      <button id="lang-toggle" class="flex items-center gap-1 px-3 py-2 rounded-full border border-[var(--border)] hover:border-primary text-sm font-semibold text-[var(--text)] transition-all" aria-label="Change language">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        <span id="lang-label">EN</span>
+      </button>
+      <a href="/" class="bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all" data-i18n="nav.back">← Powrót</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
+  <article class="prose-doc">
+    <p class="text-sm" data-i18n="meta">Ostatnia aktualizacja: 23 sierpnia 2026</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6" data-i18n="title">Standardy bezpieczeństwa dzieci</h1>
+    <p data-i18n="intro">Recomly, usługa Recomly Sp. z o.o. (Warszawa)</p>
+    <p data-i18n="zero">W Recomly obowiązuje zasada zerowej tolerancji wobec seksualnego wykorzystywania i krzywdzenia dzieci (CSAE). Standardy dotyczą aplikacji Recomly oraz wszystkich treści i zachowań w niej.</p>
+
+    <h2 data-i18n="prohibit.h">Czego zakazujemy</h2>
+    <ul>
+      <li data-i18n="prohibit.l1">Materiałów przedstawiających seksualne wykorzystywanie dziecka (CSAM), w tym generowanych przez AI i rysowanych</li>
+      <li data-i18n="prohibit.l2">Seksualizacji małoletniego w jakiejkolwiek formie - w zdjęciach, tekstach i nazwach użytkownika</li>
+      <li data-i18n="prohibit.l3">Groomingu, sekstorsji oraz nakłaniania małoletniego do kontaktu, przesłania zdjęć lub spotkania w celach seksualnych</li>
+      <li data-i18n="prohibit.l4">Handlu małoletnimi oraz reklamowania lub ułatwiania ich seksualnego wykorzystania</li>
+      <li data-i18n="prohibit.l5">Udostępniania, żądania i linkowania treści CSAE, również poza aplikację</li>
+    </ul>
+    <p data-i18n="enforcement">Złamanie tych zasad oznacza natychmiastowe usunięcie treści i trwałe zablokowanie konta. Te same zasady są częścią <a href="terms">Regulaminu</a>.</p>
+
+    <h2 data-i18n="report.h">Jak zgłosić</h2>
+    <p data-i18n="report.p1">W aplikacji otwórz rekomendację, zdjęcie lub profil, dotknij menu ⋯ i wybierz Zgłoś → Bezpieczeństwo dzieci. Możesz też napisać na <a href="mailto:kacper@recomly.app">kacper@recomly.app</a>. Zgłoszenia mogą być anonimowe.</p>
+    <p data-i18n="report.p2">Jeśli dziecku grozi bezpośrednie niebezpieczeństwo, zadzwoń najpierw pod 112. Materiały CSAM można zgłosić także do <a href="https://dyzurnet.pl/">Dyżurnet.pl</a>.</p>
+
+    <h2 data-i18n="response.h">Jak reagujemy</h2>
+    <p data-i18n="response.p">Zgłoszenia dotyczące bezpieczeństwa dzieci mają najwyższy priorytet i są rozpatrywane bez zbędnej zwłoki. Po powzięciu wiedzy o CSAM usuwamy treść, blokujemy konto, zabezpieczamy dane w zakresie wymaganym prawem i zawiadamiamy właściwe organy - w tym Policję, a w odpowiednich przypadkach NCMEC.</p>
+
+    <h2 data-i18n="legal.h">Zgodność z prawem</h2>
+    <p data-i18n="legal.p">Działamy zgodnie z przepisami o ochronie małoletnich, w tym art. 200 i 202 Kodeksu karnego oraz aktem o usługach cyfrowych (DSA).</p>
+
+    <h2 data-i18n="contact.h">Kontakt ds. bezpieczeństwa dzieci</h2>
+    <p data-i18n-html="contact.p">Kacper Poradzki, CEO - <a href="mailto:kacper@recomly.app">kacper@recomly.app</a><br/>Recomly Sp. z o.o., ul. Kasprzaka 31A, 01-234 Warszawa</p>
+  </article>
+</main>
+
+<footer class="bg-white border-t border-[var(--border)] py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <a href="/"><img src="logo.png" alt="Recomly" class="h-6 w-auto"/></a>
+    <div class="flex items-center gap-6 text-sm text-[var(--muted)]">
+      <a href="privacy" class="hover:text-primary transition-colors" data-i18n="footer.privacy">Polityka prywatności</a>
+      <a href="terms" class="hover:text-primary transition-colors" data-i18n="footer.terms">Regulamin</a>
+    </div>
+    <div class="text-sm text-[var(--muted)]">© 2026 Recomly</div>
+  </div>
+</footer>
+
+<script>
+  const T = {
+    pl: {
+      "nav.back": "← Powrót", "meta": "Ostatnia aktualizacja: 23 sierpnia 2026", "title": "Standardy bezpieczeństwa dzieci",
+      "intro": "Recomly, usługa Recomly Sp. z o.o. (Warszawa)", "zero": "W Recomly obowiązuje zasada zerowej tolerancji wobec seksualnego wykorzystywania i krzywdzenia dzieci (CSAE). Standardy dotyczą aplikacji Recomly oraz wszystkich treści i zachowań w niej.",
+      "prohibit.h": "Czego zakazujemy", "prohibit.l1": "Materiałów przedstawiających seksualne wykorzystywanie dziecka (CSAM), w tym generowanych przez AI i rysowanych", "prohibit.l2": "Seksualizacji małoletniego w jakiejkolwiek formie - w zdjęciach, tekstach i nazwach użytkownika", "prohibit.l3": "Groomingu, sekstorsji oraz nakłaniania małoletniego do kontaktu, przesłania zdjęć lub spotkania w celach seksualnych", "prohibit.l4": "Handlu małoletnimi oraz reklamowania lub ułatwiania ich seksualnego wykorzystania", "prohibit.l5": "Udostępniania, żądania i linkowania treści CSAE, również poza aplikację",
+      "enforcement": "Złamanie tych zasad oznacza natychmiastowe usunięcie treści i trwałe zablokowanie konta. Te same zasady są częścią <a href=\"terms\">Regulaminu</a>.", "report.h": "Jak zgłosić", "report.p1": "W aplikacji otwórz rekomendację, zdjęcie lub profil, dotknij menu ⋯ i wybierz Zgłoś → Bezpieczeństwo dzieci. Możesz też napisać na <a href=\"mailto:kacper@recomly.app\">kacper@recomly.app</a>. Zgłoszenia mogą być anonimowe.", "report.p2": "Jeśli dziecku grozi bezpośrednie niebezpieczeństwo, zadzwoń najpierw pod 112. Materiały CSAM można zgłosić także do <a href=\"https://dyzurnet.pl/\">Dyżurnet.pl</a>.",
+      "response.h": "Jak reagujemy", "response.p": "Zgłoszenia dotyczące bezpieczeństwa dzieci mają najwyższy priorytet i są rozpatrywane bez zbędnej zwłoki. Po powzięciu wiedzy o CSAM usuwamy treść, blokujemy konto, zabezpieczamy dane w zakresie wymaganym prawem i zawiadamiamy właściwe organy - w tym Policję, a w odpowiednich przypadkach NCMEC.", "legal.h": "Zgodność z prawem", "legal.p": "Działamy zgodnie z przepisami o ochronie małoletnich, w tym art. 200 i 202 Kodeksu karnego oraz aktem o usługach cyfrowych (DSA).", "contact.h": "Kontakt ds. bezpieczeństwa dzieci", "contact.p": "Kacper Poradzki, CEO - <a href=\"mailto:kacper@recomly.app\">kacper@recomly.app</a><br/>Recomly Sp. z o.o., ul. Kasprzaka 31A, 01-234 Warszawa", "footer.privacy": "Polityka prywatności", "footer.terms": "Regulamin"
+    },
+    en: {
+      "nav.back": "← Back", "meta": "Last updated: August 23, 2026", "title": "Child Safety Standards", "intro": "Recomly, operated by Recomly Sp. z o.o. (Warsaw, Poland)", "zero": "Recomly has zero tolerance for child sexual abuse and exploitation (CSAE). These standards apply to the Recomly app and to all content and conduct on it.",
+      "prohibit.h": "What we prohibit", "prohibit.l1": "Child sexual abuse material (CSAM), including AI-generated or drawn imagery", "prohibit.l2": "Sexualising a minor in any way, in images, text or usernames", "prohibit.l3": "Grooming, sextortion, or soliciting contact, images or meetings with a minor for sexual purposes", "prohibit.l4": "Trafficking a minor, or advertising or facilitating their sexual exploitation", "prohibit.l5": "Sharing, requesting or linking to CSAE content, including links off the app", "enforcement": "Breaking these rules means immediate removal of the content and permanent termination of the account. The same rules are part of our <a href=\"terms\">Terms</a>.",
+      "report.h": "How to report", "report.p1": "In the app, open any recommendation, photo or profile, tap the ⋯ menu and choose Report → Child safety. You can also email <a href=\"mailto:kacper@recomly.app\">kacper@recomly.app</a>. Reports can be anonymous.", "report.p2": "If a child is in immediate danger, contact emergency services first (112 in Poland). CSAM can also be reported to <a href=\"https://dyzurnet.pl/\">Dyżurnet.pl</a> (Poland) or the <a href=\"https://report.cybertip.org/\">NCMEC CyberTipline</a>.", "response.h": "How we respond", "response.p": "Child safety reports are our highest priority and are reviewed without undue delay. When we become aware of CSAM in the app we remove it, terminate the account, preserve the relevant data as required by law, and report it to the competent authorities - including law enforcement in Poland and, where applicable, NCMEC.", "legal.h": "Legal compliance", "legal.p": "We comply with applicable child safety law, including art. 200 and 202 of the Polish Penal Code and the EU Digital Services Act, and with equivalent requirements in other markets where Recomly is available.", "contact.h": "Child safety contact", "contact.p": "Kacper Poradzki, CEO - <a href=\"mailto:kacper@recomly.app\">kacper@recomly.app</a><br/>Recomly Sp. z o.o., Kasprzaka 31A St., 01-234 Warsaw, Poland", "footer.privacy": "Privacy policy", "footer.terms": "Terms"
+    }
+  };
+  let currentLang = 'pl';
+  function applyLang(lang) {
+    const dict = T[lang] || T.pl;
+    document.querySelectorAll('[data-i18n]').forEach(el => { const key = el.getAttribute('data-i18n'); if (dict[key]) el.textContent = dict[key]; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { const key = el.getAttribute('data-i18n-html'); if (dict[key]) el.innerHTML = dict[key]; });
+    document.documentElement.lang = lang;
+    document.title = dict.title + ' - Recomly';
+    document.getElementById('lang-label').textContent = lang === 'pl' ? 'EN' : 'PL';
+    currentLang = lang;
+    localStorage.setItem('recomly-lang', lang);
+  }
+  document.getElementById('lang-toggle').addEventListener('click', () => applyLang(currentLang === 'pl' ? 'en' : 'pl'));
+  applyLang(localStorage.getItem('recomly-lang') || 'pl');
+</script>
+</body>
+</html>
