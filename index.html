@@ -11,7 +11,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tailwind.css">
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+  (function () {
+    var ua = navigator.userAgent;
+    var cls = document.documentElement.classList;
+    if (/iPad|iPhone|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) cls.add('ios', 'mobile');
+    else if (/Android/.test(ua) && !/HuaweiBrowser/.test(ua)) cls.add('android', 'mobile');
+    else if (/Mobi|Android/.test(ua)) cls.add('mobile');
+  })();
+</script>
 
 <style>
   :root {
@@ -72,22 +80,13 @@
     z-index: 0;
   }
 
-  .custom-check {
-    appearance: none;
-    width: 20px; height: 20px;
-    border: 2px solid #d1cce0;
-    border-radius: 5px;
-    flex-shrink: 0; cursor: pointer;
-    position: relative; transition: all 0.2s;
-    margin-top: 2px;
-  }
-  .custom-check:checked { background: var(--primary); border-color: var(--primary); }
-  .custom-check:checked::after {
-    content: ''; position: absolute;
-    left: 5px; top: 1px; width: 6px; height: 11px;
-    border: solid white; border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
+  .store-btn { display: inline-block; transition: transform 0.15s; }
+  .store-btn:hover { transform: scale(1.04); }
+  .store-btn img { height: 52px; width: auto; }
+  html.ios .store-android, html.android .store-ios, html.mobile .desktop-only { display: none; }
+  .qr { width: 140px; height: 140px; }
+  .qr-sm { width: 88px; height: 88px; }
+  .qr-card { padding: 12px 20px 12px 12px; }
 
   .hero-grid {
     background-image:
@@ -131,10 +130,10 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
         <span id="lang-label">EN</span>
       </button>
-      <a href="#waitlist" onclick="event.preventDefault(); document.getElementById('waitlist').scrollIntoView({behavior:'smooth'});" class="hidden sm:inline-flex items-center bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-[rgba(107,33,232,0.3)]" data-i18n="nav.cta">
-        Zdobądź wczesny dostęp
+      <a href="#download" data-download-cta class="hidden sm:inline-flex items-center bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-[rgba(107,33,232,0.3)]" data-i18n="nav.cta">
+        Pobierz aplikację
       </a>
-      <a href="#waitlist" onclick="event.preventDefault(); document.getElementById('waitlist').scrollIntoView({behavior:'smooth'});" class="sm:hidden bg-primary text-white px-3.5 py-1.5 rounded-full text-xs font-semibold" data-i18n="nav.cta-short">Dostęp</a>
+      <a href="#download" data-download-cta class="sm:hidden bg-primary text-white px-3.5 py-1.5 rounded-full text-xs font-semibold" data-i18n="nav.cta-short">Pobierz</a>
     </div>
   </div>
 </nav>
@@ -157,14 +156,17 @@
       Restauracje, kawiarnie i bary warte odwiedzenia. Twój asystent AI Remi pomoże wybrać to właściwe.
     </p>
 
-    <form id="hero-form" onsubmit="return false" class="fade-up fade-up-delay-3 max-w-md mx-auto flex flex-col sm:flex-row gap-3 mb-4">
-      <input type="email" id="hero-email" placeholder="Twój adres email"
-        data-i18n-placeholder="hero.email-placeholder"
-        class="flex-1 px-5 py-3.5 rounded-full border border-[var(--border)] bg-white focus:outline-none focus:border-primary focus:ring-4 focus:ring-[rgba(107,33,232,0.1)] transition-all text-base"/>
-      <button type="button" id="hero-submit" class="bg-primary hover:bg-primary-dark text-white px-7 py-3.5 rounded-full font-semibold transition-all hover:scale-105 hover:shadow-lg hover:shadow-[rgba(107,33,232,0.35)] whitespace-nowrap" data-i18n="hero.cta">
-        Zdobądź wczesny dostęp
-      </button>
-    </form>
+    <div class="fade-up fade-up-delay-3 flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+      <a href="https://apps.apple.com/app/id6772970281" class="store-btn store-ios"><img src="badge-app-store-pl.svg" data-pl="badge-app-store-pl.svg" data-en="badge-app-store-en.svg" alt="App Store"/></a>
+      <a href="https://play.google.com/store/apps/details?id=com.recomly.app" class="store-btn store-android"><img src="badge-google-play-pl.png" data-pl="badge-google-play-pl.png" data-en="badge-google-play-en.png" alt="Google Play"/></a>
+    </div>
+
+    <div class="desktop-only fade-up fade-up-delay-3 mb-4">
+      <div class="inline-flex items-center gap-3 bg-white border border-[var(--border)] rounded-2xl qr-card">
+        <img src="qr-download.svg" alt="QR" class="qr-sm"/>
+        <p class="text-sm text-[var(--muted)] sm:text-left" data-i18n-html="download.qr-hero">Zeskanuj aparatem<br/>w telefonie</p>
+      </div>
+    </div>
 
     <p class="fade-up fade-up-delay-3 text-sm text-primary font-semibold" data-i18n="hero.helper">
       Koniec zgadywania, gdzie dziś zjeść.
@@ -296,43 +298,27 @@
   </div>
 </section>
 
-<!-- WAITLIST -->
-<section id="waitlist" class="py-16 sm:py-20 lg:py-24">
+<!-- DOWNLOAD -->
+<section id="download" class="py-16 sm:py-20 lg:py-24">
   <div class="max-w-2xl mx-auto px-5 sm:px-6">
     <div class="text-center mb-8 sm:mb-10 fade-up">
       <div class="inline-flex items-center gap-2 bg-white text-primary px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-5 sm:mb-6 shadow-sm">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3l1.9 5.8L20 10l-4.8 3.5L17 20l-5-3.5L7 20l1.8-6.5L4 10l6.1-1.2z"/></svg>
-        <span data-i18n="waitlist.badge">Ograniczona liczba miejsc</span>
+        <span data-i18n="download.badge">Dostępne na iOS i Androida</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4" data-i18n="waitlist.title">Zdobądź wczesny dostęp</h2>
-      <p class="text-base sm:text-lg text-[var(--muted)]" data-i18n="waitlist.subtitle">Bądź wśród pierwszych. Koniec ze scrollowaniem opinii i zgadywaniem gdzie zjeść.</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3 sm:mb-4" data-i18n="download.title">Pobierz Recomly</h2>
+      <p class="text-base sm:text-lg text-[var(--muted)]" data-i18n="download.subtitle">Koniec ze scrollowaniem opinii i zgadywaniem gdzie zjeść.</p>
     </div>
 
-    <div id="waitlist-card" class="fade-up bg-white rounded-3xl shadow-sm border border-[var(--border)] p-6 sm:p-8 lg:p-10">
-      <form id="waitlist-form" onsubmit="return false" class="space-y-4 sm:space-y-5">
-        <div>
-          <label class="block text-sm font-semibold mb-2" data-i18n-html="waitlist.email-label">Adres email <span class="text-primary">*</span></label>
-          <input type="email" id="wl-email" placeholder="twoj@email.com" data-i18n-placeholder="waitlist.email-placeholder" class="w-full px-5 py-3.5 rounded-full border border-[var(--border)] focus:outline-none focus:border-primary focus:ring-4 focus:ring-[rgba(107,33,232,0.1)] transition-all text-base"/>
-        </div>
-        <div>
-          <label class="block text-sm font-semibold mb-2" data-i18n-html="waitlist.ig-label">Instagram <span class="text-[var(--muted)] font-normal">(opcjonalnie)</span></label>
-          <input type="text" id="wl-ig" placeholder="@twojnick" data-i18n-placeholder="waitlist.ig-placeholder" class="w-full px-5 py-3.5 rounded-full border border-[var(--border)] focus:outline-none focus:border-primary focus:ring-4 focus:ring-[rgba(107,33,232,0.1)] transition-all text-base"/>
-        </div>
-        <label class="flex items-start gap-3 cursor-pointer">
-          <input type="checkbox" id="wl-consent" class="custom-check"/>
-          <span class="text-sm text-[var(--muted)]" data-i18n-html="waitlist.consent">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisu do waitlisty, zgodnie z <a href="privacy" class="text-primary underline">polityką prywatności</a>.</span>
-        </label>
-        <button type="button" id="wl-btn" disabled class="w-full bg-primary hover:bg-primary-dark disabled:bg-gray-300 disabled:cursor-not-allowed text-white py-4 rounded-full font-semibold transition-all disabled:hover:scale-100 hover:scale-[1.02] hover:shadow-lg hover:shadow-[rgba(107,33,232,0.35)]" data-i18n="waitlist.submit">Zdobywam dostęp</button>
-        <p class="text-xs text-[var(--muted)] text-center" data-i18n="waitlist.disclaimer">Nie wysyłamy spamu. Możesz wypisać się w każdej chwili.</p>
-      </form>
-    </div>
-
-    <div id="success-card" class="hidden fade-up bg-white rounded-3xl shadow-sm border border-[var(--border)] p-8 sm:p-10 text-center">
-      <div class="w-16 h-16 mx-auto rounded-full bg-[var(--primary-light)] flex items-center justify-center mb-5">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6938ef" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <div class="fade-up bg-white rounded-3xl shadow-sm border border-[var(--border)] p-6 sm:p-8 lg:p-10 text-center">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="https://apps.apple.com/app/id6772970281" class="store-btn store-ios"><img src="badge-app-store-pl.svg" data-pl="badge-app-store-pl.svg" data-en="badge-app-store-en.svg" alt="App Store"/></a>
+        <a href="https://play.google.com/store/apps/details?id=com.recomly.app" class="store-btn store-android"><img src="badge-google-play-pl.png" data-pl="badge-google-play-pl.png" data-en="badge-google-play-en.png" alt="Google Play"/></a>
       </div>
-      <h3 class="text-2xl font-bold mb-2" data-i18n="success.title">Jesteś na liście! 🎉</h3>
-      <p class="text-[var(--muted)]" data-i18n="success.text">Dziękujemy. Dostaniesz od nas wiadomość, gdy tylko otworzymy dostęp.</p>
+      <div class="desktop-only mt-6 sm:mt-8">
+        <img src="qr-download.svg" alt="QR" class="qr mx-auto mb-3"/>
+        <p class="text-sm text-[var(--muted)]" data-i18n="download.qr">Zeskanuj aparatem w telefonie</p>
+      </div>
     </div>
   </div>
 </section>
@@ -386,12 +372,10 @@
   // ===== i18n =====
   const TRANSLATIONS = {
     pl: {
-      "nav.cta": "Zdobądź wczesny dostęp",
-      "nav.cta-short": "Dostęp",
+      "nav.cta": "Pobierz aplikację",
+      "nav.cta-short": "Pobierz",
       "hero.title": 'Rekomendacje<br class="hidden sm:block"/> od znajomych, twórców<br class="hidden sm:block"/> i społeczności<br/> <span class="text-primary">w jednym miejscu.</span>',
       "hero.subtitle": "Restauracje, kawiarnie i bary warte odwiedzenia. Twój asystent AI Remi pomoże wybrać to właściwe.",
-      "hero.email-placeholder": "Twój adres email",
-      "hero.cta": "Zdobądź wczesny dostęp",
       "hero.helper": "Koniec zgadywania, gdzie dziś zjeść.",
       "showcase.title": "Odkrywaj i zapisuj swoje ulubione gastro miejscówki",
       "showcase.subtitle": "Inspiracje od ludzi, którzy mają podobny gust do Ciebie.",
@@ -407,34 +391,23 @@
       "ai.bullet1": "Dopasowane do tego, na co masz ochotę tu i teraz",
       "ai.bullet2": "Oparte na miejscach polecanych przez społeczność",
       "ai.bullet3": "Bez scrollowania i zgadywania",
-      "waitlist.badge": "Ograniczona liczba miejsc",
-      "waitlist.title": "Zdobądź wczesny dostęp",
-      "waitlist.subtitle": "Bądź wśród pierwszych. Koniec ze scrollowaniem opinii i zgadywaniem gdzie zjeść.",
-      "waitlist.email-label": 'Adres email <span class="text-primary">*</span>',
-      "waitlist.email-placeholder": "twoj@email.com",
-      "waitlist.ig-label": 'Instagram <span class="text-[var(--muted)] font-normal">(opcjonalnie)</span>',
-      "waitlist.ig-placeholder": "@twojnick",
-      "waitlist.consent": 'Wyrażam zgodę na przetwarzanie moich danych osobowych w celu zapisu do waitlisty, zgodnie z <a href="privacy" class="text-primary underline">polityką prywatności</a>.',
-      "waitlist.submit": "Zdobywam dostęp",
-      "waitlist.disclaimer": "Nie wysyłamy spamu. Możesz wypisać się w każdej chwili.",
-      "success.title": "Jesteś na liście! 🎉",
-      "success.text": "Dziękujemy. Dostaniesz od nas wiadomość, gdy tylko otworzymy dostęp.",
+      "download.badge": "Dostępne na iOS i Androida",
+      "download.title": "Pobierz Recomly",
+      "download.subtitle": "Koniec ze scrollowaniem opinii i zgadywaniem gdzie zjeść.",
+      "download.qr": "Zeskanuj aparatem w telefonie",
+      "download.qr-hero": "Zeskanuj aparatem<br/>w telefonie",
       "footer.privacy": "Polityka prywatności",
       "footer.terms": "Regulamin",
       "footer.deleteAccount": "Usuń konto",
       "cookie.text": "Ta strona wykorzystuje pliki cookies w celach analitycznych i marketingowych.",
       "cookie.more": "Dowiedz się więcej",
-      "cookie.ok": "OK",
-      "form.error.generic": "Coś poszło nie tak. Spróbuj ponownie.",
-      "form.submitting": "Zapisuję..."
+      "cookie.ok": "OK"
     },
     en: {
-      "nav.cta": "Get early access",
-      "nav.cta-short": "Access",
+      "nav.cta": "Download the app",
+      "nav.cta-short": "Download",
       "hero.title": 'Recommendations<br class="hidden sm:block"/> from friends, creators<br class="hidden sm:block"/> and the community<br/> <span class="text-primary">in one place.</span>',
       "hero.subtitle": "Restaurants, cafés and bars worth visiting. Your AI assistant Remi will help you pick the right one.",
-      "hero.email-placeholder": "Your email address",
-      "hero.cta": "Get early access",
       "hero.helper": "No more guessing where to eat tonight.",
       "showcase.title": "Discover and save your favorite food spots",
       "showcase.subtitle": "Inspiration from people who share your taste.",
@@ -450,26 +423,17 @@
       "ai.bullet1": "Tailored to what you're craving right now",
       "ai.bullet2": "Based on places recommended by the community",
       "ai.bullet3": "No scrolling, no guessing",
-      "waitlist.badge": "Limited spots available",
-      "waitlist.title": "Get early access",
-      "waitlist.subtitle": "Be among the first. No more scrolling reviews and guessing where to eat.",
-      "waitlist.email-label": 'Email address <span class="text-primary">*</span>',
-      "waitlist.email-placeholder": "your@email.com",
-      "waitlist.ig-label": 'Instagram <span class="text-[var(--muted)] font-normal">(optional)</span>',
-      "waitlist.ig-placeholder": "@yourhandle",
-      "waitlist.consent": 'I agree to the processing of my personal data for the purpose of joining the waitlist, in accordance with the <a href="privacy" class="text-primary underline">privacy policy</a>.',
-      "waitlist.submit": "Get access",
-      "waitlist.disclaimer": "No spam. You can unsubscribe anytime.",
-      "success.title": "You're on the list! 🎉",
-      "success.text": "Thank you. We'll send you a message as soon as we open access.",
+      "download.badge": "Available on iOS and Android",
+      "download.title": "Get Recomly",
+      "download.subtitle": "No more scrolling reviews and guessing where to eat.",
+      "download.qr": "Scan with your phone camera",
+      "download.qr-hero": "Scan with your<br/>phone camera",
       "footer.privacy": "Privacy policy",
       "footer.terms": "Terms",
       "footer.deleteAccount": "Delete account",
       "cookie.text": "This site uses cookies for analytics and marketing purposes.",
       "cookie.more": "Learn more",
-      "cookie.ok": "OK",
-      "form.error.generic": "Something went wrong. Please try again.",
-      "form.submitting": "Submitting..."
+      "cookie.ok": "OK"
     }
   };
 
@@ -526,75 +490,16 @@
   setTimeout(() => banner.classList.remove('translate-y-full'), 1200);
   document.getElementById('cookie-ok').addEventListener('click', () => banner.classList.add('translate-y-full'));
 
-  // Hero submit → scroll to waitlist
-  document.getElementById('hero-submit').addEventListener('click', () => {
-    document.getElementById('wl-email').value = document.getElementById('hero-email').value;
-    document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' });
-  });
-
-  // ===== Supabase init =====
-  const SUPABASE_URL = 'https://apzzzvfumnnzdgnsdqdy.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFwenp6dmZ1bW5uemRnbnNkcWR5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcwNzM1NjksImV4cCI6MjA5MjY0OTU2OX0.xxuwmzBoKb9UqsIipzE9jy5WmAR2nCrp8hPsn0Cifos';
-  let sb = null;
-  try {
-    if (window.supabase && window.supabase.createClient) {
-      sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-    }
-  } catch (err) { console.error('Supabase init failed:', err); }
-
-  const consent = document.getElementById('wl-consent');
-  const emailField = document.getElementById('wl-email');
-  const igField = document.getElementById('wl-ig');
-  const btn = document.getElementById('wl-btn');
-  const updateBtn = () => btn.disabled = !(consent.checked && emailField.value);
-  consent.addEventListener('change', updateBtn);
-  emailField.addEventListener('input', updateBtn);
-
-  let errorEl = document.createElement('p');
-  errorEl.className = 'text-sm text-red-600 text-center mt-2';
-  errorEl.style.display = 'none';
-  btn.parentElement.insertBefore(errorEl, btn.nextSibling);
-
-  document.getElementById('wl-btn').addEventListener('click', async () => {
-    if (!consent.checked || !emailField.value) return;
-    if (!sb) {
-      errorEl.textContent = (TRANSLATIONS[currentLang] || TRANSLATIONS.pl)['form.error.generic'];
-      errorEl.style.display = 'block';
-      return;
-    }
-    btn.disabled = true;
-    const originalLabel = btn.textContent;
-    btn.textContent = (TRANSLATIONS[currentLang] || TRANSLATIONS.pl)['form.submitting'];
-    errorEl.style.display = 'none';
-
-    const { error } = await sb.from('waitlist').insert({
-      email: emailField.value.trim().toLowerCase(),
-      instagram: igField.value.trim() || null
+  // Download CTA: straight to the store on phones, scroll to the download section elsewhere
+  const cls = document.documentElement.classList;
+  const STORE = cls.contains('ios') ? 'https://apps.apple.com/app/id6772970281'
+    : cls.contains('android') ? 'https://play.google.com/store/apps/details?id=com.recomly.app' : null;
+  document.querySelectorAll('[data-download-cta]').forEach(a => {
+    if (STORE) { a.href = STORE; return; }
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('download').scrollIntoView({ behavior: 'smooth' });
     });
-
-    btn.disabled = false;
-    btn.textContent = originalLabel;
-
-    function showSuccessState() {
-      document.getElementById('waitlist-card').classList.add('hidden');
-      document.getElementById('success-card').classList.remove('hidden');
-      document.getElementById('success-card').classList.add('in');
-      // Clear hero email field so user doesn't think submission failed
-      const heroEmail = document.getElementById('hero-email');
-      if (heroEmail) heroEmail.value = '';
-    }
-
-    if (error) {
-      if (error.code === '23505') {
-        showSuccessState();
-        return;
-      }
-      errorEl.textContent = (TRANSLATIONS[currentLang] || TRANSLATIONS.pl)['form.error.generic'];
-      errorEl.style.display = 'block';
-      return;
-    }
-
-    showSuccessState();
   });
 </script>
 </body>

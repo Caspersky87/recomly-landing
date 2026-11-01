@@ -1,27 +1,18 @@
 # recomly-landing
-Recomly waitlist landing page
+Recomly landing page
+
+## Store links
+
+- App Store: https://apps.apple.com/app/id6772970281
+- Google Play: https://play.google.com/store/apps/details?id=com.recomly.app
 
 ## `/download` (QR code target)
 
-Before launch it shows "coming soon" with a waitlist link. To go live once both store listings are public:
+Sends phones to their store; other devices see both store buttons.
 
-1. In `download.html`, set `var LIVE = true;`.
-2. Add these redirects to `vercel.json` so phones skip the page:
+- `vercel.json` redirects iPhone and Android (except Huawei) on the server.
+- The script in `download.html` catches iPads, which send a Mac user agent.
 
-```json
-"redirects": [
-  {
-    "source": "/download",
-    "has": [{ "type": "header", "key": "user-agent", "value": ".*(iPhone|iPod).*" }],
-    "destination": "https://apps.apple.com/app/id6772970281",
-    "permanent": false
-  },
-  {
-    "source": "/download",
-    "has": [{ "type": "header", "key": "user-agent", "value": ".*Android.*" }],
-    "missing": [{ "type": "header", "key": "user-agent", "value": ".*HuaweiBrowser.*" }],
-    "destination": "https://play.google.com/store/apps/details?id=com.recomly.app",
-    "permanent": false
-  }
-]
-```
+## Homepage
+
+Store buttons in the hero and the download section. Phones see only their store; desktop sees both plus `qr-download.svg` (points to `https://recomly.app/download`).
