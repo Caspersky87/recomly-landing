@@ -29,12 +29,10 @@
   .prose-doc p { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
   .prose-doc ul { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: disc; }
   .prose-doc ol { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: decimal; }
+  .prose-doc ol ol { list-style: lower-alpha; margin-top: 0.5rem; }
   .prose-doc li { margin-bottom: 0.5rem; }
   .prose-doc strong { color: var(--text); }
   .prose-doc a { color: var(--primary); text-decoration: underline; }
-  .prose-doc table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-  .prose-doc th, .prose-doc td { border: 1px solid var(--border); padding: 0.75rem; text-align: left; color: var(--muted); }
-  .prose-doc th { background: var(--primary-light); color: var(--text); font-weight: 600; }
 </style>
 </head>
 <body>
@@ -58,125 +56,206 @@
 <!-- CONTENT -->
 <main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
   <div class="prose-doc">
-    <p class="text-sm" data-i18n="meta">Obowiązuje od: 25.10.2026</p>
+    <p class="text-sm" data-i18n="meta">Obowiązuje od: 2.11.2026</p>
     <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6" data-i18n="title">Polityka prywatności</h1>
-    <p data-i18n="intro">Niniejsza Polityka prywatności opisuje, w jaki sposób Recomly sp. z o.o. przetwarza dane osobowe użytkowników aplikacji mobilnej Recomly (iOS i Android) oraz strony internetowej recomly.app, zgodnie z RODO i polskimi przepisami o ochronie danych osobowych.</p>
+    <p data-i18n-html="intro">Niniejsza Polityka prywatności opisuje, w jaki sposób Recomly sp. z o.o. z siedzibą w Warszawie (dalej: „<strong>Recomly</strong>” lub „<strong>my</strong>”) przetwarza dane osobowe użytkowników aplikacji mobilnej Recomly dostępnej na systemy iOS oraz Android (dalej: „<strong>Aplikacja</strong>”), strony internetowej recomly.app („<strong>Serwis</strong>”), a także innych osób, które nawiązują kontakt lub współpracę z Recomly (dalej: „<strong>Ty</strong>”, „<strong>Ciebie</strong>”). Recomly przetwarza dane osobowe zgodnie z RODO i polskimi przepisami o ochronie danych osobowych.</p>
 
     <!-- §1 Administrator -->
-    <h2 data-i18n="s1.h">§1. Administrator danych osobowych</h2>
-    <p data-i18n-html="s1.p1"><strong>Recomly sp. z o.o.</strong><br/>
-    ul. Kasprzaka 31A, Warszawa<br/>
-    NIP: 5273199463<br/>
-    KRS: 0001214798<br/>
-    Sąd Rejonowy dla m.st. Warszawy w Warszawie, XII Wydział Gospodarczy KRS<br/>
-    Adres email: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></p>
-    <p data-i18n="s1.p2">Inspektor Ochrony Danych nie został powołany. We wszelkich sprawach związanych z przetwarzaniem danych osobowych prosimy o kontakt pod wskazanym wyżej adresem email.</p>
+    <h2 data-i18n="s1.h">§1. Kto jest administratorem Twoich danych?</h2>
+    <p data-i18n-html="s1.p1">Administratorem Twoich danych osobowych jest <strong>Recomly sp. z o.o. z siedzibą w Warszawie</strong>, ul. Kasprzaka 31A, Warszawa, NIP: 5273199463, wpisana do rejestru przedsiębiorców Krajowego Rejestru Sądowego przez Sąd Rejonowy dla m.st. Warszawy w Warszawie, XII Wydział Gospodarczy KRS pod nr KRS: 0001214798, REGON: 543699175.</p>
+    <p data-i18n-html="s1.p2">Możesz skontaktować się z nami w każdej sprawie dotyczącej Twoich danych osobowych pod adresem e-mail: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a> lub pisemnie na adres naszej siedziby.</p>
 
-    <!-- §2 Zakres danych -->
-    <h2 data-i18n="s2.h">§2. Jakie dane zbieramy</h2>
-    <p data-i18n="s2.p1">Zbieramy dane niezbędne do działania Aplikacji (art. 5 ust. 1 lit. c RODO), a dane oznaczone poniżej jako opcjonalne - wyłącznie za Twoją zgodą:</p>
+    <!-- §2 Czyje dane, cel, podstawa, okres -->
+    <h2 data-i18n="s2.h">§2. Czyje dane przetwarzamy, w jakim celu, na jakiej podstawie i jak długo?</h2>
+
+    <h3 data-i18n="s2.1.h">1. Zalogowani Użytkownicy Aplikacji i Serwisu</h3>
+    <p data-i18n-html="s2.1.scope"><strong>Zakres danych:</strong></p>
     <ul>
-      <li data-i18n-html="s2.l1"><strong>Dane konta</strong> - adres email (lub konto Google/Apple) oraz numer telefonu weryfikowany kodem SMS - w celu potwierdzenia autentyczności konta; przy logowaniu społecznościowym (Google, Apple) - imię, email, identyfikator konta, zdjęcie profilowe; hasło (w formie zaszyfrowanej), jeśli konto zakładane jest bez logowania społecznościowego</li>
-      <li data-i18n-html="s2.l2"><strong>Dane profilu</strong> - imię, nazwa użytkownika, zdjęcie profilowe, opis, linki do profili w mediach społecznościowych (opcjonalnie) oraz podane przez Ciebie preferencje kulinarne (Taste Graph) - do dopasowania rekomendacji</li>
-      <li data-i18n-html="s2.l3"><strong>Dane społecznościowe</strong> - relacje i połączenia między użytkownikami zapisywane przez Aplikację</li>
-      <li data-i18n-html="s2.l4"><strong>Dane o aktywności</strong> - oceny, recenzje, zdjęcia i interakcje z treściami</li>
-      <li data-i18n-html="s2.l11"><strong>Wizyty w miejscach partnerskich</strong> - gdy pokazujesz swój kod Recomly (kod QR lub 6-cyfrowy kod) w miejscu partnerskim, obsługa tego miejsca rejestruje wizytę: miejsce, datę i godzinę, rabat, kwotę rachunku, opcjonalną kwotę serwisu oraz - jeśli miejsce tego wymaga - zdjęcie paragonu. Obsługa nie widzi Twojego imienia ani profilu. Przetwarzamy te dane, aby przyznać Ci rabat (art. 6 ust. 1 lit. b RODO), oraz w celu rozliczenia z miejscem partnerskim (art. 6 ust. 1 lit. f RODO - nasz prawnie uzasadniony interes polegający na rozliczaniu się z partnerami). Po usunięciu konta wizyty są odłączane od Ciebie i przechowywane bez Twojej tożsamości na potrzeby rozliczeń</li>
-      <li data-i18n-html="s2.l12"><strong>Polecenia Twórców</strong> - gdy otworzysz recenzję zweryfikowanego Twórcy, wyznaczysz z niej trasę, zadzwonisz do miejsca lub zapiszesz je, albo założysz konto z linku lub kodu polecającego Twórcy, zapisujemy: Ciebie, Twórcę, miejsce, rodzaj czynności i jej czas. Dane te służą wyłącznie do ustalenia, którym Twórcom należy się wynagrodzenie za Twoją wizytę w miejscu partnerskim. Nie wpływają na Twoje rekomendacje i nie zależą od zgody „Personalizacja”</li>
-      <li data-i18n-html="s2.l13"><strong>Link lub kod polecający</strong> - jeśli zainstalujesz Aplikację z linku polecającego Twórcy, przy pierwszym uruchomieniu Aplikacja odczytuje kod polecający: na Androidzie z linku do sklepu Google Play, a na iOS ze schowka, wyłącznie po tym, jak dotkniesz „Wklej”. Kod możesz usunąć przed założeniem konta</li>
-      <li data-i18n-html="s2.l9"><strong>Dane o korzystaniu z Aplikacji (opcjonalne, za zgodą „Personalizacja”)</strong> - przeglądane miejsca i treści, czas ich oglądania, wyszukiwania, pytania zadawane asystentowi Remi oraz wyświetlone rekomendacje. Na ich podstawie tworzymy Twój profil behawioralny (profilowanie), aby dopasować rekomendacje. Bez tej zgody nie wykorzystujemy tych danych do personalizacji</li>
-      <li data-i18n-html="s2.l5"><strong>Dane lokalizacyjne</strong> - zbierane wyłącznie podczas aktywnego korzystania z aplikacji (nie w tle), do rekomendacji w pobliżu</li>
-      <li data-i18n-html="s2.l6"><strong>Dane techniczne i analityczne</strong> - identyfikator urządzenia, system operacyjny, wersja aplikacji, token powiadomień push oraz data ostatniej aktywności w Aplikacji. <strong>Opcjonalnie, wyłącznie za zgodą „Analityka”</strong>, zbieramy też dane o użytkowaniu Aplikacji, takie jak zdarzenia, odwiedzane ekrany i wpisywane frazy wyszukiwania (PostHog), i łączymy je z Twoim kontem (identyfikator konta, adres email, data założenia konta). Bez tej zgody nie zbieramy danych o użytkowaniu Aplikacji. Zdarzenia sprzed Twojej decyzji (np. z zakładania konta) są przechowywane wyłącznie w pamięci urządzenia: wysyłamy je dopiero po wyrażeniu zgody, a w przeciwnym razie usuwamy. Logi serwera mogą zawierać treść zapytań (w tym pytań zadawanych Remi, wraz z identyfikatorem konta) oraz lokalizację wyszukiwania; przechowujemy je do 30 dni (Google Cloud Logging). Dane te nie są wykorzystywane do śledzenia między aplikacjami/witrynami ani do reklam ukierunkowanych</li>
-      <li data-i18n-html="s2.l10"><strong>Raporty awarii</strong> - informacje o błędach i awariach Aplikacji, bez adresu email ani innych danych kontaktowych (Firebase Crashlytics). Identyfikator konta dołączamy do nich wyłącznie za zgodą „Analityka”</li>
+      <li data-i18n-html="s2.1.d1"><strong>Dane profilu</strong> - numer telefonu (weryfikowany SMS-em), adres e-mail, imię/nick, zdjęcie profilowe, opis, linki do profili w mediach społecznościowych (opcjonalne), hasło (w postaci zahaszowanej, jeśli konto zakładane jest bez logowania społecznościowego), preferencje kulinarne (w trakcie onboardingu do dopasowania rekomendacji), recenzje, oceny, dodane zdjęcia, zapisane foldery, listy obserwowanych i obserwujących, relacje w Aplikacji, identyfikator konta (User ID). W przypadku logowania przez Google lub Apple: identyfikator zewnętrzny, imię oraz adres e-mail przekazane przez dostawcę tożsamości.</li>
+      <li data-i18n-html="s2.1.d2"><strong>Wizyty w Restauracjach</strong> - gdy pokazujesz swój kod Recomly (kod QR lub 6-cyfrowy kod) w miejscu partnerskim („<strong>Restauracja</strong>”), obsługa tego miejsca rejestruje wizytę: miejsce, datę i godzinę, rabat, kwotę rachunku, opcjonalną kwotę serwisu oraz - jeśli miejsce tego wymaga - zdjęcie paragonu. Obsługa nie widzi Twojego imienia ani profilu. Przetwarzamy te dane, aby przyznać Ci rabat oraz w celu rozliczenia z miejscem partnerskim. Po usunięciu konta Twoje wizyty są odłączane od Ciebie i przechowywane bez Twojej tożsamości na potrzeby rozliczeń z Restauracją.</li>
+      <li data-i18n-html="s2.1.d3"><strong>Polecenia Twórców</strong> - gdy otworzysz recenzję zweryfikowanego Twórcy, wyznaczysz z niej trasę, zadzwonisz do miejsca lub zapiszesz je, albo założysz konto z linku lub kodu polecającego Twórcy, zapisujemy: Ciebie, Twórcę, miejsce, rodzaj czynności i jej czas. Dane te służą wyłącznie do ustalenia, którym Twórcom należy się wynagrodzenie za Twoją wizytę w Restauracji. Nie wpływają na Twoje rekomendacje i nie zależą od zgody „Personalizacja”.</li>
+      <li data-i18n-html="s2.1.d4"><strong>Link lub kod polecający</strong> - jeśli zainstalujesz Aplikację z linku polecającego Twórcy, przy pierwszym uruchomieniu Aplikacja odczytuje kod polecający: na Androidzie z linku do sklepu Google Play, a na iOS ze schowka, wyłącznie po tym, jak dotkniesz „Wklej”. Kod możesz usunąć przed założeniem konta.</li>
+      <li data-i18n-html="s2.1.d5"><strong>Dane o korzystaniu z Aplikacji (opcjonalne, za zgodą „Personalizacja”)</strong> - przeglądane miejsca i treści, czas ich oglądania, wyszukiwania, pytania zadawane asystentowi Remi oraz wyświetlone rekomendacje. Na ich podstawie tworzymy Twój profil behawioralny (profilowanie), aby dopasować rekomendacje. Bez Twojej zgody nie wykorzystujemy tych danych do personalizacji. Nie podejmujemy decyzji opartych wyłącznie na zautomatyzowanym przetwarzaniu danych, w tym profilowaniu, które wywoływałyby skutki prawne lub w podobny sposób istotnie wpływałyby na Ciebie. Profilowanie opisane powyżej wpływa wyłącznie na dobór i kolejność wyświetlanych rekomendacji.</li>
+      <li data-i18n-html="s2.1.d6"><strong>Dane lokalizacyjne</strong> - zbierane wyłącznie podczas aktywnego korzystania z Aplikacji (nie w tle), do rekomendacji w pobliżu.</li>
+      <li data-i18n-html="s2.1.d7"><strong>Dane techniczne i analityczne</strong> - identyfikator urządzenia, system operacyjny, wersja aplikacji, token powiadomień push oraz data ostatniej aktywności w Aplikacji.</li>
+      <li data-i18n-html="s2.1.d8"><strong>Dane o użytkowaniu Aplikacji (opcjonalne, za zgodą „Analityka”)</strong> - zdarzenia, odwiedzane ekrany i wpisywane frazy wyszukiwania, które łączymy z Twoim kontem (identyfikator konta, adres e-mail, data założenia konta). Bez Twojej zgody nie zbieramy danych o użytkowaniu Aplikacji. Zdarzenia sprzed Twojej decyzji (np. z zakładania konta) są przechowywane wyłącznie w pamięci urządzenia: wysyłamy je dopiero po wyrażeniu zgody, a w przeciwnym razie usuwamy.</li>
+      <li data-i18n-html="s2.1.d9"><strong>Logi serwera</strong> - mogą zawierać treść zapytań (w tym pytań zadawanych Remi, wraz z identyfikatorem konta) oraz lokalizację wyszukiwania. Dane te nie są wykorzystywane do śledzenia między aplikacjami/witrynami ani do reklam ukierunkowanych.</li>
     </ul>
-    <p data-i18n="s2.p2">Nie podejmujemy decyzji opartych wyłącznie na zautomatyzowanym przetwarzaniu danych, w tym profilowaniu, które wywoływałyby skutki prawne lub w podobny sposób istotnie wpływałyby na osobę, której dane dotyczą. Profilowanie opisane powyżej wpływa wyłącznie na dobór i kolejność wyświetlanych rekomendacji.</p>
-    <p data-i18n-html="s2.p3"><strong>Profil gustu.</strong> Tworzymy profil Twojego gustu na podstawie Twoich recenzji, ocen, wyborów dokonanych podczas onboardingu oraz folderów. Stanowi on podstawową część usługi (rekomendacje i wskaźniki dopasowania) i jest przetwarzany na podstawie art. 6 ust. 1 lit. b RODO. Jest zawsze aktywny, dopóki posiadasz konto.</p>
-    <p data-i18n-html="s2.p4"><strong>Profil behawioralny.</strong> Za Twoją zgodą wykorzystujemy również Twoją aktywność w Aplikacji: przeglądane miejsca, wyszukiwania, pytania zadawane Remi oraz wyświetlone Ci rekomendacje. Podstawą jest Twoja zgoda (art. 6 ust. 1 lit. a RODO). Możesz ją w każdej chwili wycofać w ustawieniach Aplikacji. Wycofanie zgody nie wpływa na przetwarzanie dokonane przed jej wycofaniem.</p>
-    <p data-i18n-html="s2.p5"><strong>Co widzą inni użytkownicy.</strong> Twój profil (imię, nazwa użytkownika, zdjęcie, opis, linki do mediów społecznościowych), Twoje recenzje, Twoje publiczne foldery oraz listy obserwujących i obserwowanych są widoczne dla wszystkich zalogowanych użytkowników Recomly.</p>
-
-    <!-- §3 Cele i podstawy prawne -->
-    <h2 data-i18n="s3.h">§3. Cele i podstawy prawne przetwarzania</h2>
-    <p data-i18n="s3.p1">Dane przetwarzamy w celu prowadzenia konta i świadczenia usług Aplikacji - w tym rekomendacji opartych na znajomych, podanych przez Ciebie preferencjach i lokalizacji - a także umożliwienia logowania społecznościowego, na podstawie wykonania umowy/regulaminu (art. 6 ust. 1 lit. b RODO). Na tej samej podstawie (art. 6 ust. 1 lit. b RODO) tworzymy profil gustu na podstawie Twoich recenzji, ocen, wyborów z onboardingu i folderów. Profil behawioralny, czyli personalizację rekomendacji na podstawie Twojej aktywności w Aplikacji (profilowanie), prowadzimy wyłącznie na podstawie Twojej zgody „Personalizacja” (art. 6 ust. 1 lit. a RODO). Analitykę użytkowania Aplikacji prowadzimy wyłącznie na podstawie Twojej zgody „Analityka” (art. 6 ust. 1 lit. a RODO); bez tej zgody jej nie prowadzimy. Obie zgody są dobrowolne, niezależne od siebie i domyślnie wyłączone, a ich brak nie ogranicza podstawowych funkcji Aplikacji. Możesz je w każdej chwili zmienić w Aplikacji (Ustawienia → Prywatność). Wysyłkę powiadomień push realizujemy wyłącznie na podstawie Twojej zgody (art. 6 ust. 1 lit. a RODO). Raporty awarii zbieramy w celu zapewnienia stabilności i bezpieczeństwa Aplikacji, na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO); identyfikator konta dołączamy do nich wyłącznie za zgodą „Analityka” (art. 6 ust. 1 lit. a RODO). Datę Twojej ostatniej aktywności w Aplikacji zapisujemy, aby liczyć zbiorcze statystyki liczby aktywnych użytkowników, na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO); przechowujemy tylko ostatnią datę, nie historię aktywności. Polecenia Twórców przetwarzamy w celu rozliczenia wynagrodzenia Twórców z miejscami partnerskimi, na podstawie prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO); możesz wnieść sprzeciw wobec tego przetwarzania (§9). Realizację praw osób, których dane dotyczą, prowadzimy w ramach obowiązku prawnego (art. 6 ust. 1 lit. c RODO), a ewentualne dochodzenie lub obronę przed roszczeniami - w ramach prawnie uzasadnionego interesu (art. 6 ust. 1 lit. f RODO).</p>
-
-    <!-- §4 Okres przechowywania -->
-    <h2 data-i18n="s4.h">§4. Okres przechowywania danych</h2>
+    <p data-i18n-html="s2.1.p1"><strong>Profil gustu.</strong> Tworzymy profil Twojego gustu na podstawie Twoich recenzji, ocen, wyborów dokonanych podczas onboardingu oraz folderów. Stanowi on podstawową część usługi (rekomendacje i wskaźniki dopasowania) i jest przetwarzany na podstawie art. 6 ust. 1 lit. b RODO. Jest zawsze aktywny, dopóki posiadasz konto.</p>
+    <p data-i18n-html="s2.1.p2"><strong>Profil behawioralny.</strong> Za Twoją zgodą wykorzystujemy również Twoją aktywność w Aplikacji: przeglądane miejsca, wyszukiwania, pytania zadawane Remi oraz wyświetlone Ci rekomendacje. Podstawą przetwarzania jest Twoja zgoda. Możesz ją w każdej chwili wycofać w ustawieniach Aplikacji. Wycofanie zgody nie wpływa na przetwarzanie dokonane przed jej wycofaniem.</p>
+    <p data-i18n-html="s2.1.p3"><strong>Co widzą inni użytkownicy?</strong> Twój profil (imię, nazwa użytkownika, zdjęcie, opis, linki do mediów społecznościowych), Twoje recenzje, Twoje publiczne foldery oraz listy obserwujących i obserwowanych są widoczne dla wszystkich zalogowanych użytkowników Recomly.</p>
+    <p data-i18n-html="s2.1.p4"><strong>Źródło danych:</strong> Dane otrzymujemy bezpośrednio od Ciebie oraz od dostawców Apple / Google (w przypadku logowania społecznościowego) i od Restauracji (personel rejestrujący kwotę Twojego rachunku po okazaniu Kodu QR).</p>
+    <p data-i18n="s2.1.p5">Pamiętaj, że po zarejestrowaniu Konta i w trakcie korzystania z usług lub funkcjonalności Serwisu jesteś zobowiązany do stałego aktualizowania wszelkich podanych przez siebie danych osobowych, jeżeli w jakimkolwiek zakresie nastąpią zmiany.</p>
+    <p data-i18n-html="s2.1.purposes"><strong>Cele i podstawy prawne:</strong></p>
+    <ol>
+      <li data-i18n="s2.1.c1">Świadczenie usług drogą elektroniczną i obsługa konta (art. 6 ust. 1 lit. b RODO) – w tym budowanie Twojego profilu gustu (tworzonego na bazie Twoich ocen, recenzji i folderów), dopasowywanie rekomendacji, weryfikacja autentyczności konta SMS-em oraz obsługa zniżek w Restauracjach.</li>
+      <li data-i18n="s2.1.c2">Rozliczenia prowizyjne i zapobieganie nadużyciom (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes polegający na weryfikacji należnej nam prowizji od Restauracji za Twoją wizytę w ramach benefitów Recomly. Po usunięciu konta dane o transakcji są trwale odłączane od Twojej tożsamości (anonimizowane) i przechowywane na potrzeby rozliczeń z partnerami.</li>
+      <li data-i18n="s2.1.c3">Rozliczanie wynagrodzenia Twórców z Restauracjami na podstawie Poleceń Twórców (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes polegający na ustaleniu, którym Twórcom należy się wynagrodzenie za Twoją wizytę. Możesz wnieść sprzeciw wobec tego przetwarzania (§6).</li>
+      <li data-i18n="s2.1.c4">Ustalenie, dochodzenie lub obrona przed roszczeniami (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes jakim jest obrona i dochodzenie naszych praw.</li>
+      <li data-i18n="s2.1.c5">Przeciwdziałanie nadużyciom, działaniom naruszającym dobre obyczaje, Regulamin Recomly, obowiązujące przepisy prawa (art. 6 ust. 1 lit. b RODO - niezbędność do wykonania umowy w zakresie wspierania bezpieczeństwa Serwisu i użytkowników oraz przeciwdziałania nadużyciom).</li>
+      <li data-i18n="s2.1.c6">Wypełnienie obowiązków prawnych, w tym księgowo-podatkowych (art. 6 ust. 1 lit. c RODO).</li>
+      <li data-i18n="s2.1.c7">Profil behawioralny, czyli personalizację rekomendacji na podstawie Twojej aktywności w Aplikacji (profilowanie), prowadzimy wyłącznie na podstawie Twojej dobrowolnej zgody „Personalizacja” (art. 6 ust. 1 lit. a RODO).</li>
+      <li data-i18n="s2.1.c8">Analityka użytkowania Aplikacji (art. 6 ust. 1 lit. a RODO) – dobrowolna zgoda „Analityka” na analitykę aktywności w celu optymalizacji świadczonych usług przez Recomly i ulepszania Serwisu. Zgoda „Analityka” jest domyślnie wyłączona i można ją w każdej chwili zmienić w Aplikacji (Ustawienia → Prywatność). Identyfikator konta dołączamy do raportów awarii tylko w przypadku uzyskania zgody „Analityka”.</li>
+      <li data-i18n="s2.1.c9">Wysyłka powiadomień push wyłącznie na podstawie Twojej dobrowolnej zgody (art. 6 ust. 1 lit. a RODO).</li>
+      <li data-i18n="s2.1.c10">Raporty awarii w celu zapewnienia stabilności i bezpieczeństwa Aplikacji (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes polegający na zapewnieniu bezpieczeństwa i funkcjonowania Aplikacji.</li>
+      <li data-i18n="s2.1.c11">Zbiorcze statystyki i aktualizacja liczby aktywnych użytkowników (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes polegający na monitorowaniu użycia Aplikacji i jej rozwoju.</li>
+    </ol>
+    <p data-i18n-html="s2.1.retention"><strong>Czas przechowywania:</strong></p>
     <ul>
-      <li data-i18n-html="s4.l1"><strong>Dane konta i profilu</strong> - przez czas posiadania konta</li>
-      <li data-i18n-html="s4.l2"><strong>Recenzje, oceny, zdjęcia i foldery</strong> - do czasu usunięcia konta</li>
-      <li data-i18n-html="s4.l8"><strong>Lokalizacja</strong> - nie przechowujemy historii lokalizacji. Twoją domyślną lokalizację wyszukiwania (miasto, adres lub punkt wybrany przez Ciebie) przechowujemy do czasu jej zmiany lub usunięcia konta. Punkt wyszukiwania zapisywany wraz z sygnałami personalizacji jest zaokrąglany do ok. 100 m, przechowywany wyłącznie za Twoją zgodą i przez 12 miesięcy</li>
-      <li data-i18n-html="s4.l6"><strong>Dane o korzystaniu z Aplikacji (personalizacja, sygnały behawioralne)</strong> - do 12 miesięcy; po wycofaniu zgody przestajemy je zbierać i wykorzystywać do personalizacji</li>
-      <li data-i18n-html="s4.l9"><strong>Wizyty w miejscach partnerskich</strong> - powiązane z Twoim kontem do czasu jego usunięcia, a następnie przechowywane bez Twojej tożsamości przez okres wymagany przepisami dotyczącymi rozliczeń i rachunkowości</li>
-      <li data-i18n-html="s4.l12"><strong>Polecenia Twórców</strong> - do 400 dni; te, które posłużyły do rozliczenia wizyty, przechowujemy razem z danymi rozliczeniowymi, bez Twojej tożsamości</li>
-      <li data-i18n-html="s4.l4"><strong>Analityka produktowa (PostHog)</strong> - do 13 miesięcy; dane powiązane z kontem usuwamy wcześniej, jeśli usuniesz konto</li>
-      <li data-i18n-html="s4.l7"><strong>Raporty awarii (Firebase Crashlytics)</strong> - do 90 dni</li>
-      <li data-i18n-html="s4.l10"><strong>Kontekst rozmowy z Remi</strong> - 30 minut</li>
-      <li data-i18n-html="s4.l11"><strong>Logi serwera (Google Cloud Logging)</strong> - do 30 dni</li>
-      <li data-i18n-html="s4.l5"><strong>Po usunięciu konta</strong> - dane usuwane w rozsądnym terminie, nie dłuższym niż 30 dni, z zastrzeżeniem danych, które musimy zachować dłużej z uwagi na obowiązki prawne (np. podatkowe) lub dochodzenie roszczeń, do upływu okresu ich przedawnienia</li>
+      <li data-i18n-html="s2.1.r1">Dane Twojego konta i profilu przechowujemy przez czas posiadania przez Ciebie aktywnego konta w Serwisie Recomly. Konto można usunąć w każdej chwili - w Aplikacji (Ustawienia → Usuń konto) lub przez stronę <a href="https://auth.recomly.app/delete-account/">https://auth.recomly.app/delete-account/</a>, bez konieczności kontaktu z obsługą. Usunięcie konta powoduje usunięcie danych profilu, historii aktywności, danych o korzystaniu z Aplikacji, danych społecznościowych, zapisanych zgód, danych analitycznych powiązanych z kontem oraz Poleceń Twórców. Wizyty w Restauracjach oraz dane o rozliczonych wynagrodzeniach Twórców są odłączane od konta i przechowywane bez Twojej tożsamości na potrzeby rozliczeń. Po usunięciu konta: dane niezbędne do obrony przed roszczeniami przechowujemy przez okres przedawnienia roszczeń (zasadniczo do 3 lat), a dokumenty księgowe przez 5 lat, licząc od końca roku kalendarzowego, w którym upłynął termin płatności podatku.</li>
+      <li data-i18n="s2.1.r2">Dane o personalizacji behawioralnej przechowujemy do 12 miesięcy lub do momentu wcześniejszego wycofania przez Ciebie zgody.</li>
+      <li data-i18n="s2.1.r3">Dane analityczne przechowujemy do 12 miesięcy lub do momentu wcześniejszego usunięcia konta / wycofania zgody.</li>
+      <li data-i18n="s2.1.r4">Polecenia Twórców przechowujemy do 400 dni; te, które posłużyły do rozliczenia wizyty, przechowujemy razem z danymi rozliczeniowymi, bez Twojej tożsamości.</li>
+      <li data-i18n="s2.1.r5">Recenzje, oceny, zdjęcia i foldery przechowujemy do czasu usunięcia konta.</li>
+      <li data-i18n="s2.1.r6">Nie przechowujemy historii Twojej lokalizacji. Twoją domyślną lokalizację wyszukiwania (miasto, adres lub punkt wybrany przez Ciebie) przechowujemy do czasu jej zmiany lub usunięcia konta. Punkt wyszukiwania zapisywany wraz z sygnałami personalizacji jest zaokrąglany do ok. 100 m i przechowywany wyłącznie za Twoją zgodą i przez 12 miesięcy.</li>
+      <li data-i18n="s2.1.r7">Raporty o awarii przechowujemy do 90 dni. Kontekst rozmowy z asystentem AI Remi - 30 minut. Logi serwera do 30 dni.</li>
     </ul>
 
-    <!-- §5 Usunięcie konta -->
-    <h2 data-i18n="s5.h">§5. Usunięcie konta</h2>
-    <p data-i18n-html="s5.p1">Konto można usunąć w każdej chwili - w Aplikacji (Ustawienia → Usuń konto) lub przez stronę <a href="https://auth.recomly.app/delete-account/">https://auth.recomly.app/delete-account/</a>, bez konieczności kontaktu z obsługą. Usunięcie konta powoduje usunięcie danych profilu, historii aktywności, danych o korzystaniu z Aplikacji, danych społecznościowych, zapisanych zgód oraz danych analitycznych powiązanych z kontem, zgodnie z §4. Polecenia Twórców są usuwane. Wizyty w miejscach partnerskich oraz dane o rozliczonych wynagrodzeniach Twórców są odłączane od konta i przechowywane bez Twojej tożsamości na potrzeby rozliczeń.</p>
+    <h3 data-i18n="s2.2.h">2. Niezalogowani Użytkownicy Serwisu (recomly.app)</h3>
+    <p data-i18n-html="s2.2.scope"><strong>Zakres danych:</strong> Adres IP, identyfikatory plików cookies, parametry przeglądarki, system operacyjny, data i czas wizyty, źródło odesłania.</p>
+    <p data-i18n-html="s2.2.purposes"><strong>Cele i podstawy prawne:</strong></p>
+    <ol>
+      <li data-i18n="s2.2.c1">Zapewnienie działania strony i bezpieczeństwa sieciowego (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes w utrzymaniu bezawaryjności Serwisu (cookies techniczne / niezbędne).</li>
+      <li data-i18n="s2.2.c2">Analityka i marketing (art. 6 ust. 1 lit. a RODO) – cookies opcjonalne, przetwarzane wyłącznie po wyrażeniu przez Ciebie zgody w banerze cookies.</li>
+    </ol>
+    <p data-i18n-html="s2.2.retention"><strong>Czas przechowywania:</strong> Zgodnie z parametrami poszczególnych plików cookies, nie dłużej niż do ich usunięcia.</p>
 
-    <!-- §6 Odbiorcy danych -->
-    <h2 data-i18n="s6.h">§6. Odbiorcy danych</h2>
+    <h3 data-i18n="s2.3.h">3. Osoby kontaktujące się z nami (np. e-mail, formularze, social media)</h3>
+    <p data-i18n-html="s2.3.scope"><strong>Zakres danych:</strong> Imię, nazwisko, nick i zdjęcie profilowe w mediach społecznościowych, interakcje z naszymi profilami w mediach społecznościowych (polubienia, obserwowanie, komentarze, wiadomości). W przypadku kontaktu telefonicznego przetwarzany jest numer telefonu i wszystkie inne dane podane dobrowolnie w trakcie rozmowy. W przypadku kontaktu mailowego przetwarzany jest adres e-mail, imię i nazwisko oraz wszystkie inne dane podane w treści e-maila. W przypadku kontaktu korespondencyjnego przetwarzane są imię, nazwisko lub nazwa firmy, adres fizyczny oraz wszelkie inne dane podane w treści korespondencji.</p>
+    <p data-i18n-html="s2.3.source"><strong>Źródło danych:</strong> bezpośrednio od Ciebie lub z publicznego profilu w serwisie społecznościowym (np. Instagram, Facebook, LinkedIn) w przypadku interakcji z nami w mediach społecznościowych.</p>
+    <p data-i18n-html="s2.3.purposes"><strong>Cele i podstawy prawne:</strong></p>
+    <ol>
+      <li data-i18n="s2.3.c1">Obsługa korespondencji i rozwiązanie zgłoszonej sprawy (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes polegający na sprawnej komunikacji i obsłudze zapytań.</li>
+      <li data-i18n="s2.3.c2">Dochodzenie praw i obrona przed roszczeniami (art. 6 ust. 1 lit. f RODO) – nasz prawnie uzasadniony interes polegający na dochodzeniu naszych praw i obronie przed roszczeniami.</li>
+    </ol>
+    <p data-i18n-html="s2.3.retention"><strong>Czas przechowywania:</strong> Przez czas niezbędny do załatwienia sprawy, a następnie w celach dowodowych przez okres do 3 lat od zakończenia kontaktu.</p>
+
+    <h3 data-i18n="s2.4.h">4. Przedstawiciele Restauracji</h3>
+    <p data-i18n-html="s2.4.scope"><strong>Zakres danych:</strong> Imię i nazwisko, służbowy adres e-mail, telefon, stanowisko/rola (np. menedżer, kelner), identyfikator w systemie, logi aktywności (czas rejestracji kodu, identyfikator sesji, błędy systemowe).</p>
+    <p data-i18n-html="s2.4.source"><strong>Źródło danych:</strong> Bezpośrednio od Ciebie lub od Twojego pracodawcy/zleceniodawcy (właściciela Restauracji), który zgłosił Cię do kontaktów lub obsługi konta Restauracji.</p>
+    <p data-i18n-html="s2.4.purposes"><strong>Cele i podstawy prawne:</strong></p>
+    <ol>
+      <li data-i18n="s2.4.c1">Zawarcie i realizacja umowy partnerskiej z Restauracją (art. 6 ust. 1 lit. f RODO) – prawnie uzasadniony interes Recomly w koordynacji obsługi konta Restauracji i utrzymaniu bieżącej współpracy.</li>
+      <li data-i18n="s2.4.c2">Zapewnienie bezpieczeństwa i diagnostyka błędów Serwisu (art. 6 ust. 1 lit. f RODO) – prawnie uzasadniony interes Recomly w utrzymaniu Serwisu, naprawie błędów i świadczeniu usług dla Użytkowników.</li>
+    </ol>
+    <p data-i18n-html="s2.4.retention"><strong>Czas przechowywania:</strong> Przez okres trwania umowy partnerskiej z Restauracją, a po jej rozwiązaniu – przez okres przedawnienia roszczeń (3 lata), nie dłużej niż w celu spełnienia wymogów prawnych dotyczących archiwizacji dokumentów księgowych (5 lat od końca roku).</p>
+
+    <h3 data-i18n="s2.5.h">5. Twórcy i Ambasadorzy (program rekomendacyjny)</h3>
+    <p data-i18n-html="s2.5.scope"><strong>Zakres danych:</strong> w przypadku posiadania Konta w Serwisie poza danymi dla Użytkowników zalogowanych z pkt 1 wyżej przetwarzane są: imię, nazwisko, firma, NIP, adres, numer rachunku bankowego, adres e-mail, telefon, linki do kanałów społecznościowych, statystyki wygenerowanych poleceń i kwoty należnych prowizji.</p>
+    <p data-i18n-html="s2.5.purposes"><strong>Cele i podstawy prawne:</strong></p>
+    <ol>
+      <li data-i18n="s2.5.c1">Zawarcie i realizacja umowy o współpracy z Twórcą lub Ambasadorem (art. 6 ust. 1 lit. b RODO).</li>
+      <li data-i18n="s2.5.c2">Wypełnienie obowiązków prawnych, w tym księgowo-podatkowych (wypłata prowizji, deklaracje, faktury) – art. 6 ust. 1 lit. c RODO.</li>
+      <li data-i18n="s2.5.c3">Ustalenie i dochodzenie roszczeń (art. 6 ust. 1 lit. f RODO) – prawnie uzasadniony interes w dochodzeniu i obronie praw Recomly.</li>
+      <li data-i18n="s2.5.c4">Wykorzystanie wizerunku do celów promocji Recomly – na podstawie dobrowolnej zgody (art. 6 ust. 1 lit. a RODO).</li>
+    </ol>
+    <p data-i18n-html="s2.5.retention"><strong>Czas przechowywania:</strong> Przez czas trwania współpracy, a następnie przez 5 lat liczonych od końca roku kalendarzowego, w którym rozliczono podatki z tytułu prowizji. W przypadku zgody na wykorzystanie wizerunku - do momentu jej wycofania.</p>
+
+    <!-- §3 Profilowanie i AI -->
+    <h2 data-i18n="s3.h">§3. Profilowanie i mechanizmy sztucznej inteligencji (AI)</h2>
+    <ol>
+      <li data-i18n-html="s3.l1"><strong>Profil Gustu (zawsze aktywny – art. 6 ust. 1 lit. b RODO):</strong> W ramach podstawowej usługi Aplikacji tworzymy model Twoich upodobań kulinarnych na podstawie jawnie podanych danych: wyborów z onboardingu, wystawionych recenzji, ocen, zapisanych folderów i obserwowanych miejsc. Pozwala to na prezentowanie trafnych rekomendacji i wskaźnika procentowego dopasowania Restauracji.</li>
+      <li data-i18n-html="s3.l2"><strong>Profil Behawioralny (wyłącznie za Twoją zgodą – art. 6 ust. 1 lit. a RODO):</strong> Jeśli wyrazisz zgodę „Personalizacja”, analizujemy Twoje zachowania w Aplikacji (wyszukiwania, kliknięcia, czas przeglądania lokali, zapytania do asystenta Remi). Wycofanie zgody powoduje natychmiastowe zaprzestanie tworzenia profilu behawioralnego.</li>
+      <li data-i18n-html="s3.l3"><strong>Brak decyzji w pełni zautomatyzowanych wywołujących skutki prawne:</strong> Żadne z prowadzonych działań profilujących nie stanowi profilowania w rozumieniu art. 22 RODO – nie wywołuje wobec Ciebie skutków prawnych ani nie wpływa na Ciebie w podobnie istotny sposób (wpływa jedynie na dobór wyświetlanych propozycji lokali).</li>
+      <li data-i18n-html="s3.l4"><strong>Asystent AI (Remi):</strong> Rozmowa z asystentem Remi jest przetwarzana z wykorzystaniem zewnętrznego modelu AI (OpenAI). Kontekst rozmowy jest przechowywany w pamięci sesyjnej przez 30 minut. Do dostawcy modelu przesyłana jest treść zapytania, wcześniejsze wiadomości z tej samej rozmowy oraz lokalizacja wyszukiwania, bez identyfikatora Twojego konta ani Twoich danych osobowych, o ile sam ich dobrowolnie nie podasz w zapytaniu skierowanym do Remi.</li>
+    </ol>
+
+    <!-- §4 Odbiorcy -->
+    <h2 data-i18n="s4.h">§4. Komu przekazujemy Twoje dane?</h2>
+    <p data-i18n="s4.p1">Twoje dane przekazujemy wyłącznie zaufanym podmiotom, z którymi zawarliśmy umowy powierzenia przetwarzania danych (art. 28 RODO) lub które posiadają odrębną podstawę prawną do ich otrzymania.</p>
+    <p data-i18n="s4.p2">Poniżej przedstawiamy listę naszych usługodawców:</p>
     <ul>
-      <li data-i18n-html="s6.l1"><strong>Supabase Inc.</strong> - infrastruktura bazodanowa strony internetowej recomly.app, region Frankfurt (Niemcy), EOG</li>
-      <li data-i18n-html="s6.l9"><strong>Google Cloud</strong> - infrastruktura Aplikacji (serwery, baza danych, przechowywanie plików), region Warszawa (Polska), EOG</li>
-      <li data-i18n-html="s6.l2"><strong>Google LLC / Firebase</strong> - logowanie, powiadomienia push, raporty awarii (Firebase Crashlytics), zamiana współrzędnych na adres (usługa systemowa Android), weryfikacja integralności aplikacji (Firebase App Check)</li>
-      <li data-i18n-html="s6.l3"><strong>Apple Inc.</strong> - logowanie „Sign in with Apple", powiadomienia push, zamiana współrzędnych na adres (usługa systemowa iOS), weryfikacja integralności aplikacji (Firebase App Check)</li>
-      <li data-i18n-html="s6.l5"><strong>Vercel Inc.</strong> - hosting strony internetowej</li>
-      <li data-i18n-html="s6.l7"><strong>PostHog</strong> - analityka produktowa (wyłącznie za Twoją zgodą „Analityka”, w powiązaniu z kontem), hosting w UE (region EU, Frankfurt), EOG</li>
-      <li data-i18n-html="s6.l10"><strong>Mapbox Inc. (USA)</strong> - wyświetlanie mapy; otrzymuje Twój adres IP oraz Twoją lokalizację, gdy mapa pokazuje Twoje położenie</li>
-      <li data-i18n-html="s6.l11"><strong>Google LLC – Google Maps Platform (USA)</strong> - podpowiedzi adresów, zdjęcia miejsc oraz zamiana nazw miejsc na współrzędne; otrzymuje wpisywany przez Ciebie tekst, nazwy miejsc z pytań do Remi oraz Twój adres IP</li>
-      <li data-i18n-html="s6.l12"><strong>Meilisearch (serwery we Frankfurcie, Niemcy)</strong> - wyszukiwanie; otrzymuje treść wyszukiwania</li>
-      <li data-i18n-html="s6.l8"><strong>OpenAI (USA)</strong> - odpowiada na pytania zadawane asystentowi Remi. Otrzymuje treść Twojego pytania, wcześniejsze wiadomości z tej samej rozmowy oraz lokalizację wyszukiwania, bez identyfikatora Twojego konta. OpenAI może przechowywać tę treść do 30 dni w celu monitorowania nadużyć i nie wykorzystuje jej do trenowania swoich modeli</li>
-      <li data-i18n-html="s6.l13"><strong>Miejsca partnerskie</strong> - otrzymują dane o wizytach opisane w §2 („Wizyty w miejscach partnerskich”), bez Twojego imienia ani profilu, oraz łączną kwotę wynagrodzenia Twórców za wizytę, bez danych o Twojej aktywności w Aplikacji</li>
-      <li data-i18n-html="s6.l14"><strong>Twórcy</strong> - otrzymują informację o należnym im wynagrodzeniu, bez Twoich danych</li>
-      <li data-i18n-html="s6.l6"><strong>Organy państwowe</strong> - w przypadkach wymaganych przepisami prawa</li>
+      <li data-i18n-html="s4.l1"><strong>Google Cloud Polska:</strong> infrastruktura Aplikacji (serwery, baza danych, przechowywanie plików) (Warszawa, Polska, EOG).</li>
+      <li data-i18n-html="s4.l2"><strong>Supabase Inc.:</strong> infrastruktura bazodanowa Serwisu (Frankfurt, Niemcy, EOG).</li>
+      <li data-i18n-html="s4.l3"><strong>Vercel Inc.:</strong> hosting witryny Serwisu.</li>
+      <li data-i18n-html="s4.l4"><strong>Firebase:</strong> autoryzacja kont, weryfikacja integralności aplikacji, powiadomienia push, raporty awarii.</li>
+      <li data-i18n-html="s4.l5"><strong>Apple Inc.:</strong> obsługa logowania „Sign in with Apple” oraz powiadomień push dla systemu iOS (USA).</li>
+      <li data-i18n-html="s4.l6"><strong>PostHog Inc.:</strong> analityka produktowa sposobu korzystania z Aplikacji i Serwisu (Frankfurt, Niemcy, EOG).</li>
+      <li data-i18n-html="s4.l7"><strong>Meilisearch:</strong> silnik wyszukiwania w aplikacji, który otrzymuje treść wyszukiwania (Frankfurt, Niemcy).</li>
+      <li data-i18n-html="s4.l8"><strong>Mapbox Inc.:</strong> generowanie mapy; otrzymuje adres IP oraz koordynaty lokalizacji wyłącznie podczas wyświetlania mapy (USA).</li>
+      <li data-i18n-html="s4.l9"><strong>Google Maps Platform:</strong> geokodowanie i podpowiedzi adresów; otrzymuje wpisywany przez Ciebie tekst, nazwy miejsc z pytań do Remi oraz Twój adres IP.</li>
+      <li data-i18n-html="s4.l10"><strong>OpenAI, L.L.C.:</strong> odpowiada na pytania zadawane asystentowi Remi. Otrzymuje treść Twojego pytania, wcześniejsze wiadomości z tej samej rozmowy oraz lokalizację wyszukiwania, bez identyfikatora Twojego konta (USA). OpenAI może przechowywać tę treść do 30 dni w celu monitorowania nadużyć i nie wykorzystuje jej do trenowania swoich modeli.</li>
     </ul>
-    <p data-i18n="s6.p1">Nie sprzedajemy ani nie udostępniamy danych użytkowników podmiotom trzecim w celach marketingowych.</p>
+    <p data-i18n="s4.p3">Dodatkowo Twoje dane mogą otrzymać Restauracje, czyli nasze lokale partnerskie, w zakresie opisanym w §2 wyżej, wraz z łączną kwotą wynagrodzenia Twórców za wizytę, bez danych o Twojej aktywności w Aplikacji. Twórcy otrzymują informację o należnym im wynagrodzeniu, bez Twoich danych.</p>
+    <p data-i18n="s4.p4">Możemy udostępnić Twoje dane uprawnionym organom państwowym na podstawie przepisów prawa, audytorom, doradcom prawnym i księgowym, a także dostawcom usług IT (np. poczty elektronicznej w przypadku kontaktu mailowego, portalom społecznościowym w przypadku interakcji na tych portalach), bankom (w przypadku dokonywania płatności), kurierom lub operatorom pocztowym (w przypadku korespondencji pisemnej), a także innym użytkownikom Aplikacji w zakresie, w jakim dane są publiczne w Serwisie.</p>
+    <p data-i18n="s4.p5">Nie sprzedajemy ani nie udostępniamy danych użytkowników podmiotom trzecim w celach marketingowych.</p>
 
-    <!-- §7 Odpowiedzialność -->
-    <h2 data-i18n="s7.h">§7. Odpowiedzialność</h2>
-    <p data-i18n="s7.p1">Użytkownik odpowiada za prawdziwość i aktualność podawanych przez siebie danych. Recomly dokłada należytej staranności przy doborze podmiotów przetwarzających dane w jej imieniu (§6), jednak nie ponosi odpowiedzialności za zdarzenia leżące poza jej kontrolą, w szczególności za naruszenia bezpieczeństwa powstałe wyłącznie po stronie takich podmiotów, działających zgodnie z własnymi politykami prywatności i umowami powierzenia.</p>
+    <!-- §5 Transfer poza EOG -->
+    <h2 data-i18n="s5.h">§5. Transfer danych poza Europejski Obszar Gospodarczy</h2>
+    <p data-i18n-html="s5.p1">W związku z korzystaniem przez nas z usług niektórych dostawców IT Twoje dane osobowe mogą być przekazywane do państw trzecich, w szczególności do USA. Przekazywanie danych poza EOG następuje z zachowaniem wymogów Rozdziału V RODO, w oparciu o decyzję wykonawczą Komisji Europejskiej stwierdzającą odpowiedni stopień ochrony danych w ramach Ram Prywatności Danych UE-USA (EU-U.S. Data Privacy Framework – DPF) – w odniesieniu do podmiotów wpisanych na aktywną listę certyfikowanych uczestników DPF – i/lub Standardowe Klauzule Umowne (SCC) przyjęte przez Komisję Europejską na mocy decyzji wykonawczej, zawarte w umowach powierzenia przetwarzania danych z dostawcami. W celu zapewnienia bezpieczeństwa transferowanych danych stosujemy wraz z dostawcami właściwe zabezpieczenia techniczne i organizacyjne. Masz prawo uzyskać kopię stosowanych zabezpieczeń lub informację o miejscu ich udostępnienia, przesyłając wniosek na nasz adres e-mail: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a>.</p>
 
-    <!-- §8 Transfer poza EOG -->
-    <h2 data-i18n="s8.h">§8. Transfer danych poza EOG</h2>
-    <p data-i18n="s8.p1">Dane Aplikacji (baza danych, pliki i serwery) przechowywane są w Google Cloud w regionie Warszawa (Polska), a dane strony internetowej - na serwerach Supabase w regionie Frankfurt (Niemcy), w obu przypadkach w obrębie EOG. Dostawcy z siedzibą w USA (Google/Firebase, Google Maps Platform, Apple, Mapbox, OpenAI) mogą przetwarzać dane poza EOG - na podstawie standardowych klauzul umownych zatwierdzonych przez Komisję Europejską (art. 46 RODO) lub w ramach EU-U.S. Data Privacy Framework, o ile dany dostawca do niego przystąpił.</p>
+    <!-- §6 Prawa -->
+    <h2 data-i18n="s6.h">§6. Jakie prawa Ci przysługują?</h2>
+    <p data-i18n="s6.p1">Zgodnie z RODO przysługują Ci następujące prawa:</p>
+    <ol>
+      <li data-i18n-html="s6.l1"><strong>Prawo dostępu do danych</strong> (art. 15 RODO) oraz uzyskania ich kopii.</li>
+      <li data-i18n-html="s6.l2"><strong>Prawo do sprostowania (poprawienia) danych</strong> (art. 16 RODO).</li>
+      <li data-i18n-html="s6.l3"><strong>Prawo do usunięcia danych</strong> („prawo do bycia zapomnianym” – art. 17 RODO).</li>
+      <li data-i18n-html="s6.l4"><strong>Prawo do ograniczenia przetwarzania</strong> (art. 18 RODO), jeśli Twoje dane osobowe są nieprawidłowe – możesz żądać ograniczenia przetwarzania Twoich danych osobowych na okres pozwalający nam sprawdzić prawidłowość tych danych; Twoje dane osobowe będą przetwarzane niezgodnie z prawem, ale nie będziesz chciał/a, aby zostały usunięte; Twoje dane osobowe nie będą nam już potrzebne, ale mogą być potrzebne Tobie do obrony lub dochodzenia roszczeń; wniesiesz sprzeciw wobec przetwarzania danych osobowych – do czasu ustalenia, czy prawnie uzasadnione podstawy po naszej stronie są nadrzędne wobec podstawy sprzeciwu.</li>
+      <li data-i18n-html="s6.l5"><strong>Prawo do przenoszenia danych</strong> (art. 20 RODO), jeśli przetwarzanie Twoich danych osobowych odbywa się na podstawie Twojej zgody lub stosunku umownego łączącego Cię z Recomly, oraz gdy przetwarzanie to odbywa się w sposób zautomatyzowany.</li>
+      <li data-i18n-html="s6.l6"><strong>Prawo do sprzeciwu</strong> (art. 21 RODO): masz prawo wnieść sprzeciw wobec przetwarzania opartego na naszym prawnie uzasadnionym interesie (art. 6 ust. 1 lit. f RODO).</li>
+      <li data-i18n-html="s6.l7"><strong>Prawo do wycofania zgody</strong> (art. 7 ust. 3 RODO): w zakresie, w jakim dane przetwarzamy na podstawie Twojej zgody, masz prawo ją cofnąć w dowolnym momencie. Wycofanie zgody nie wpływa na legalność przetwarzania sprzed jej cofnięcia.</li>
+      <li data-i18n-html="s6.l8"><strong>Prawo do wniesienia skargi do organu nadzorczego:</strong> jeśli uznasz, że przetwarzamy Twoje dane niezgodnie z prawem, masz prawo wnieść skargę do organu nadzorczego, którym w Polsce jest Prezes Urzędu Ochrony Danych Osobowych z siedzibą w Warszawie.</li>
+    </ol>
+    <p data-i18n-html="s6.p2">W celu realizacji swoich praw napisz do nas maila na adres: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></p>
 
-    <!-- §9 Prawa -->
-    <h2 data-i18n="s9.h">§9. Twoje prawa</h2>
-    <p data-i18n-html="s9.p1">Dostępu (art. 15), sprostowania (art. 16), usunięcia (art. 17), ograniczenia przetwarzania (art. 18), przenoszenia danych (art. 20), sprzeciwu (art. 21) oraz wycofania zgody (art. 7 ust. 3 RODO) w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania dokonanego przed wycofaniem. Zgody „Personalizacja” i „Analityka” możesz wycofać samodzielnie w Aplikacji (Ustawienia → Prywatność). Przysługuje Ci też prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa, <a href="https://uodo.gov.pl">uodo.gov.pl</a>).</p>
-    <p data-i18n="s9.p2">W celu realizacji powyższych praw skontaktuj się z nami pod adresem kontakt@recomly.app. Odpowiedź otrzymasz w terminie 30 dni, w uzasadnionych przypadkach wydłużonym o kolejne 60 dni.</p>
+    <!-- §7 Obowiązek podania danych -->
+    <h2 data-i18n="s7.h">§7. Obowiązek podania danych i skutki ich niepodania</h2>
+    <p data-i18n="s7.p1">Podanie przez Ciebie danych osobowych jest co do zasady dobrowolne, jednak w określonych sytuacjach stanowi warunek zawarcia umowy lub wymóg ustawowy:</p>
+    <ol>
+      <li data-i18n-html="s7.l1">Zalogowani Użytkownicy Aplikacji:
+        <ol>
+          <li>Podanie adresu e-mail, numeru telefonu (oraz hasła lub danych konta Apple/Google) jest warunkiem umownym zawarcia i realizacji umowy o świadczenie usług drogą elektroniczną (założenia Konta w Serwisie). Konsekwencją niepodania tych danych lub odmowy weryfikacji numeru telefonu kodem SMS jest brak możliwości zarejestrowania i korzystania z konta w Serwisie.</li>
+          <li>Podanie danych profilowych (np. imię, zdjęcie, preferencje kulinarne) jest dobrowolne, ale niezbędne do korzystania z funkcji społecznościowych oraz prawidłowego działania profilu gustu użytkownika.</li>
+        </ol>
+      </li>
+      <li data-i18n="s7.l2">Korzystanie z benefitów i wizyty: Okazanie kodu QR / kodu Użytkownika w Restauracji jest wymogiem umownym skorzystania ze zniżki lub dedykowanej oferty. Konsekwencją odmowy okazania kodu jest brak naliczenia benefitu i konieczność uregulowania standardowego rachunku w lokalu.</li>
+      <li data-i18n="s7.l3">Zgody opcjonalne (Personalizacja behawioralna, analityka, powiadomienia push, wykorzystanie wizerunku): Podanie danych i wyrażenie zgód jest w pełni dobrowolne. Odmowa ich udzielenia nie wywołuje żadnych negatywnych skutków – możesz bez przeszkód korzystać z podstawowych funkcji Aplikacji i zniżek w Restauracjach.</li>
+      <li data-i18n="s7.l4">Osoby kontaktujące się z nami (e-mail, formularze, social media): podanie danych (np. e-mail, imię, treść zapytania) jest dobrowolne, lecz niezbędne do odebrania zgłoszenia i udzielenia odpowiedzi. Brak ich podania uniemożliwi nam kontakt z Tobą.</li>
+      <li data-i18n-html="s7.l5">Partnerzy biznesowi, personel Restauracji, Ambasadorzy i Twórcy:
+        <ol>
+          <li>Podanie danych osób reprezentujących oraz koordynatorów jest warunkiem zawarcia i realizacji umowy o współpracy partnerskiej.</li>
+          <li>Podanie danych personelu Restauracji (imię, służbowy e-mail) jest niezbędne do utworzenia konta dla członka personelu Restauracji.</li>
+          <li>Podanie danych rozliczeniowych i podatkowych (NIP, adres, rachunek bankowy) przez przedsiębiorców jest wymogiem ustawowym wynikającym z przepisów. Brak ich podania uniemożliwia zawarcie umowy, rozliczenie prowizji oraz wypłatę wynagrodzenia.</li>
+        </ol>
+      </li>
+    </ol>
 
-    <!-- §10 Dzieci -->
-    <h2 data-i18n="s10.h">§10. Dzieci</h2>
-    <p data-i18n="s10.p1">Aplikacja nie jest kierowana do osób poniżej 16 roku życia i nie zbieramy świadomie danych takich osób. Jeśli dowiemy się, że konto założyła osoba poniżej 16 roku życia, niezwłocznie usuniemy to konto i dane tej osoby.</p>
+    <!-- §8 Dzieci -->
+    <h2 data-i18n="s8.h">§8. Ochrona prywatności osób poniżej 16. roku życia</h2>
+    <p data-i18n="s8.p1">Aplikacja Recomly oraz Serwis są przeznaczone dla osób, które ukończyły 16 lat. Nie zbieramy świadomie danych od osób młodszych. Jeśli poweźmiemy informację, że konto założyła osoba poniżej 16. roku życia bez wymaganej zgody rodzica lub opiekuna prawnego, niezwłocznie usuniemy to konto oraz wszelkie powiązane z nim dane.</p>
 
-    <!-- §11 Uprawnienia systemowe -->
-    <h2 data-i18n="s11.h">§11. Uprawnienia systemowe (iOS / Android)</h2>
-    <p data-i18n="s11.p1">Aplikacja może prosić o dostęp do lokalizacji - wykorzystywanej wyłącznie do wyników „w pobliżu” i pokazywania Twojego położenia na mapie, i tylko podczas korzystania z Aplikacji (nie śledzimy Twojej lokalizacji w tle); do aparatu i galerii zdjęć - w celu dodawania zdjęć do recenzji; oraz do wysyłania powiadomień push - w celu informowania o aktywności znajomych i nowościach. Wszystkie powyższe uprawnienia są opcjonalne - odmowa ich udzielenia nie uniemożliwia korzystania z podstawowych funkcji Aplikacji.</p>
+    <!-- §9 Uprawnienia systemowe -->
+    <h2 data-i18n="s9.h">§9. Uprawnienia systemowe w Aplikacji (Android / iOS)</h2>
+    <p data-i18n="s9.p1">Dla prawidłowego działania poszczególnych funkcji Aplikacja może poprosić Cię o zgodę na dostęp do:</p>
+    <ol>
+      <li data-i18n="s9.l1">Lokalizacji urządzenia: wyłącznie podczas korzystania z Aplikacji (nigdy w tle), w celu pokazania Twojej pozycji na mapie i lokali w pobliżu.</li>
+      <li data-i18n="s9.l2">Aparatu i galerii zdjęć: wyłącznie w celu dodawania zdjęć do publikowanych przez Ciebie recenzji potraw i lokali.</li>
+      <li data-i18n="s9.l3">Powiadomień push: w celu wysyłania informacji o aktywności znajomych, nowych benefitach lub potwierdzeniach transakcji.</li>
+    </ol>
+    <p data-i18n="s9.p2">Wszystkie powyższe uprawnienia są opcjonalne i możesz nimi zarządzać w dowolnym momencie, a odmowa ich udzielenia nie uniemożliwia korzystania z podstawowych funkcji Aplikacji.</p>
 
-    <!-- §12 Cookies -->
-    <h2 data-i18n="s12.h">§12. Pliki cookies</h2>
-    <p data-i18n="s12.p1">Strona recomly.app używa cookies niezbędnych do jej działania oraz - na podstawie odrębnej, dobrowolnej zgody wyrażanej w banerze cookies - cookies analitycznych i marketingowych. Pełną, aktualną listę cookies wraz z ich celem i czasem przechowywania udostępniamy w banerze zgody na stronie. Aplikacja mobilna nie wykorzystuje plików cookies, lecz identyfikatory urządzenia i tokeny SDK opisane w §2 i §6.</p>
+    <!-- §10 Cookies -->
+    <h2 data-i18n="s10.h">§10. Pliki cookies i śledzenie na stronie Serwisu</h2>
+    <p data-i18n="s10.p1">Pliki cookies to niewielkie informacje tekstowe zapisywane i odczytywane w pamięci Twojego urządzenia końcowego (np. komputera, smartfona). Na stronie internetowej Serwisu wykorzystujemy pliki cookies:</p>
+    <ul>
+      <li data-i18n="s10.l1">Niezbędne (techniczne): kluczowe dla prawidłowego wyświetlania witryny i jej bezpieczeństwa. Stosowanie tych plików nie wymaga Twojej uprzedniej zgody, a ich zablokowanie może uniemożliwić korzystanie ze strony.</li>
+      <li data-i18n="s10.l2">Opcjonalne (analityczne i marketingowe): aktywowane wyłącznie po wyrażeniu przez Ciebie zgody w banerze cookies.</li>
+    </ul>
+    <p data-i18n="s10.p2">Możesz w każdej chwili zmienić preferencje dotyczące cookies za pośrednictwem banera na stronie Serwisu. Pełną, aktualną listę cookies wraz z ich celem i czasem przechowywania udostępniamy w banerze zgody na stronie Serwisu. Wycofanie zgody nie wpływa na zgodność z prawem działań dokonanych przed jej wycofaniem. Możesz również w każdej chwili samodzielnie zablokować lub usunąć pliki cookies, konfigurując ustawienia swojej przeglądarki internetowej.</p>
 
-    <!-- §13 Bezpieczeństwo -->
-    <h2 data-i18n="s13.h">§13. Bezpieczeństwo danych</h2>
-    <p data-i18n="s13.p1">Stosujemy szyfrowanie połączenia (SSL/TLS) i danych w spoczynku, ograniczony dostęp do bazy danych, regularne kopie zapasowe, silne hasła i uwierzytelnianie wieloskładnikowe dla kont administracyjnych oraz zasadę najmniejszych uprawnień.</p>
+    <!-- §11 Bezpieczeństwo -->
+    <h2 data-i18n="s11.h">§11. Bezpieczeństwo danych</h2>
+    <p data-i18n="s11.p1">Stosujemy szyfrowanie połączenia (SSL/TLS) i danych w spoczynku, ograniczony dostęp do bazy danych, regularne kopie zapasowe, silne hasła i uwierzytelnianie wieloskładnikowe dla kont administracyjnych oraz zasadę najmniejszych uprawnień.</p>
 
-    <!-- §14 Naruszenie ochrony danych -->
-    <h2 data-i18n="s14.h">§14. Naruszenie ochrony danych</h2>
-    <p data-i18n="s14.p1">W przypadku naruszenia ochrony danych osobowych Recomly zgłosi je Prezesowi UODO w ciągu 72 godzin (art. 33 RODO), zawiadomi osoby, których dane dotyczą, jeśli naruszenie może powodować wysokie ryzyko naruszenia ich praw lub wolności (art. 34 RODO), oraz podejmie działania w celu usunięcia naruszenia i zapobieżenia jego skutkom.</p>
+    <!-- §12 Odnośniki -->
+    <h2 data-i18n="s12.h">§12. Odnośniki do stron trzecich</h2>
+    <p data-i18n="s12.p1">Klikając w linki zamieszczone na Stronie lub w Aplikacji, możesz zostać przekierowana/y do stron internetowych lub serwisów społecznościowych, które są administrowane lub stanowią usługę świadczoną przez podmioty niezależne od Recomly. W takim przypadku proces przetwarzania danych osobowych odbywa się zgodnie z zasadami określonymi przez te podmioty.</p>
 
-    <!-- §15 Zmiany -->
-    <h2 data-i18n="s15.h">§15. Zmiany Polityki prywatności</h2>
-    <p data-i18n="s15.p1">Recomly zastrzega sobie prawo do zmiany niniejszej Polityki w każdym czasie. O istotnych zmianach poinformujemy poprzez aktualizację daty na początku dokumentu oraz - w miarę potrzeby - drogą emailową lub powiadomieniem w aplikacji.</p>
-
-    <!-- §16 Postanowienia końcowe -->
-    <h2 data-i18n="s16.h">§16. Postanowienia końcowe</h2>
-    <p data-i18n="s16.p1">W sprawach nieuregulowanych niniejszą Polityką zastosowanie mają przepisy RODO oraz polskiej Ustawy o ochronie danych osobowych z dnia 10 maja 2018 r. Nieważność któregokolwiek postanowienia nie wpływa na ważność pozostałych (klauzula salwatoryjna).</p>
-    <p data-i18n-html="s16.p2">Pytania dotyczące przetwarzania danych osobowych: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></p>
+    <!-- §13 Zmiany -->
+    <h2 data-i18n="s13.h">§13. Zmiany Polityki prywatności</h2>
+    <p data-i18n="s13.p1">Recomly zastrzega sobie prawo do zmiany niniejszej Polityki w każdym czasie. O istotnych zmianach poinformujemy Cię poprzez aktualizację daty na początku dokumentu oraz - w miarę potrzeby - drogą mailową lub powiadomieniem w Aplikacji lub na stronie Serwisu.</p>
+    <p data-i18n-html="s13.p2">Aktualna wersja Polityki prywatności jest zawsze dostępna w Aplikacji mobilnej oraz pod adresem: <a href="https://recomly.app/privacy">https://recomly.app/privacy</a>.</p>
   </div>
 </main>
 
@@ -205,82 +284,138 @@
       "nav.back": "← Back",
       "footer.privacy": "Privacy policy",
       "footer.terms": "Terms",
-      "meta": "Effective from: October 25, 2026",
+      "meta": "Effective from: November 2, 2026",
       "title": "Privacy Policy",
-      "intro": "This Privacy Policy describes how Recomly sp. z o.o. processes the personal data of users of the Recomly mobile application (iOS and Android) and the recomly.app website, in accordance with GDPR and Polish data protection regulations.",
-      "s1.h": "§1. Data Controller",
-      "s1.p1": "<strong>Recomly sp. z o.o.</strong><br/> Kasprzaka 31A St., Warsaw, Poland<br/> Tax ID (NIP): 5273199463<br/> Court Register (KRS): 0001214798<br/> District Court for the Capital City of Warsaw, 12th Commercial Division of the National Court Register<br/> Email: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>",
-      "s1.p2": "A Data Protection Officer has not been appointed. For all matters related to the processing of personal data, please contact us at the email address indicated above.",
-      "s2.h": "§2. What data we collect",
-      "s2.p1": "We collect the data necessary for the operation of the Application (Article 5(1)(c) GDPR), and the data marked below as optional - only with your consent:",
-      "s2.l1": "<strong>Account data</strong> - email address (or Google/Apple account) and a phone number verified by SMS code - to confirm that the account is genuine; when using social login (Google, Apple) - name, email, account identifier, profile photo; password (in encrypted form), if the account is created without social login",
-      "s2.l2": "<strong>Profile data</strong> - name, username, profile photo, description, links to social media profiles (optional) and the culinary preferences you provide (Taste Graph) - for tailoring recommendations",
-      "s2.l3": "<strong>Social data</strong> - relationships and connections between users stored by the Application",
-      "s2.l4": "<strong>Activity data</strong> - ratings, reviews, photos and content interactions",
-      "s2.l11": "<strong>Visits at partner places</strong> - when you show your Recomly code (QR or 6-digit code) at a partner place, the place's staff record a visit: the place, the date and time, the discount, the bill amount, an optional service amount and, if the place requires it, a photo of the receipt. Staff do not see your name or profile. We process this data to give you the discount (Article 6(1)(b) GDPR) and to settle with the partner place (Article 6(1)(f) GDPR, our legitimate interest in billing partners). When you delete your account, visits are unlinked from you and kept without your identity for billing purposes",
-      "s2.l12": "<strong>Creator referrals</strong> - when you open a verified Creator's review, get directions or call the place from it, save the place, or sign up with a Creator's referral link or code, we record: you, the Creator, the place, the type of action and its time. We use this data only to work out which Creators are owed a fee for your visit at a partner place. It does not affect your recommendations and does not depend on the \"Personalization\" consent",
-      "s2.l13": "<strong>Referral link or code</strong> - if you install the Application from a Creator's referral link, the Application reads the referral code on first launch: on Android from the Google Play link, and on iOS from the clipboard, only after you tap \"Paste\". You can remove the code before creating your account",
-      "s2.l9": "<strong>Application usage data (optional, with the \"Personalization\" consent)</strong> - places and content viewed, time spent viewing them, searches, questions asked to the Remi assistant and recommendations shown. Based on this we build your behavioral profile (profiling) to tailor recommendations. Without this consent we do not use this data for personalization",
-      "s2.l5": "<strong>Location data</strong> - collected only while actively using the application (not in the background), to show nearby recommendations",
-      "s2.l6": "<strong>Technical and analytical data</strong> - device identifier, operating system, application version, push notification token and the date of your last activity in the Application. <strong>Optionally, only with the \"Analytics\" consent</strong>, we also collect data on Application usage, such as events, screens visited and search phrases you type (PostHog), and link it to your account (account identifier, email address, account creation date). Without this consent we do not collect Application usage data. Events from before your decision (e.g. while creating your account) are kept only in your device's memory: we send them only once you consent, and delete them otherwise. Server logs may contain the content of requests (including questions asked to Remi, together with the account identifier) and the search location; we keep them for up to 30 days (Google Cloud Logging). This data is not used for cross-app/cross-site tracking or targeted advertising",
-      "s2.l10": "<strong>Crash reports</strong> - information about Application errors and crashes, without email address or other contact details (Firebase Crashlytics). We attach your account identifier to them only with the \"Analytics\" consent",
-      "s2.p2": "We do not make decisions based solely on automated processing of data, including profiling, that produce legal effects or similarly significantly affect the data subject. The profiling described above only affects the selection and order of the recommendations shown.",
-      "s2.p3": "<strong>Taste profile.</strong> We build a taste profile from your reviews, ratings, onboarding choices and folders. It is a core part of the service (recommendations and match scores) and is processed on the basis of Article 6(1)(b) GDPR. It is always on while you have an account.",
-      "s2.p4": "<strong>Behavioral profile.</strong> With your consent, we also use your activity in the app: places you view, your searches, your questions to Remi and the recommendations we showed you. This is based on your consent (Article 6(1)(a) GDPR). You can withdraw it at any time in the app settings. Withdrawing it doesn't affect processing that happened before.",
-      "s2.p5": "<strong>What other users see.</strong> Your profile (name, username, photo, description, social media links), your reviews, your public folders and your followers and following lists are visible to all logged-in Recomly users.",
-      "s3.h": "§3. Purposes and legal bases of processing",
-      "s3.p1": "We process data to maintain your account and provide the Application's services - including recommendations based on friends, the preferences you provide and location - and to enable social login, based on performance of the contract/terms of service (Article 6(1)(b) GDPR). On the same basis (Article 6(1)(b) GDPR) we build your taste profile from your reviews, ratings, onboarding choices and folders. We build your behavioral profile, i.e. personalize recommendations based on your activity in the Application (profiling), solely on the basis of your \"Personalization\" consent (Article 6(1)(a) GDPR). We carry out Application usage analytics solely on the basis of your \"Analytics\" consent (Article 6(1)(a) GDPR); without this consent we do not carry it out. Both consents are voluntary, independent of each other and off by default, and not giving them does not limit the Application's core features. You can change them at any time in the Application (Settings → Privacy). Sending push notifications is carried out solely on the basis of your consent (Article 6(1)(a) GDPR). We collect crash reports to keep the Application stable and secure, based on our legitimate interest (Article 6(1)(f) GDPR); we attach your account identifier to them only with the \"Analytics\" consent (Article 6(1)(a) GDPR). We record the date of your last activity in the Application to count aggregate active-user statistics, based on our legitimate interest (Article 6(1)(f) GDPR); we keep only the latest date, not an activity history. We process creator referrals to settle Creator fees with partner places, based on our legitimate interest (Article 6(1)(f) GDPR); you can object to this processing (§9). We handle requests exercising data subject rights as part of a legal obligation (Article 6(1)(c) GDPR), and any pursuit or defense against claims - as part of our legitimate interest (Article 6(1)(f) GDPR).",
-      "s4.h": "§4. Data retention period",
-      "s4.l1": "<strong>Account and profile data</strong> - for as long as the account exists",
-      "s4.l2": "<strong>Reviews, ratings, photos and folders</strong> - until you delete your account",
-      "s4.l8": "<strong>Location</strong> - we store no location history. Your default search location (a city, an address or a point you choose) is kept until you change it or delete your account. The search point saved with personalization signals is rounded to about 100 m, stored only with your consent, and kept for 12 months",
-      "s4.l6": "<strong>Application usage data (personalization, behavioral signals)</strong> - up to 12 months; after you withdraw consent, we stop collecting it and using it for personalization",
-      "s4.l9": "<strong>Visits at partner places</strong> - linked to your account until you delete it, then kept without your identity for as long as billing and accounting law requires",
-      "s4.l12": "<strong>Creator referrals</strong> - up to 400 days; those used to settle a visit are kept with the billing data, without your identity",
-      "s4.l4": "<strong>Product analytics (PostHog)</strong> - up to 13 months; data linked to your account is deleted earlier if you delete your account",
-      "s4.l7": "<strong>Crash reports (Firebase Crashlytics)</strong> - up to 90 days",
-      "s4.l10": "<strong>Remi conversation context</strong> - 30 minutes",
-      "s4.l11": "<strong>Server logs (Google Cloud Logging)</strong> - up to 30 days",
-      "s4.l5": "<strong>After account deletion</strong> - data is deleted within a reasonable period, not exceeding 30 days, except for data we must retain longer due to legal obligations (e.g. tax) or the pursuit of claims, until the expiry of their limitation period",
-      "s5.h": "§5. Account deletion",
-      "s5.p1": "You can delete your account at any time - in the Application (Settings → Delete account) or via the page <a href=\"https://auth.recomly.app/delete-account/\">https://auth.recomly.app/delete-account/</a>, without needing to contact support. Deleting your account results in the deletion of profile data, activity history, Application usage data, social data, stored consents and analytical data linked to the account, in accordance with §4. Creator referrals are deleted. Visits at partner places and data on settled Creator fees are unlinked from the account and kept without your identity for billing purposes.",
-      "s6.h": "§6. Data recipients",
-      "s6.l1": "<strong>Supabase Inc.</strong> - database infrastructure for the recomly.app website, Frankfurt (Germany) region, EEA",
-      "s6.l9": "<strong>Google Cloud</strong> - Application infrastructure (servers, database, file storage), Warsaw (Poland) region, EEA",
-      "s6.l2": "<strong>Google LLC / Firebase</strong> - login, push notifications, crash reports (Firebase Crashlytics), converting coordinates into an address (Android system service), app integrity verification (Firebase App Check)",
-      "s6.l3": "<strong>Apple Inc.</strong> - \"Sign in with Apple\" login, push notifications, converting coordinates into an address (iOS system service), app integrity verification (Firebase App Check)",
-      "s6.l5": "<strong>Vercel Inc.</strong> - website hosting",
-      "s6.l7": "<strong>PostHog</strong> - product analytics (only with your \"Analytics\" consent, linked to your account), hosted in the EU (EU region, Frankfurt), EEA",
-      "s6.l10": "<strong>Mapbox Inc. (USA)</strong> - displays the map; receives your IP address and your location when the map shows your position",
-      "s6.l11": "<strong>Google LLC – Google Maps Platform (USA)</strong> - address suggestions, place photos and converting place names into coordinates; receives the text you type, place names from your questions to Remi and your IP address",
-      "s6.l12": "<strong>Meilisearch (servers in Frankfurt, Germany)</strong> - search; receives the search text",
-      "s6.l8": "<strong>OpenAI (USA)</strong> - answers questions you ask Remi. Receives the text of your question, earlier messages from the same conversation and the search location, without your account identifier. OpenAI may keep the text for up to 30 days to monitor abuse and does not use it to train its models",
-      "s6.l13": "<strong>Partner places</strong> - receive the visit data described in §2 (\"Visits at partner places\"), without your name or profile, and the total Creator fee for the visit, without data about your activity in the Application",
-      "s6.l14": "<strong>Creators</strong> - receive information about the fees they are owed, without your data",
-      "s6.l6": "<strong>State authorities</strong> - in cases required by law",
-      "s6.p1": "We do not sell or share user data with third parties for marketing purposes.",
-      "s7.h": "§7. Liability",
-      "s7.p1": "The user is responsible for the accuracy and up-to-dateness of the data they provide. Recomly exercises due diligence in selecting entities that process data on its behalf (§6), but is not liable for events beyond its control, in particular security breaches occurring solely on the part of such entities, which act in accordance with their own privacy policies and data processing agreements.",
-      "s8.h": "§8. Data transfer outside the EEA",
-      "s8.p1": "Application data (database, files and servers) is stored in Google Cloud in the Warsaw (Poland) region, and website data on Supabase servers in the Frankfurt (Germany) region, in both cases within the EEA. Providers based in the USA (Google/Firebase, Google Maps Platform, Apple, Mapbox, OpenAI) may process data outside the EEA - on the basis of standard contractual clauses approved by the European Commission (Article 46 GDPR) or under the EU-U.S. Data Privacy Framework, to the extent the given provider has joined it.",
-      "s9.h": "§9. Your rights",
-      "s9.p1": "Access (Article 15), rectification (Article 16), erasure (Article 17), restriction of processing (Article 18), data portability (Article 20), objection (Article 21), and withdrawal of consent (Article 7(3) GDPR) at any time, without affecting the lawfulness of processing carried out before withdrawal. You can withdraw the \"Personalization\" and \"Analytics\" consents yourself in the Application (Settings → Privacy). You also have the right to lodge a complaint with the President of the Personal Data Protection Office (Stawki 2 St., 00-193 Warsaw, <a href=\"https://uodo.gov.pl\">uodo.gov.pl</a>).",
-      "s9.p2": "To exercise the above rights, contact us at kontakt@recomly.app. You will receive a response within 30 days, in justified cases extended by a further 60 days.",
-      "s10.h": "§10. Children",
-      "s10.p1": "The Application is not directed at persons under 16 years of age, and we do not knowingly collect data of such persons. If we learn that a person under 16 has created an account, we will delete that account and the person's data without delay.",
-      "s11.h": "§11. System permissions (iOS / Android)",
-      "s11.p1": "The Application may request access to location - used only for \"near me\" results and to show your position on the map, and only while you use the app (we don't track your location in the background); to the camera and photo gallery - to add photos to reviews; and to send push notifications - to inform about friends' activity and news. All of the above permissions are optional - refusing them does not prevent use of the Application's core features.",
-      "s12.h": "§12. Cookies",
-      "s12.p1": "The recomly.app website uses cookies necessary for its operation, and - based on separate, voluntary consent given via the cookie banner - analytical and marketing cookies. We provide a full, up-to-date list of cookies along with their purpose and retention period in the consent banner on the site. The mobile application does not use cookies, but rather device identifiers and SDK tokens described in §2 and §6.",
-      "s13.h": "§13. Data security",
-      "s13.p1": "We apply connection encryption (SSL/TLS) and encryption of data at rest, restricted access to the database, regular backups, strong passwords and multi-factor authentication for administrative accounts, and the principle of least privilege.",
-      "s14.h": "§14. Personal data breach",
-      "s14.p1": "In the event of a personal data breach, Recomly will report it to the President of the Personal Data Protection Office within 72 hours (Article 33 GDPR), notify the data subjects if the breach may result in a high risk to their rights or freedoms (Article 34 GDPR), and take action to remedy the breach and prevent its consequences.",
-      "s15.h": "§15. Changes to the Privacy Policy",
-      "s15.p1": "Recomly reserves the right to change this Policy at any time. We will inform you of significant changes by updating the date at the beginning of the document and, as needed, by email or an in-app notification.",
-      "s16.h": "§16. Final provisions",
-      "s16.p1": "In matters not covered by this Policy, the provisions of GDPR and the Polish Personal Data Protection Act of 10 May 2018 apply. The invalidity of any provision does not affect the validity of the remaining provisions (severability clause).",
-      "s16.p2": "Questions regarding the processing of personal data: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>"
+      "intro": "This Privacy Policy describes how Recomly sp. z o.o. with its registered office in Warsaw (\"<strong>Recomly</strong>\" or \"<strong>we</strong>\") processes the personal data of users of the Recomly mobile application available on iOS and Android (\"<strong>Application</strong>\"), the recomly.app website (\"<strong>Service</strong>\"), and other persons who contact or cooperate with Recomly (\"<strong>you</strong>\"). Recomly processes personal data in accordance with the GDPR and Polish data protection law.",
+      "s1.h": "§1. Who is the controller of your data?",
+      "s1.p1": "The controller of your personal data is <strong>Recomly sp. z o.o. with its registered office in Warsaw</strong>, Kasprzaka 31A St., Warsaw, Tax ID (NIP): 5273199463, entered in the register of entrepreneurs of the National Court Register by the District Court for the Capital City of Warsaw, 12th Commercial Division of the National Court Register under KRS number: 0001214798, REGON: 543699175.",
+      "s1.p2": "You can contact us about any matter concerning your personal data at <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a> or in writing at our registered office address.",
+      "s2.h": "§2. Whose data we process, why, on what basis and for how long",
+      "s2.1.h": "1. Logged-in Users of the Application and the Service",
+      "s2.1.scope": "<strong>Data we process:</strong>",
+      "s2.1.d1": "<strong>Profile data</strong> - phone number (verified by SMS), email address, name/nickname, profile photo, description, links to social media profiles (optional), password (hashed, if the account is created without social login), culinary preferences (given during onboarding to tailor recommendations), reviews, ratings, added photos, saved folders, following and followers lists, relationships in the Application, account identifier (User ID). When signing in with Google or Apple: the external identifier, name and email address provided by the identity provider.",
+      "s2.1.d2": "<strong>Visits at Restaurants</strong> - when you show your Recomly code (QR or 6-digit code) at a partner place (\"<strong>Restaurant</strong>\"), the place's staff record a visit: the place, the date and time, the discount, the bill amount, an optional service amount and, if the place requires it, a photo of the receipt. Staff do not see your name or profile. We process this data to give you the discount and to settle with the partner place. When you delete your account, your visits are unlinked from you and kept without your identity for billing with the Restaurant.",
+      "s2.1.d3": "<strong>Creator referrals</strong> - when you open a verified Creator's review, get directions or call the place from it, save the place, or sign up with a Creator's referral link or code, we record: you, the Creator, the place, the type of action and its time. We use this data only to work out which Creators are owed a fee for your visit at a Restaurant. It does not affect your recommendations and does not depend on the \"Personalization\" consent.",
+      "s2.1.d4": "<strong>Referral link or code</strong> - if you install the Application from a Creator's referral link, the Application reads the referral code on first launch: on Android from the Google Play link, and on iOS from the clipboard, only after you tap \"Paste\". You can remove the code before creating your account.",
+      "s2.1.d5": "<strong>Application usage data (optional, with the \"Personalization\" consent)</strong> - places and content viewed, time spent viewing them, searches, questions asked to the Remi assistant and recommendations shown. Based on this we build your behavioral profile (profiling) to tailor recommendations. Without your consent we do not use this data for personalization. We do not make decisions based solely on automated processing, including profiling, that produce legal effects concerning you or similarly significantly affect you. The profiling described above only affects the selection and order of the recommendations shown.",
+      "s2.1.d6": "<strong>Location data</strong> - collected only while actively using the Application (not in the background), to show nearby recommendations.",
+      "s2.1.d7": "<strong>Technical and analytical data</strong> - device identifier, operating system, application version, push notification token and the date of your last activity in the Application.",
+      "s2.1.d8": "<strong>Application usage analytics (optional, with the \"Analytics\" consent)</strong> - events, screens visited and search phrases you type, which we link to your account (account identifier, email address, account creation date). Without your consent we do not collect this data. Events from before your decision (e.g. while creating your account) are kept only in your device's memory: we send them only once you consent, and delete them otherwise.",
+      "s2.1.d9": "<strong>Server logs</strong> - may contain the content of requests (including questions asked to Remi, together with the account identifier) and the search location. This data is not used for cross-app/cross-site tracking or targeted advertising.",
+      "s2.1.p1": "<strong>Taste profile.</strong> We build a taste profile from your reviews, ratings, onboarding choices and folders. It is a core part of the service (recommendations and match scores) and is processed on the basis of Article 6(1)(b) GDPR. It is always on while you have an account.",
+      "s2.1.p2": "<strong>Behavioral profile.</strong> With your consent, we also use your activity in the Application: places you view, your searches, your questions to Remi and the recommendations we showed you. This processing is based on your consent. You can withdraw it at any time in the Application settings. Withdrawing it doesn't affect processing that happened before.",
+      "s2.1.p3": "<strong>What do other users see?</strong> Your profile (name, username, photo, description, social media links), your reviews, your public folders and your followers and following lists are visible to all logged-in Recomly users.",
+      "s2.1.p4": "<strong>Source of data:</strong> We receive data directly from you, from Apple / Google (when you use social login) and from Restaurants (staff recording your bill amount after you show your QR code).",
+      "s2.1.p5": "Please remember that after registering an Account and while using the Service, you are obliged to keep the personal data you have provided up to date if it changes in any way.",
+      "s2.1.purposes": "<strong>Purposes and legal bases:</strong>",
+      "s2.1.c1": "Providing electronic services and maintaining the account (Article 6(1)(b) GDPR) - including building your taste profile (based on your ratings, reviews and folders), tailoring recommendations, verifying the account by SMS and handling discounts at Restaurants.",
+      "s2.1.c2": "Commission settlements and fraud prevention (Article 6(1)(f) GDPR) - our legitimate interest in verifying the commission owed to us by the Restaurant for your visit under Recomly benefits. After account deletion, transaction data is permanently unlinked from your identity (anonymized) and kept for billing with partners.",
+      "s2.1.c3": "Settling Creator fees with Restaurants based on Creator referrals (Article 6(1)(f) GDPR) - our legitimate interest in determining which Creators are owed a fee for your visit. You can object to this processing (§6).",
+      "s2.1.c4": "Establishing, pursuing or defending claims (Article 6(1)(f) GDPR) - our legitimate interest in defending and pursuing our rights.",
+      "s2.1.c5": "Preventing abuse and actions that violate good practice, the Recomly Terms or the law (Article 6(1)(b) GDPR - necessary for performing the contract as regards the security of the Service and users and preventing abuse).",
+      "s2.1.c6": "Fulfilling legal obligations, including accounting and tax obligations (Article 6(1)(c) GDPR).",
+      "s2.1.c7": "We build your behavioral profile, i.e. personalize recommendations based on your activity in the Application (profiling), solely on the basis of your voluntary \"Personalization\" consent (Article 6(1)(a) GDPR).",
+      "s2.1.c8": "Application usage analytics (Article 6(1)(a) GDPR) - your voluntary \"Analytics\" consent to activity analytics to optimize Recomly's services and improve the Service. The \"Analytics\" consent is off by default and you can change it at any time in the Application (Settings → Privacy). We attach your account identifier to crash reports only with the \"Analytics\" consent.",
+      "s2.1.c9": "Sending push notifications solely on the basis of your voluntary consent (Article 6(1)(a) GDPR).",
+      "s2.1.c10": "Crash reports to keep the Application stable and secure (Article 6(1)(f) GDPR) - our legitimate interest in ensuring the security and functioning of the Application.",
+      "s2.1.c11": "Aggregate statistics and updating the number of active users (Article 6(1)(f) GDPR) - our legitimate interest in monitoring use of the Application and its development.",
+      "s2.1.retention": "<strong>Retention period:</strong>",
+      "s2.1.r1": "We keep your account and profile data for as long as you have an active Recomly account. You can delete your account at any time - in the Application (Settings → Delete account) or via <a href=\"https://auth.recomly.app/delete-account/\">https://auth.recomly.app/delete-account/</a>, without needing to contact support. Deleting your account deletes profile data, activity history, Application usage data, social data, stored consents, analytical data linked to the account and Creator referrals. Visits at Restaurants and data on settled Creator fees are unlinked from the account and kept without your identity for billing. After account deletion, we keep data needed to defend against claims for the limitation period (generally up to 3 years), and accounting documents for 5 years from the end of the calendar year in which the tax payment deadline passed.",
+      "s2.1.r2": "We keep behavioral personalization data for up to 12 months or until you withdraw your consent, whichever is earlier.",
+      "s2.1.r3": "We keep analytics data for up to 12 months or until you delete your account / withdraw your consent, whichever is earlier.",
+      "s2.1.r4": "We keep Creator referrals for up to 400 days; those used to settle a visit are kept with the billing data, without your identity.",
+      "s2.1.r5": "We keep reviews, ratings, photos and folders until you delete your account.",
+      "s2.1.r6": "We store no location history. Your default search location (a city, an address or a point you choose) is kept until you change it or delete your account. The search point saved with personalization signals is rounded to about 100 m and stored only with your consent, for 12 months.",
+      "s2.1.r7": "We keep crash reports for up to 90 days. Remi conversation context - 30 minutes. Server logs - up to 30 days.",
+      "s2.2.h": "2. Visitors to the Service who are not logged in (recomly.app)",
+      "s2.2.scope": "<strong>Data we process:</strong> IP address, cookie identifiers, browser parameters, operating system, date and time of the visit, referral source.",
+      "s2.2.purposes": "<strong>Purposes and legal bases:</strong>",
+      "s2.2.c1": "Keeping the website running and network security (Article 6(1)(f) GDPR) - our legitimate interest in keeping the Service working (technical / necessary cookies).",
+      "s2.2.c2": "Analytics and marketing (Article 6(1)(a) GDPR) - optional cookies, processed only after you consent in the cookie banner.",
+      "s2.2.retention": "<strong>Retention period:</strong> According to the parameters of the individual cookies, no longer than until they are deleted.",
+      "s2.3.h": "3. People who contact us (e.g. email, forms, social media)",
+      "s2.3.scope": "<strong>Data we process:</strong> First name, surname, social media nickname and profile photo, interactions with our social media profiles (likes, follows, comments, messages). For phone contact, we process the phone number and any other data given voluntarily during the call. For email contact, we process the email address, first name and surname and any other data given in the email. For postal contact, we process the first name, surname or company name, postal address and any other data given in the letter.",
+      "s2.3.source": "<strong>Source of data:</strong> directly from you or from your public social media profile (e.g. Instagram, Facebook, LinkedIn) when you interact with us on social media.",
+      "s2.3.purposes": "<strong>Purposes and legal bases:</strong>",
+      "s2.3.c1": "Handling correspondence and resolving the matter raised (Article 6(1)(f) GDPR) - our legitimate interest in efficient communication and handling enquiries.",
+      "s2.3.c2": "Pursuing rights and defending against claims (Article 6(1)(f) GDPR) - our legitimate interest in pursuing our rights and defending against claims.",
+      "s2.3.retention": "<strong>Retention period:</strong> For as long as needed to resolve the matter, and then for evidence purposes for up to 3 years after the contact ends.",
+      "s2.4.h": "4. Restaurant representatives",
+      "s2.4.scope": "<strong>Data we process:</strong> First name and surname, work email address, phone number, position/role (e.g. manager, waiter), system identifier, activity logs (time a code was registered, session identifier, system errors).",
+      "s2.4.source": "<strong>Source of data:</strong> Directly from you or from your employer/principal (the Restaurant owner) who named you as a contact or to operate the Restaurant's account.",
+      "s2.4.purposes": "<strong>Purposes and legal bases:</strong>",
+      "s2.4.c1": "Concluding and performing the partnership agreement with the Restaurant (Article 6(1)(f) GDPR) - Recomly's legitimate interest in coordinating the Restaurant's account and maintaining ongoing cooperation.",
+      "s2.4.c2": "Ensuring security and diagnosing Service errors (Article 6(1)(f) GDPR) - Recomly's legitimate interest in maintaining the Service, fixing errors and providing services to Users.",
+      "s2.4.retention": "<strong>Retention period:</strong> For the term of the partnership agreement with the Restaurant and, after it ends, for the limitation period for claims (3 years), no longer than needed to meet legal requirements for archiving accounting documents (5 years from the end of the year).",
+      "s2.5.h": "5. Creators and Ambassadors (referral program)",
+      "s2.5.scope": "<strong>Data we process:</strong> if you have an Account in the Service, in addition to the data for logged-in Users in point 1 above we process: first name, surname, company, Tax ID (NIP), address, bank account number, email address, phone number, links to social media channels, statistics of referrals generated and amounts of commission owed.",
+      "s2.5.purposes": "<strong>Purposes and legal bases:</strong>",
+      "s2.5.c1": "Concluding and performing the cooperation agreement with the Creator or Ambassador (Article 6(1)(b) GDPR).",
+      "s2.5.c2": "Fulfilling legal obligations, including accounting and tax obligations (commission payouts, tax returns, invoices) - Article 6(1)(c) GDPR.",
+      "s2.5.c3": "Establishing and pursuing claims (Article 6(1)(f) GDPR) - legitimate interest in pursuing and defending Recomly's rights.",
+      "s2.5.c4": "Using your image to promote Recomly - on the basis of voluntary consent (Article 6(1)(a) GDPR).",
+      "s2.5.retention": "<strong>Retention period:</strong> For the duration of the cooperation, and then for 5 years from the end of the calendar year in which the taxes on the commission were settled. If you consented to the use of your image - until you withdraw that consent.",
+      "s3.h": "§3. Profiling and artificial intelligence (AI)",
+      "s3.l1": "<strong>Taste Profile (always on - Article 6(1)(b) GDPR):</strong> As part of the core service of the Application, we build a model of your culinary preferences based on data you explicitly provide: onboarding choices, reviews, ratings, saved folders and followed places. This lets us show relevant recommendations and a percentage match score for a Restaurant.",
+      "s3.l2": "<strong>Behavioral Profile (only with your consent - Article 6(1)(a) GDPR):</strong> If you give the \"Personalization\" consent, we analyze your behavior in the Application (searches, clicks, time spent viewing venues, questions to the Remi assistant). Withdrawing consent immediately stops the building of your behavioral profile.",
+      "s3.l3": "<strong>No fully automated decisions with legal effects:</strong> None of our profiling constitutes profiling within the meaning of Article 22 GDPR - it does not produce legal effects concerning you or similarly significantly affect you (it only affects which venues are suggested).",
+      "s3.l4": "<strong>AI assistant (Remi):</strong> Conversations with Remi are processed using an external AI model (OpenAI). The conversation context is kept in session memory for 30 minutes. The model provider receives the text of your question, earlier messages from the same conversation and the search location, without your account identifier or your personal data, unless you voluntarily include them in your question to Remi.",
+      "s4.h": "§4. Who do we share your data with?",
+      "s4.p1": "We share your data only with trusted entities with which we have concluded data processing agreements (Article 28 GDPR) or which have a separate legal basis to receive it.",
+      "s4.p2": "Below is a list of our service providers:",
+      "s4.l1": "<strong>Google Cloud Poland:</strong> Application infrastructure (servers, database, file storage) (Warsaw, Poland, EEA).",
+      "s4.l2": "<strong>Supabase Inc.:</strong> database infrastructure for the Service (Frankfurt, Germany, EEA).",
+      "s4.l3": "<strong>Vercel Inc.:</strong> hosting of the Service website.",
+      "s4.l4": "<strong>Firebase:</strong> account authentication, app integrity verification, push notifications, crash reports.",
+      "s4.l5": "<strong>Apple Inc.:</strong> \"Sign in with Apple\" and push notifications for iOS (USA).",
+      "s4.l6": "<strong>PostHog Inc.:</strong> product analytics on how the Application and the Service are used (Frankfurt, Germany, EEA).",
+      "s4.l7": "<strong>Meilisearch:</strong> in-app search engine, which receives the search text (Frankfurt, Germany).",
+      "s4.l8": "<strong>Mapbox Inc.:</strong> map rendering; receives your IP address and location coordinates only while the map is displayed (USA).",
+      "s4.l9": "<strong>Google Maps Platform:</strong> geocoding and address suggestions; receives the text you type, place names from your questions to Remi and your IP address.",
+      "s4.l10": "<strong>OpenAI, L.L.C.:</strong> answers questions you ask Remi. Receives the text of your question, earlier messages from the same conversation and the search location, without your account identifier (USA). OpenAI may keep the text for up to 30 days to monitor abuse and does not use it to train its models.",
+      "s4.p3": "In addition, Restaurants, i.e. our partner venues, may receive your data to the extent described in §2 above, together with the total Creator fee for the visit, without data about your activity in the Application. Creators receive information about the fees they are owed, without your data.",
+      "s4.p4": "We may share your data with authorized state authorities as required by law, auditors, legal and accounting advisers, IT service providers (e.g. email providers when you contact us by email, social networks when you interact with us there), banks (for payments), couriers or postal operators (for written correspondence), and other users of the Application to the extent the data is public in the Service.",
+      "s4.p5": "We do not sell or share user data with third parties for marketing purposes.",
+      "s5.h": "§5. Data transfer outside the European Economic Area",
+      "s5.p1": "Because we use some IT providers, your personal data may be transferred to third countries, in particular the USA. Transfers outside the EEA comply with Chapter V GDPR and are based on the European Commission's implementing decision on the adequacy of protection under the EU-U.S. Data Privacy Framework (DPF) - for entities on the active list of certified DPF participants - and/or Standard Contractual Clauses (SCC) adopted by the European Commission, included in our data processing agreements with providers. Together with our providers, we apply appropriate technical and organizational safeguards to protect transferred data. You have the right to obtain a copy of the safeguards applied or information on where they are available by sending a request to <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>.",
+      "s6.h": "§6. What are your rights?",
+      "s6.p1": "Under the GDPR, you have the following rights:",
+      "s6.l1": "<strong>Right of access to your data</strong> (Article 15 GDPR) and to obtain a copy of it.",
+      "s6.l2": "<strong>Right to rectification (correction) of data</strong> (Article 16 GDPR).",
+      "s6.l3": "<strong>Right to erasure</strong> (\"right to be forgotten\" - Article 17 GDPR).",
+      "s6.l4": "<strong>Right to restriction of processing</strong> (Article 18 GDPR) if: your personal data is inaccurate - for a period enabling us to verify its accuracy; your data is processed unlawfully but you do not want it erased; we no longer need your data but you need it to establish, pursue or defend claims; or you have objected to processing - until it is determined whether our legitimate grounds override the grounds of your objection.",
+      "s6.l5": "<strong>Right to data portability</strong> (Article 20 GDPR), if the processing is based on your consent or a contract with Recomly and is carried out by automated means.",
+      "s6.l6": "<strong>Right to object</strong> (Article 21 GDPR): you have the right to object to processing based on our legitimate interest (Article 6(1)(f) GDPR).",
+      "s6.l7": "<strong>Right to withdraw consent</strong> (Article 7(3) GDPR): where we process data based on your consent, you can withdraw it at any time. Withdrawing consent does not affect the lawfulness of processing before the withdrawal.",
+      "s6.l8": "<strong>Right to lodge a complaint with a supervisory authority:</strong> if you believe we process your data unlawfully, you can lodge a complaint with the supervisory authority, which in Poland is the President of the Personal Data Protection Office in Warsaw.",
+      "s6.p2": "To exercise your rights, email us at <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>",
+      "s7.h": "§7. Obligation to provide data and consequences of not providing it",
+      "s7.p1": "Providing your personal data is generally voluntary, but in certain situations it is a condition of concluding a contract or a statutory requirement:",
+      "s7.l1": "Logged-in Users of the Application:<ol><li>Providing an email address and phone number (and a password or Apple/Google account data) is a contractual condition for concluding and performing the agreement for electronic services (creating an Account in the Service). If you do not provide this data or refuse to verify your phone number with an SMS code, you cannot register or use an account in the Service.</li><li>Providing profile data (e.g. name, photo, culinary preferences) is voluntary, but necessary to use social features and for the taste profile to work properly.</li></ol>",
+      "s7.l2": "Using benefits and visits: Showing the QR code / User code at a Restaurant is a contractual requirement for receiving a discount or special offer. If you refuse to show the code, no benefit is applied and you pay the standard bill at the venue.",
+      "s7.l3": "Optional consents (behavioral Personalization, analytics, push notifications, use of image): Providing data and giving consents is fully voluntary. Refusing them has no negative consequences - you can freely use the core features of the Application and discounts at Restaurants.",
+      "s7.l4": "People who contact us (email, forms, social media): providing data (e.g. email, name, content of the enquiry) is voluntary, but necessary to receive and answer your request. If you do not provide it, we cannot contact you.",
+      "s7.l5": "Business partners, Restaurant staff, Ambassadors and Creators:<ol><li>Providing the data of representatives and coordinators is a condition for concluding and performing the partnership agreement.</li><li>Providing Restaurant staff data (name, work email) is necessary to create an account for a Restaurant staff member.</li><li>Providing billing and tax data (Tax ID, address, bank account) by entrepreneurs is a statutory requirement. Without it, we cannot conclude the agreement, settle commission or pay remuneration.</li></ol>",
+      "s8.h": "§8. Privacy of persons under 16",
+      "s8.p1": "The Recomly Application and the Service are intended for persons aged 16 and over. We do not knowingly collect data from younger persons. If we learn that an account was created by a person under 16 without the required consent of a parent or legal guardian, we will delete the account and all associated data without delay.",
+      "s9.h": "§9. System permissions in the Application (Android / iOS)",
+      "s9.p1": "For individual features to work properly, the Application may ask for your permission to access:",
+      "s9.l1": "Device location: only while you use the Application (never in the background), to show your position on the map and venues nearby.",
+      "s9.l2": "Camera and photo gallery: only to add photos to the reviews of dishes and venues you publish.",
+      "s9.l3": "Push notifications: to send information about friends' activity, new benefits or transaction confirmations.",
+      "s9.p2": "All of the above permissions are optional and you can manage them at any time; refusing them does not prevent use of the Application's core features.",
+      "s10.h": "§10. Cookies and tracking on the Service website",
+      "s10.p1": "Cookies are small text files saved and read in the memory of your device (e.g. computer, smartphone). On the Service website we use cookies that are:",
+      "s10.l1": "Necessary (technical): essential for displaying the website correctly and keeping it secure. They do not require your prior consent, and blocking them may prevent you from using the site.",
+      "s10.l2": "Optional (analytics and marketing): activated only after you consent in the cookie banner.",
+      "s10.p2": "You can change your cookie preferences at any time via the banner on the Service website. We provide a full, up-to-date list of cookies with their purpose and retention period in the consent banner on the site. Withdrawing consent does not affect the lawfulness of actions taken before the withdrawal. You can also block or delete cookies at any time in your browser settings.",
+      "s11.h": "§11. Data security",
+      "s11.p1": "We apply connection encryption (SSL/TLS) and encryption of data at rest, restricted access to the database, regular backups, strong passwords and multi-factor authentication for administrative accounts, and the principle of least privilege.",
+      "s12.h": "§12. Links to third-party sites",
+      "s12.p1": "Links on the website or in the Application may take you to websites or social networks run by, or provided as a service by, entities independent of Recomly. In that case, your personal data is processed according to those entities' rules.",
+      "s13.h": "§13. Changes to the Privacy Policy",
+      "s13.p1": "Recomly reserves the right to change this Policy at any time. We will inform you of significant changes by updating the date at the top of the document and, as needed, by email, an in-app notification or a notice on the Service website.",
+      "s13.p2": "The current version of the Privacy Policy is always available in the mobile Application and at <a href=\"https://recomly.app/privacy\">https://recomly.app/privacy</a>."
     }
   };
 
