@@ -29,6 +29,7 @@
   .prose-doc p { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; }
   .prose-doc ul { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: disc; }
   .prose-doc ol { color: var(--muted); line-height: 1.7; margin-bottom: 1rem; padding-left: 1.5rem; list-style: decimal; }
+  .prose-doc ol ol { list-style: lower-alpha; margin-top: 0.5rem; }
   .prose-doc li { margin-bottom: 0.5rem; }
   .prose-doc strong { color: var(--text); }
   .prose-doc a { color: var(--primary); text-decoration: underline; }
@@ -55,22 +56,26 @@
 <!-- CONTENT -->
 <main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
   <div class="prose-doc">
-    <p class="text-sm" data-i18n="meta">Obowiązuje od: 12.10.2026</p>
+    <p class="text-sm" data-i18n="meta">Obowiązuje od: 16.11.2026</p>
     <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6" data-i18n="title">Regulamin</h1>
-    <p data-i18n="intro">Niniejszy Regulamin określa zasady korzystania z aplikacji mobilnej Recomly ("Aplikacja") oraz strony internetowej recomly.app ("Serwis"), prowadzonych przez Recomly sp. z o.o.</p>
+    <p data-i18n="intro">Niniejszy Regulamin określa zasady korzystania z aplikacji mobilnej Recomly dostępnej na urządzenia z systemami iOS oraz Android ("Aplikacja") oraz strony internetowej recomly.app ("Serwis"), prowadzonych przez Recomly sp. z o.o. z siedzibą w Warszawie.</p>
 
     <!-- §1 Definicje -->
     <h2 data-i18n="s1.h">§1. Definicje</h2>
-    <ul>
-      <li data-i18n-html="s1.l1"><strong>Recomly</strong> - Recomly sp. z o.o. z siedzibą w Warszawie, ul. Kasprzaka 31A, NIP: 5273199463, KRS: 0001214798, Sąd Rejonowy dla m.st. Warszawy w Warszawie, XII Wydział Gospodarczy KRS</li>
+    <ol>
+      <li data-i18n-html="s1.l1"><strong>Recomly</strong> - Recomly sp. z o.o. z siedzibą w Warszawie, ul. Kasprzaka 31A, Warszawa, NIP: 5273199463, wpisana do rejestru przedsiębiorców Krajowego Rejestru Sądowego przez Sąd Rejonowy dla m.st. Warszawy w Warszawie, XII Wydział Gospodarczy KRS pod nr KRS: 0001214798, REGON: 543699175, adres poczty elektronicznej: kontakt@recomly.app</li>
       <li data-i18n-html="s1.l2"><strong>Aplikacja</strong> - aplikacja mobilna Recomly, dostępna w App Store i Google Play, umożliwiająca odkrywanie restauracji na podstawie rekomendacji obserwowanych osób, preferencji smakowych Użytkownika oraz - za zgodą Użytkownika - danych o korzystaniu z Aplikacji</li>
       <li data-i18n-html="s1.l3"><strong>Serwis</strong> - strona internetowa recomly.app</li>
       <li data-i18n-html="s1.l4"><strong>Konto</strong> - indywidualne konto Użytkownika w Aplikacji, założone po rejestracji</li>
       <li data-i18n-html="s1.l5"><strong>Użytkownik</strong> - osoba fizyczna posiadająca zdolność do czynności prawnych, która założyła Konto lub korzysta z Serwisu</li>
-      <li data-i18n-html="s1.l6"><strong>Partner</strong> - restauracja lub inny podmiot gastronomiczny prezentowany w Aplikacji, z którym Recomly współpracuje na odrębnych zasadach określonych w umowie partnerskiej</li>
+      <li data-i18n-html="s1.l6"><strong>Partner / Restauracja</strong> - restauracja lub inny podmiot gastronomiczny prezentowany w Aplikacji, z którym Recomly współpracuje na odrębnych zasadach określonych w umowie partnerskiej</li>
       <li data-i18n-html="s1.l7"><strong>Treści</strong> - wszelkie treści dodawane przez Użytkownika w Aplikacji, w tym oceny, recenzje, zdjęcia, opisy i komentarze</li>
-      <li data-i18n-html="s1.l9"><strong>Regulamin</strong> - niniejszy dokument</li>
-    </ul>
+      <li data-i18n-html="s1.l8"><strong>Regulamin</strong> - niniejszy dokument</li>
+      <li data-i18n-html="s1.l9"><strong>Benefit / Rabat</strong> - specjalna oferta cenowa, rabat lub świadczenie dodatkowe przyznawane Użytkownikowi bezpośrednio przez Partnera w lokalu gastronomicznym po okazaniu Kodu Recomly</li>
+      <li data-i18n-html="s1.l10"><strong>Kod Recomly</strong> - unikalny cyfrowy identyfikator generowany w Aplikacji (Kod QR lub kod alfanumeryczny), służący weryfikacji prawa Użytkownika do Benefitu w lokalu Partnera</li>
+      <li data-i18n-html="s1.l11"><strong>DSA</strong> - Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2022/2065 z dnia 19 października 2022 r. w sprawie jednolitego rynku usług cyfrowych (Akt o Usługach Cyfrowych)</li>
+      <li data-i18n-html="s1.l12"><strong>Ustawa o prawach konsumenta</strong> - ustawa z dnia 30 maja 2014 r. o prawach konsumenta</li>
+    </ol>
 
     <!-- §2 Postanowienia ogólne -->
     <h2 data-i18n="s2.h">§2. Postanowienia ogólne</h2>
@@ -78,46 +83,69 @@
       <li data-i18n="s2.l1">Regulamin określa zasady świadczenia usług drogą elektroniczną przez Recomly za pośrednictwem Aplikacji i Serwisu.</li>
       <li data-i18n="s2.l2">Korzystanie z podstawowych funkcji Aplikacji jest bezpłatne dla Użytkowników. Recomly zastrzega sobie prawo wprowadzenia w przyszłości płatnych funkcji dodatkowych, o czym Użytkownicy zostaną odrębnie poinformowani przed ich uruchomieniem, z możliwością rezygnacji.</li>
       <li data-i18n="s2.l3">Z Aplikacji mogą korzystać wyłącznie osoby, które ukończyły 16 lat.</li>
-      <li data-i18n="s2.l4">Rejestrując się w Aplikacji (lub logując się po raz pierwszy przez Apple lub Google), Użytkownik akceptuje Regulamin, potwierdza zapoznanie się z Polityką prywatności oraz oświadcza, że ukończył 16 lat.</li>
+      <li data-i18n="s2.l4">Rejestrując się w Aplikacji (lub logując się po raz pierwszy przez Apple lub Google), Użytkownik akceptuje Regulamin, potwierdza zapoznanie się z Polityką prywatności oraz oświadcza, że ukończył 16 lat. Osoba poniżej 16. roku życia nie może założyć Konta ani zawierać umowy o świadczenie usług z Recomly.</li>
       <li data-i18n="s2.l5">Aktualna wersja Regulaminu jest zawsze dostępna w Aplikacji (Ustawienia → Warunki użytkowania) oraz pod adresem recomly.app/terms.</li>
       <li data-i18n-html="s2.l6">Szczegółowe zasady ochrony dzieci i reagowania na zagrożenia opisują odrębne <a href="child-safety">Standardy bezpieczeństwa dzieci</a>, dostępne w Aplikacji i Serwisie.</li>
+      <li data-i18n="s2.l7">Umowa o świadczenie usług drogą elektroniczną w zakresie przeglądania publicznych treści Serwisu zostaje zawarta z chwilą wejścia na stronę recomly.app i ulega rozwiązaniu z chwilą jej opuszczenia.</li>
+      <li data-i18n="s2.l8">Umowa o prowadzenie Konta i korzystanie z Aplikacji zostaje zawarta na czas nieokreślony z chwilą pomyślnego zakończenia procedury rejestracji i ulega rozwiązaniu w momencie usunięcia Konta.</li>
     </ol>
 
     <!-- §3 Rejestracja i Konto -->
     <h2 data-i18n="s3.h">§3. Rejestracja i Konto</h2>
     <ol>
-      <li data-i18n="s3.l1">Założenie Konta wymaga podania adresu email albo skorzystania z logowania Google lub Apple, oraz weryfikacji numeru telefonu kodem SMS.</li>
+      <li data-i18n-html="s3.l1">Rejestracja Konta w Aplikacji jest możliwa poprzez:
+        <ol>
+          <li>wprowadzenie adresu e-mail i hasła lub skorzystanie z modułu logowania społecznościowego Apple („Sign in with Apple”) lub Google („Google Sign-In”);</li>
+          <li>podanie numeru telefonu komórkowego oraz wprowadzenie jednorazowego kodu weryfikacyjnego przesłanego wiadomością SMS.</li>
+        </ol>
+      </li>
       <li data-i18n="s3.l2">Użytkownik zobowiązany jest do podania prawdziwych danych oraz do ich aktualizacji w razie zmiany.</li>
-      <li data-i18n="s3.l3">Jeden Użytkownik może posiadać wyłącznie jedno Konto. Zakazane jest zakładanie kont w imieniu osób trzecich bez ich zgody oraz zakładanie kont fikcyjnych.</li>
-      <li data-i18n="s3.l4">Użytkownik odpowiada za zachowanie poufności danych umożliwiających dostęp do Konta i ponosi odpowiedzialność za działania podejmowane za jego pośrednictwem, chyba że nastąpiły one wskutek okoliczności, za które Użytkownik nie ponosi odpowiedzialności (np. naruszenie bezpieczeństwa po stronie Recomly).</li>
-      <li data-i18n-html="s3.l5">Użytkownik może usunąć Konto w każdej chwili - bezpośrednio w Aplikacji (Ustawienia → Usuń konto) lub za pośrednictwem strony <a href="https://auth.recomly.app/delete-account/">https://auth.recomly.app/delete-account/</a>, bez konieczności kontaktu z obsługą.</li>
+      <li data-i18n="s3.l3">Jeden Użytkownik może posiadać wyłącznie jedno Konto. Zakazane jest zakładanie kont w imieniu osób trzecich bez ich zgody oraz zakładanie kont fikcyjnych. Udostępnianie Konta osobom trzecim lub korzystanie z Kont innych osób jest zabronione.</li>
+      <li data-i18n="s3.l4">Weryfikacja numeru telefonu za pomocą kodu SMS jest integralnym wymogiem umownym rejestracji Konta. Wymóg ten służy weryfikacji unikalności kont, ochronie platformy i Partnerów przed botami, wyłudzeniami rabatów oraz fałszywymi ocenami.</li>
+      <li data-i18n="s3.l5">Użytkownik odpowiada za zachowanie poufności danych umożliwiających dostęp do Konta i ponosi odpowiedzialność za działania podejmowane za jego pośrednictwem, chyba że nastąpiły one wskutek okoliczności, za które Użytkownik nie ponosi odpowiedzialności (np. naruszenie bezpieczeństwa po stronie Recomly).</li>
+      <li data-i18n="s3.l6">Użytkownikowi będącemu konsumentem przysługuje prawo do odstąpienia od umowy o świadczenie usług drogą elektroniczną (prowadzenie Konta) bez podania przyczyny w terminie 14 dni od dnia jej zawarcia. Konsument może złożyć Recomly jednoznaczne oświadczenie np. w drodze wiadomości e-mail na adres: kontakt@recomly.app lub skorzystać z ustawowego wzoru formularza odstąpienia od umowy zgodnie z Ustawą o prawach konsumenta. Do zachowania terminu wystarczy wysłanie oświadczenia przed jego upływem. Z uwagi na bezpłatny charakter prowadzenia Konta, skorzystanie z prawa do odstąpienia od umowy wywołuje skutek tożsamy z usunięciem Konta przez Użytkownika.</li>
+      <li data-i18n-html="s3.l7">Użytkownik może w każdej chwili bez ponoszenia kosztów usunąć Konto - bezpośrednio w Aplikacji (Ustawienia → Usuń konto) lub za pośrednictwem strony <a href="https://auth.recomly.app/delete-account/">https://auth.recomly.app/delete-account/</a>, bez konieczności kontaktu z obsługą. Usunięcie Konta stanowi rozwiązanie umowy o świadczenie usług elektronicznych z Recomly.</li>
     </ol>
 
     <!-- §4 Funkcjonalności Aplikacji -->
     <h2 data-i18n="s4.h">§4. Funkcjonalności Aplikacji</h2>
     <ol>
-      <li data-i18n-html="s4.l1">Aplikacja umożliwia w szczególności:
+      <li data-i18n-html="s4.l1">W ramach Aplikacji Recomly świadczy bezpłatne usługi cyfrowe obejmujące m.in.:
         <ul>
+          <li>prowadzenie Konta i personalizację profilu;</li>
           <li>odkrywanie restauracji i miejsc gastronomicznych na podstawie rekomendacji obserwowanych osób oraz preferencji smakowych Użytkownika (Taste Graph);</li>
           <li>dodawanie ocen, recenzji i zdjęć odwiedzonych miejsc;</li>
           <li>zapisywanie i organizowanie ulubionych miejsc oraz list do odwiedzenia;</li>
           <li>obserwowanie znajomych i przeglądanie ich rekomendacji;</li>
-          <li>zadawanie pytań asystentowi AI (Remi) - odpowiedzi generowane automatycznie mogą zawierać błędy;</li>
-          <li>korzystanie z rabatów oferowanych przez Partnerów za pomocą kodu Recomly;</li>
+          <li>prowadzenie Profilu Gustu opartego na jawnych wyborach i ocenach Użytkownika w celu prezentowania procentowego wskaźnika dopasowania lokalu;</li>
+          <li>korzystanie z asystenta konwersacyjnego AI („Remi”) wspierającego wyszukiwanie lokali;</li>
+          <li>tworzenie i zapisywanie prywatnych lub publicznych list lokali (foldery);</li>
+          <li>generowanie Kodu Recomly uprawniającego do odbioru Benefitów w lokalach Partnerów;</li>
+          <li>za odrębną zgodą Użytkownika: personalizację rekomendacji na podstawie analizy zachowań (profilowanie behawioralne) oraz wysyłkę powiadomień push;</li>
           <li>rekomendacje dopasowane do lokalizacji oraz - za zgodą Użytkownika, którą można w każdej chwili wycofać - do sposobu korzystania z Aplikacji. Brak zgody nie ogranicza pozostałych funkcji Aplikacji.</li>
         </ul>
       </li>
-      <li data-i18n="s4.l2">Recomly dokłada starań, aby prezentowane rekomendacje i dane o Partnerach były aktualne i rzetelne, jednak nie gwarantuje ich pełnej kompletności ani nieomylności - treści w Aplikacji mają charakter informacyjny.</li>
-      <li data-i18n="s4.l3">Recomly zastrzega sobie prawo do rozwijania, modyfikowania lub wycofywania poszczególnych funkcjonalności Aplikacji, z zachowaniem należytej staranności w informowaniu Użytkowników o istotnych zmianach.</li>
-      <li data-i18n="s4.l4">Niektórzy Partnerzy oferują rabaty dla Użytkowników. Rabatu udziela Partner, który ustala jego warunki i może je zmienić lub zakończyć. Recomly nie gwarantuje, że dany Partner oferuje rabat w określonym czasie.</li>
+      <li data-i18n="s4.l2">Odpowiedzi asystenta Remi są generowane automatycznie przy użyciu algorytmów sztucznej inteligencji na podstawie zapytania Użytkownika oraz danych o lokalach.</li>
+      <li data-i18n-html="s4.l3">Zasady przyznawania Benefitów w lokalach Partnerów:
+        <ul>
+          <li>Benefit (rabat) jest świadczeniem przyznawanym Użytkownikowi bezpośrednio przez Partnera (wystawcę rachunku gastronomicznego).</li>
+          <li>Warunkiem naliczenia Benefitu jest okazanie ważnego Kodu Recomly obsłudze Partnera przed wystawieniem rachunku / paragonu fiskalnego i zarejestrowanie wizyty przez personel lokalu.</li>
+        </ul>
+      </li>
+      <li data-i18n="s4.l4">Recomly dokłada należytej staranności w weryfikacji aktualności ofert Partnerów, jednak za bezpośrednią realizację usługi gastronomicznej oraz prawidłowe zastosowanie Rabatu odpowiada Partner prowadzący dany lokal.</li>
+      <li data-i18n="s4.l5">Recomly dokłada starań, aby prezentowane rekomendacje i dane o Partnerach były aktualne i rzetelne, jednak nie gwarantuje ich pełnej kompletności ani nieomylności - treści w Aplikacji mają charakter informacyjny.</li>
+      <li data-i18n="s4.l6">Recomly zastrzega sobie prawo do rozwijania, modyfikowania lub wycofywania poszczególnych funkcjonalności Aplikacji, z zachowaniem należytej staranności w informowaniu Użytkowników o istotnych zmianach.</li>
+      <li data-i18n="s4.l7">Niektórzy Partnerzy oferują rabaty dla Użytkowników. Rabatu udziela Partner, który ustala jego warunki i może je zmienić lub zakończyć. Recomly nie gwarantuje, że dany Partner oferuje Rabat w określonym czasie.</li>
     </ol>
 
     <!-- §5 Treści Użytkownika -->
     <h2 data-i18n="s5.h">§5. Treści Użytkownika</h2>
     <ol>
-      <li data-i18n="s5.l1">Dodając Treści do Aplikacji, Użytkownik zachowuje do nich pełnię praw autorskich, jednocześnie udziela Recomly nieodpłatnej, niewyłącznej, obejmującej cały świat licencji na przechowywanie, wyświetlanie, powielanie i rozpowszechnianie tych Treści w ramach funkcjonowania Aplikacji oraz w materiałach promocyjnych Recomly, przez okres posiadania Konta oraz przez czas niezbędny do realizacji obowiązków prawnych po jego usunięciu. Zdjęcia dodane do miejsca lub do recenzji mogą być wyświetlane w Aplikacji jako zdjęcia miejsca, w tym jako jego zdjęcie główne. Recomly może wyświetlać Treści bez wskazywania ich autora.</li>
-      <li data-i18n="s5.l2">Użytkownik ponosi pełną odpowiedzialność za zamieszczane Treści i oświadcza, że przysługują mu do nich odpowiednie prawa.</li>
-      <li data-i18n-html="s5.l3">Zabronione jest zamieszczanie Treści, które:
+      <li data-i18n="s5.l1">Dodając Treści do Serwisu lub Aplikacji, Użytkownik zachowuje do nich pełnię praw autorskich, jednocześnie udziela Recomly nieodpłatnej, niewyłącznej, obejmującej cały świat licencji na utrwalanie i zwielokrotnianie w pamięci urządzeń i serwerów chmurowych, przechowywanie, publiczne wyświetlanie, powielanie i rozpowszechnianie tych Treści w Serwisie i Aplikacji, wykorzystanie fragmentów recenzji lub zdjęć w ramach funkcjonowania Aplikacji przez okres posiadania Konta oraz w materiałach promocyjnych Recomly (w mediach społecznościowych, na stronach internetowych, materiałach marketingowych cyfrowych i drukowanych Recomly) bez ograniczeń czasowych również przez okres po usunięciu Konta. Zdjęcia dodane do miejsca lub do recenzji mogą być wyświetlane w Aplikacji jako zdjęcia Restauracji, w tym jako jej zdjęcie główne. Recomly może wyświetlać Treści bez wskazywania ich autora.</li>
+      <li data-i18n="s5.l2">Użytkownik ponosi pełną odpowiedzialność za zamieszczane Treści i oświadcza, że przysługują mu do nich odpowiednie prawa lub uzyskał odpowiednie zgody od osób trzecich.</li>
+      <li data-i18n="s5.l3">Dodając Treści Użytkownik zgadza się, aby zostały opublikowane, były dostępne dla innych Użytkowników i Restauracji oraz używane w Serwisie i Aplikacji oraz materiałach promocyjnych Recomly zgodnie z ust. 1 wyżej. W przypadku chęci wykorzystania przez Recomly zdjęć z wizerunkiem osób dla celów marketingowych, Recomly uzyska odrębną zgodę od tych osób na wykorzystanie ich wizerunku.</li>
+      <li data-i18n="s5.l4">Użytkownik oświadcza, że opublikowane Treści są wynikiem jego własnej twórczości, odzwierciedlają jego faktyczne doświadczenia konsumenckie i nie naruszają praw osób trzecich (w tym praw autorskich, prawa do wizerunku, tajemnicy przedsiębiorstwa ani dóbr osobistych).</li>
+      <li data-i18n-html="s5.l5">Zabronione jest zamieszczanie Treści, które:
         <ul>
           <li>nawołują do nienawiści lub dyskryminacji ze względu na rasę, pochodzenie etniczne lub narodowe, wyznanie, płeć, orientację seksualną, niepełnosprawność lub wiek;</li>
           <li>stanowią nękanie, zastraszanie, groźby lub mowę nienawiści wobec innych osób;</li>
@@ -128,24 +156,28 @@
           <li>naruszają prawa osób trzecich, w tym prawa autorskie, znaki towarowe lub dobra osobiste;</li>
           <li>zawierają dane osobowe innych osób ujawnione bez ich zgody.</li>
         </ul>
-        Recomly stosuje zasadę zera tolerancji wobec treści budzących sprzeciw (objectionable content) oraz użytkowników dopuszczających się nadużyć. Treści naruszające powyższe zasady są usuwane, a Recomly może niezwłocznie zawiesić lub usunąć Konto ich autora.
       </li>
-      <li data-i18n-html="s5.l4">Zgłaszanie i moderacja treści. Każdy Użytkownik oraz osoba trzecia może zgłosić Treść naruszającą Regulamin lub przepisy prawa za pośrednictwem funkcji „Zgłoś" w Aplikacji lub na adres kontakt@recomly.app. Recomly rozpatruje zgłoszenia i, według własnego uznania, może usunąć Treść, ograniczyć do niej dostęp lub zawiesić Konto autora, informując go zwięźle o powodzie decyzji.</li>
-      <li data-i18n="s5.l5">Punkt kontaktowy dla organów władzy publicznej oraz Użytkowników w rozumieniu art. 11–12 Aktu o usługach cyfrowych (DSA): kontakt@recomly.app.</li>
     </ol>
 
-    <!-- §6 Zakaz nadużyć -->
-    <h2 data-i18n="s6.h">§6. Zakaz nadużyć</h2>
-    <p data-i18n="s6.p1">Korzystając z Aplikacji, Użytkownik zobowiązany jest do:</p>
+    <!-- §6 Nielegalne treści -->
+    <h2 data-i18n="s6.h">§6. Nielegalne treści</h2>
     <ol>
-      <li data-i18n="s6.l1">niepodejmowania działań zakłócających prawidłowe funkcjonowanie Aplikacji,</li>
-      <li data-i18n="s6.l2">niedodawania fałszywych ocen lub recenzji niezwiązanych z faktycznym doświadczeniem,</li>
-      <li data-i18n="s6.l3">niemanipulowania mechanizmami rekomendacji (np. poprzez tworzenie fikcyjnych kont lub sztucznych połączeń),</li>
-      <li data-i18n="s6.l4">niewykorzystywania zautomatyzowanych narzędzi (botów, skryptów) do interakcji z Aplikacją bez wyraźnej zgody Recomly,</li>
-      <li data-i18n="s6.l5">niepodejmowania prób nieautoryzowanego dostępu do infrastruktury Aplikacji lub danych innych Użytkowników,</li>
-      <li data-i18n="s6.l6">niepobierania, niekopiowania ani niepowielania zawartości Aplikacji (w tym scrapingu) bez zgody Recomly.</li>
+      <li data-i18n="s6.l1">Recomly stosuje zasadę zera tolerancji wobec treści budzących sprzeciw (objectionable content) oraz użytkowników dopuszczających się nadużyć. Treści naruszające powyższe zasady są usuwane, a Recomly może niezwłocznie zawiesić lub usunąć Konto ich autora.</li>
+      <li data-i18n-html="s6.l2">Korzystając z Aplikacji, Użytkownik zobowiązany jest do:
+        <ol>
+          <li>niepodejmowania działań zakłócających prawidłowe funkcjonowanie Aplikacji,</li>
+          <li>niedodawania fałszywych ocen lub recenzji niezwiązanych z faktycznym doświadczeniem,</li>
+          <li>niemanipulowania mechanizmami rekomendacji (np. poprzez tworzenie fikcyjnych kont lub sztucznych połączeń),</li>
+          <li>niewykorzystywania zautomatyzowanych narzędzi (botów, skryptów) do interakcji z Aplikacją bez wyraźnej zgody Recomly,</li>
+          <li>niepodejmowania prób nieautoryzowanego dostępu do infrastruktury Aplikacji lub danych innych Użytkowników,</li>
+          <li>niepobierania, niekopiowania ani niepowielania zawartości Aplikacji (w tym scrapingu) bez zgody Recomly.</li>
+        </ol>
+        Naruszenie powyższych zasad uprawnia Recomly do ostrzeżenia, czasowego zawieszenia lub usunięcia Konta Użytkownika oraz dochodzenia roszczeń na drodze prawnej.
+      </li>
+      <li data-i18n="s6.l3">Zakazane jest dostarczanie przez Użytkownika treści o charakterze bezprawnym oraz podejmowanie działań mogących zakłócić pracę infrastruktury teleinformatycznej Recomly (w szczególności inżynieria wsteczna, scraping danych, ataki DDoS, wykorzystywanie nieautoryzowanych botów).</li>
+      <li data-i18n-html="s6.l4">Każdy Użytkownik oraz osoba trzecia może zgłosić Treść naruszającą Regulamin lub przepisy prawa za pośrednictwem funkcji „Zgłoś" w Aplikacji lub na adres kontakt@recomly.app. Zgłoszenie powinno zawierać uzasadnienie oraz wskazanie lokalizacji danej treści (np. link, zrzut ekranu, identyfikator recenzji). Recomly rozpatruje zgłoszenia i, według własnego uznania, może usunąć Treść, ograniczyć do niej dostęp lub zawiesić bądź usunąć Konto autora, informując go zwięźle o powodzie decyzji.</li>
+      <li data-i18n="s6.l5">Punkt kontaktowy dla organów władzy publicznej oraz Użytkowników w rozumieniu art. 11–12 DSA: kontakt@recomly.app.</li>
     </ol>
-    <p data-i18n="s6.p2">Naruszenie powyższych zasad uprawnia Recomly do ostrzeżenia, czasowego zawieszenia lub usunięcia Konta Użytkownika oraz dochodzenia roszczeń na drodze prawnej.</p>
 
     <!-- §7 Zawieszenie i usunięcie Konta przez Recomly -->
     <h2 data-i18n="s7.h">§7. Zawieszenie i usunięcie Konta przez Recomly</h2>
@@ -156,26 +188,41 @@
 
     <!-- §8 Wynagrodzenie i płatności -->
     <h2 data-i18n="s8.h">§8. Wynagrodzenie i płatności</h2>
-    <p data-i18n="s8.p1">Korzystanie z podstawowych funkcji Aplikacji przez Użytkowników jest bezpłatne. Recomly uzyskuje przychód z prowizji rozliczanej z Partnerami na podstawie odrębnych umów. Recomly zastrzega sobie prawo do wprowadzenia w przyszłości płatnych funkcji dodatkowych (w tym subskrypcji rozliczanych przez App Store/Google Play) - zasady takich funkcji, w tym warunki automatycznego odnawiania i rezygnacji, zostaną określone w odrębnym dokumencie udostępnionym przed ich uruchomieniem.</p>
+    <p data-i18n="s8.p1">Korzystanie z podstawowych funkcji Aplikacji i Serwisu przez Użytkowników jest bezpłatne. Recomly uzyskuje przychód z prowizji rozliczanej z Partnerami na podstawie odrębnych umów. Recomly zastrzega sobie prawo do wprowadzenia w przyszłości płatnych funkcji dodatkowych (w tym subskrypcji rozliczanych przez App Store/Google Play) - zasady takich funkcji, w tym warunki automatycznego odnawiania i rezygnacji, zostaną określone przed ich uruchomieniem.</p>
 
     <!-- §9 Wymagania techniczne -->
     <h2 data-i18n="s9.h">§9. Wymagania techniczne</h2>
-    <p data-i18n="s9.p1">Korzystanie z Aplikacji wymaga urządzenia mobilnego z systemem iOS lub Android w wersji wspieranej przez producenta, dostępu do Internetu, aktywnego adresu email oraz numeru telefonu. Recomly nie odpowiada za nieprawidłowe działanie Aplikacji wynikające z niespełnienia powyższych wymagań.</p>
+    <ol>
+      <li data-i18n="s9.l1">Korzystanie z Aplikacji wymaga urządzenia mobilnego z systemem iOS lub Android w aktualnej wersji wspieranej przez producenta, dostępu do Internetu, aktywnego adresu email oraz numeru telefonu. Recomly nie odpowiada za nieprawidłowe działanie Aplikacji wynikające z niespełnienia powyższych wymagań przez Użytkownika.</li>
+      <li data-i18n="s9.l2">W celu prawidłowego funkcjonowania Serwisu i korzystania z Konta, Użytkownik ma obowiązek zadbać, aby używane przez niego oprogramowanie było aktualne, szczególnie w zakresie ewentualnego pobierania nowych wersji lub aktualizacji.</li>
+      <li data-i18n="s9.l3">Recomly zapewnia środki techniczne i organizacyjne zapobiegające pozyskiwaniu i modyfikacji danych osobowych przez osoby nieuprawnione (w tym szyfrowanie protokołem SSL/TLS), jednak korzystanie z sieci Internet wiąże się z potencjalnym ryzykiem technicznym, takim jak zagrożenie złośliwym oprogramowaniem (malware, ransomware), próby wyłudzenia danych (phishing) czy nieautoryzowany dostęp osób trzecich wynikający z niedostatecznego zabezpieczenia urządzenia końcowego przez Użytkownika.</li>
+      <li data-i18n="s9.l4">Recomly zastrzega sobie prawo dokonywania czasowych przerw w dostępie do Serwisu w celach konserwacyjnych, naprawczych lub w celach aktualizacji albo rozbudowy Serwisu lub Aplikacji - o ile działania te takiej przerwy wymagają.</li>
+    </ol>
 
     <!-- §10 Własność intelektualna -->
     <h2 data-i18n="s10.h">§10. Własność intelektualna</h2>
     <ol>
-      <li data-i18n="s10.l1">Wszelkie prawa do Aplikacji i Serwisu, w tym do nazwy, logotypu, treści, grafik, układu i kodu źródłowego, przysługują Recomly lub podmiotom, z którymi Recomly zawarło stosowne umowy, z zastrzeżeniem praw Użytkowników do własnych Treści (§5).</li>
-      <li data-i18n="s10.l2">Korzystanie z Aplikacji nie powoduje przeniesienia jakichkolwiek praw własności intelektualnej na Użytkownika.</li>
+      <li data-i18n="s10.l1">Wszelkie prawa do Aplikacji i Serwisu, w tym do nazwy, logotypu, treści, grafik, układu i kodu źródłowego, przysługują Recomly lub podmiotom, z którymi Recomly zawarło stosowne umowy, z zastrzeżeniem praw Użytkowników do własnych Treści.</li>
+      <li data-i18n="s10.l2">Korzystanie z Aplikacji i Serwisu nie powoduje przeniesienia jakichkolwiek praw własności intelektualnej na Użytkownika.</li>
       <li data-i18n="s10.l3">Zabrania się kopiowania, modyfikowania, dekompilowania, rozpowszechniania lub wykorzystywania w jakikolwiek sposób elementów Aplikacji bez uprzedniej pisemnej zgody Recomly, z wyjątkiem zakresu dozwolonego bezwzględnie obowiązującymi przepisami prawa.</li>
       <li data-i18n-html="s10.l4">Znak towarowy „Recomly" oraz logotyp Recomly są chronione prawem.</li>
     </ol>
 
-    <!-- §11 Odpowiedzialność -->
-    <h2 data-i18n="s11.h">§11. Odpowiedzialność</h2>
+    <!-- §11 Asystent AI - Remi -->
+    <h2 data-i18n="s11.h">§11. Asystent AI - Remi</h2>
     <ol>
-      <li data-i18n-html="s11.l1">Aplikacja i Serwis dostarczane są w stanie „tak jak jest" („as is"), bez gwarancji nieprzerwanego, bezbłędnego lub w pełni bezpiecznego działania.</li>
-      <li data-i18n-html="s11.l2">W maksymalnym zakresie dopuszczalnym przez prawo Recomly nie ponosi odpowiedzialności za:
+      <li data-i18n-html="s11.l1">Wchodząc w interakcję z asystentem AI „Remi”, Użytkownik prowadzi konwersację z automatycznym systemem sztucznej inteligencji (AI), a nie z osobą fizyczną. Funkcjonalność ta opiera się na modelach LLM dostarczanych przez zewnętrznego dostawcę.</li>
+      <li data-i18n="s11.l2">Odpowiedzi generowane przez Remi mają charakter wyłącznie pomocniczy, subiektywny i orientacyjny. Ze względu na specyfikę technologii generatywnej sztucznej inteligencji, generowane odpowiedzi mogą zawierać nieścisłości, błędy merytoryczne, przedawnione dane lub zmyślone informacje (tzw. halucynacje AI).</li>
+      <li data-i18n="s11.l3">Odpowiedzi Remi w żadnym wypadku nie stanowią gwarancji braku alergenów, informacji dietetycznej ani porady medycznej. Przed skorzystaniem z oferty Restauracji Użytkownik ma obowiązek zweryfikować dane lub informacje od Remi z Restauracją. Recomly nie ponosi odpowiedzialności za niezgodność sugestii Remi ze stanem faktycznym w lokalu Restauracji.</li>
+      <li data-i18n="s11.l4">Użytkownik zobowiązuje się do niewprowadzania w oknie rozmowy z asystentem Remi danych poufnych, danych kart płatniczych, haseł oraz danych osobowych, w tym danych o stanie zdrowia.</li>
+      <li data-i18n="s11.l5">Zabrania się wykorzystywania asystenta Remi do generowania treści bezprawnych, wulgarnych, nawołujących do nienawiści, jak również podejmowania prób obchodzenia zabezpieczeń algorytmicznych modelu.</li>
+    </ol>
+
+    <!-- §12 Odpowiedzialność -->
+    <h2 data-i18n="s12.h">§12. Odpowiedzialność</h2>
+    <ol>
+      <li data-i18n="s12.l1">Recomly ponosi odpowiedzialność za niewykonanie lub nienależyte wykonanie umowy na zasadach ogólnych. Wyłącza się odpowiedzialność Recomly za utracone korzyści.</li>
+      <li data-i18n-html="s12.l2">W maksymalnym zakresie dopuszczalnym przez prawo Recomly nie ponosi odpowiedzialności za:
         <ul>
           <li>decyzje podjęte przez Użytkownika na podstawie rekomendacji lub Treści prezentowanych w Aplikacji;</li>
           <li>jakość, bezpieczeństwo, legalność lub dostępność usług świadczonych przez Partnerów;</li>
@@ -185,47 +232,67 @@
           <li>utratę danych, która nie nastąpiła z wyłącznej winy Recomly.</li>
         </ul>
       </li>
-      <li data-i18n="s11.l3">Żadne postanowienie niniejszego Regulaminu nie ogranicza odpowiedzialności Recomly za szkody wyrządzone umyślnie lub wskutek rażącego niedbalstwa ani jakiejkolwiek odpowiedzialności, której nie można ograniczyć na podstawie obowiązujących przepisów, w tym przepisów o ochronie konsumentów.</li>
-      <li data-i18n="s11.l4">Użytkownik zobowiązuje się zwolnić Recomly z odpowiedzialności za wszelkie roszczenia osób trzecich wynikające z naruszenia przez Użytkownika Regulaminu lub przepisów prawa, w szczególności w związku z zamieszczonymi przez niego Treściami.</li>
+      <li data-i18n="s12.l3">Żadne postanowienie niniejszego Regulaminu nie ogranicza odpowiedzialności Recomly za szkody wyrządzone umyślnie ani jakiejkolwiek odpowiedzialności, której nie można ograniczyć na podstawie obowiązujących przepisów, w tym przepisów Ustawy o ochronie konsumentów.</li>
+      <li data-i18n="s12.l4">Użytkownik zobowiązuje się zwolnić Recomly z odpowiedzialności za wszelkie roszczenia osób trzecich wynikające z naruszenia przez Użytkownika Regulaminu lub przepisów prawa, w szczególności w związku z zamieszczonymi przez niego Treściami.</li>
+      <li data-i18n="s12.l5">Wobec Użytkowników niebędących konsumentami (np. przedsiębiorców korzystających z Aplikacji w celach zarobkowych) odpowiedzialność Recomly z tytułu wszelkich szkód (z wyłączeniem szkody wyrządzonej umyślnie) zostaje ograniczona do kwoty 3-miesięcznego wynagrodzenia prowizyjnego, jakie zostało wypłacone Użytkownikowi przed dniem powstania szkody.</li>
+      <li data-i18n="s12.l6">Recomly nie ponosi odpowiedzialności za niewykonanie lub nienależyte wykonanie usług gastronomicznych świadczonych przez Restauracje na rzecz Użytkowników w lokalach, w tym za jakość potraw, obsługę kelnerską czy ewentualne szkody na zdrowiu konsumenta powstałe w lokalu gastronomicznym (odpowiedzialność w tym zakresie spoczywa wyłącznie na Restauracji prowadzącej lokal).</li>
     </ol>
 
-    <!-- §12 Reklamacje -->
-    <h2 data-i18n="s12.h">§12. Reklamacje</h2>
+    <!-- §13 Reklamacje -->
+    <h2 data-i18n="s13.h">§13. Reklamacje</h2>
     <ol>
-      <li data-i18n="s12.l1">Reklamacje dotyczące funkcjonowania Aplikacji lub Serwisu można zgłaszać na adres kontakt@recomly.app.</li>
-      <li data-i18n="s12.l2">Reklamacja powinna zawierać: imię i nazwisko, adres email powiązany z Kontem, opis problemu oraz oczekiwany sposób jego rozwiązania.</li>
-      <li data-i18n="s12.l3">Recomly rozpatruje reklamacje w terminie 14 dni od ich otrzymania.</li>
+      <li data-i18n="s13.l1">Recomly ma obowiązek dostarczać usługi (Aplikację, Serwis) zgodne z umową przez cały okres jej trwania. Recomly informuje Użytkownika o aktualizacjach Aplikacji (w tym aktualizacjach dotyczących zabezpieczeń) niezbędnych do zachowania jej zgodności z umową oraz dostarcza je za pośrednictwem sklepów App Store / Google Play.</li>
+      <li data-i18n="s13.l2">W przypadku niewykonania lub nienależytego wykonania usług przez Recomly Użytkownikowi przysługują uprawnienia przewidziane w Ustawie o prawach konsumenta (w tym żądanie doprowadzenia do zgodności z umową, a w przypadkach przewidzianych prawem – odstąpienie od umowy).</li>
+      <li data-i18n-html="s13.l3">Reklamacje dotyczące funkcjonowania Aplikacji, Konta lub innych usług cyfrowych można zgłaszać:
+        <ol>
+          <li>pocztą elektroniczną na adres: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a>;</li>
+          <li>pisemnie na adres siedziby Recomly.</li>
+        </ol>
+      </li>
+      <li data-i18n="s13.l4">Zgłoszenie reklamacji powinno zawierać: dane identyfikujące Użytkownika (adres e-mail Konta), opis zaistniałego problemu, datę jego wystąpienia oraz żądanie Użytkownika.</li>
+      <li data-i18n="s13.l5">Recomly rozpatruje reklamację i udziela odpowiedzi w terminie 14 dni od dnia jej otrzymania, przesyłając odpowiedź na adres e-mail, z którego nadesłano zgłoszenie.</li>
     </ol>
 
-    <!-- §13 Rozwiązywanie sporów -->
-    <h2 data-i18n="s13.h">§13. Rozwiązywanie sporów</h2>
+    <!-- §14 Rozwiązywanie sporów -->
+    <h2 data-i18n="s14.h">§14. Rozwiązywanie sporów</h2>
     <ol>
-      <li data-i18n="s13.l1">Użytkownik będący konsumentem może skorzystać z pozasądowych sposobów rozpatrywania reklamacji i dochodzenia roszczeń, w szczególności z pomocy powiatowego (miejskiego) rzecznika konsumentów, Wojewódzkich Inspektoratów Inspekcji Handlowej lub stałych polubownych sądów konsumenckich.</li>
-      <li data-i18n="s13.l2">Nieuzasadnione ograniczenie Treści lub Konta Użytkownika przez Recomly może zostać zaskarżone do podmiotu pozasądowego rozstrzygania sporów certyfikowanego zgodnie z art. 21 Aktu o usługach cyfrowych - listę takich podmiotów publikuje Komisja Europejska.</li>
-      <li data-i18n="s13.l3">Skorzystanie z pozasądowych sposobów rozpatrywania sporów ma charakter dobrowolny.</li>
+      <li data-i18n="s14.l1">Użytkownik będący konsumentem może skorzystać z pozasądowych sposobów rozpatrywania reklamacji i dochodzenia roszczeń, w szczególności z pomocy powiatowego (miejskiego) rzecznika konsumentów, Wojewódzkich Inspektoratów Inspekcji Handlowej lub stałych polubownych sądów konsumenckich.</li>
+      <li data-i18n="s14.l2">Nieuzasadnione ograniczenie Treści lub Konta Użytkownika przez Recomly może zostać zaskarżone do podmiotu pozasądowego rozstrzygania sporów certyfikowanego zgodnie z DSA.</li>
+      <li data-i18n="s14.l3">Skorzystanie z pozasądowych sposobów rozpatrywania sporów ma charakter dobrowolny.</li>
     </ol>
 
-    <!-- §14 Zmiany Regulaminu -->
-    <h2 data-i18n="s14.h">§14. Zmiany Regulaminu</h2>
+    <!-- §15 Zmiany Regulaminu -->
+    <h2 data-i18n="s15.h">§15. Zmiany Regulaminu</h2>
     <ol>
-      <li data-i18n="s14.l1">Recomly może zmienić Regulamin z ważnych przyczyn, w szczególności w razie zmiany przepisów prawa, zmiany funkcjonalności Aplikacji, konieczności zapewnienia bezpieczeństwa lub przeciwdziałania nadużyciom albo decyzji organów władzy publicznej.</li>
-      <li data-i18n="s14.l2">O zmianach Regulaminu Recomly informuje Użytkowników w Aplikacji lub drogą emailową przed ich wejściem w życie.</li>
-      <li data-i18n="s14.l3">Użytkownik, który nie akceptuje zmian, może usunąć Konto przed ich wejściem w życie (§3 ust. 5). Jeśli tego nie zrobi, zmiany wiążą go od dnia ich wejścia w życie.</li>
+      <li data-i18n-html="s15.l1">Recomly może dokonać zmiany niniejszego Regulaminu wyłącznie z ważnych przyczyn, którymi są m.in.:
+        <ol>
+          <li>zmiana przepisów prawa powszechnie obowiązującego, orzeczenie sądu lub decyzja administracyjna wpływająca bezpośrednio na treść Regulaminu;</li>
+          <li>zmiana warunków technicznych świadczenia usług, w tym aktualizacja systemów operacyjnych iOS/Android, integracja z nowymi narzędziami lub zmiana dostawców infrastruktury;</li>
+          <li>wdrożenie nowych funkcjonalności, modyfikacja lub wycofanie dotychczasowych funkcji Aplikacji lub Serwisu;</li>
+          <li>konieczność przeciwdziałania nadużyciom, naruszeniom bezpieczeństwa lub wyeliminowania luk prawnych;</li>
+          <li>zmiana danych teleadresowych lub innych informacji prawnych na temat Recomly;</li>
+          <li>korekta oczywistych omyłek lub błędów pisarskich albo uzupełnienia luk lub nieścisłości w Regulaminie niedających się usunąć w wyniku wykładni zawartych postanowień;</li>
+          <li>względy bezpieczeństwa lub zapobiegania oszustwom.</li>
+        </ol>
+      </li>
+      <li data-i18n="s15.l2">O każdej zmianie Regulaminu Użytkownicy zostaną powiadomieni drogą elektroniczną (na adres e-mail przypisany do Konta) lub poprzez wyraźny komunikat wewnątrz Aplikacji z co najmniej 14-dniowym wyprzedzeniem przed planowanym wejściem w życie nowego brzmienia Regulaminu.</li>
+      <li data-i18n="s15.l3">Użytkownik, który nie wyraża zgody na wprowadzenie proponowanych zmian, ma prawo rozwiązać umowę i usunąć Konto przed upływem terminu wejścia zmian w życie. Brak usunięcia Konta lub dalsze korzystanie z Aplikacji po wejściu w życie nowego Regulaminu uważa się za jego akceptację.</li>
     </ol>
 
-    <!-- §15 Dane osobowe -->
-    <h2 data-i18n="s15.h">§15. Dane osobowe</h2>
-    <p data-i18n-html="s15.p1">Zasady przetwarzania danych osobowych Użytkowników reguluje odrębny dokument - <a href="privacy">Polityka prywatności</a>, dostępna w Aplikacji i Serwisie. Polityka prywatności stanowi integralną część niniejszego Regulaminu.</p>
+    <!-- §16 Dane osobowe -->
+    <h2 data-i18n="s16.h">§16. Dane osobowe</h2>
+    <p data-i18n-html="s16.p1">Zasady przetwarzania danych osobowych Użytkowników reguluje odrębny dokument - <a href="privacy">Polityka prywatności</a>, dostępna w Aplikacji i Serwisie.</p>
 
-    <!-- §16 Postanowienia końcowe -->
-    <h2 data-i18n="s16.h">§16. Postanowienia końcowe</h2>
+    <!-- §17 Postanowienia końcowe -->
+    <h2 data-i18n="s17.h">§17. Postanowienia końcowe</h2>
     <ol>
-      <li data-i18n="s16.l1">Prawem właściwym dla niniejszego Regulaminu jest prawo polskie.</li>
-      <li data-i18n="s16.l2">W sprawach nieuregulowanych Regulaminem zastosowanie mają przepisy Kodeksu cywilnego, Ustawy o świadczeniu usług drogą elektroniczną, Ustawy o prawach konsumenta, Aktu o usługach cyfrowych (DSA) oraz inne właściwe przepisy prawa.</li>
-      <li data-i18n="s16.l3">Wszelkie spory wynikające z Regulaminu rozstrzygane będą przez sąd właściwy dla siedziby Recomly. Postanowienie to nie dotyczy konsumentów - w ich przypadku właściwość sądu określają powszechnie obowiązujące przepisy prawa.</li>
-      <li data-i18n="s16.l4">Nieważność któregokolwiek postanowienia nie wpływa na ważność pozostałych postanowień Regulaminu (klauzula salwatoryjna). Postanowienie nieważne zostanie zastąpione postanowieniem najbliższym jego celowi.</li>
+      <li data-i18n="s17.l1">Prawem właściwym dla niniejszego Regulaminu jest prawo polskie. Wybór prawa polskiego nie pozbawia konsumenta ochrony przyznanej mu na podstawie przepisów, których nie można wyłączyć w drodze umowy na mocy prawa państwa jego zwykłego pobytu.</li>
+      <li data-i18n="s17.l2">W sprawach nieuregulowanych Regulaminem zastosowanie mają w szczególności przepisy Kodeksu cywilnego, ustawy o świadczeniu usług drogą elektroniczną, Ustawy o prawach konsumenta oraz DSA.</li>
+      <li data-i18n="s17.l3">Wszelkie spory wynikające z Regulaminu rozstrzygane będą przez sąd właściwy dla siedziby Recomly. Postanowienie to nie dotyczy konsumentów - w ich przypadku właściwość sądu określają powszechnie obowiązujące przepisy prawa.</li>
+      <li data-i18n="s17.l4">Nieważność któregokolwiek postanowienia nie wpływa na ważność pozostałych postanowień Regulaminu (klauzula salwatoryjna). Postanowienie nieważne zostanie zastąpione postanowieniem najbliższym jego celowi.</li>
+      <li data-i18n="s17.l5">Aktualna treść Regulaminu jest stale dostępna pod adresem https://recomly.app/terms oraz w menu ustawień Aplikacji Recomly w sposób umożliwiający jej pobranie, odtworzenie i utrwalenie w formacie PDF.</li>
     </ol>
-    <p data-i18n-html="s16.p1">Kontakt: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></p>
+    <p data-i18n-html="s17.p1">Kontakt: <a href="mailto:kontakt@recomly.app">kontakt@recomly.app</a></p>
   </div>
 </main>
 
@@ -254,88 +321,110 @@
       "nav.back": "← Back",
       "footer.privacy": "Privacy policy",
       "footer.terms": "Terms",
-      "meta": "Effective from: October 12, 2026",
+      "meta": "Effective from: November 16, 2026",
       "title": "Terms of Service",
-      "intro": "These Terms of Service set forth the rules for using the Recomly mobile application (\"Application\") and the recomly.app website (\"Service\"), operated by Recomly sp. z o.o.",
+      "intro": "These Terms of Service set forth the rules for using the Recomly mobile application available on iOS and Android devices (\"Application\") and the recomly.app website (\"Service\"), operated by Recomly sp. z o.o. with its registered office in Warsaw.",
       "s1.h": "§1. Definitions",
-      "s1.l1": "<strong>Recomly</strong> - Recomly sp. z o.o. with its registered office in Warsaw, Kasprzaka 31A St., Tax ID (NIP): 5273199463, Court Register (KRS): 0001214798, District Court for the Capital City of Warsaw, 12th Commercial Division of the National Court Register",
+      "s1.l1": "<strong>Recomly</strong> - Recomly sp. z o.o. with its registered office in Warsaw, Kasprzaka 31A St., Warsaw, Tax ID (NIP): 5273199463, entered in the register of entrepreneurs of the National Court Register by the District Court for the Capital City of Warsaw, 12th Commercial Division of the National Court Register under KRS number: 0001214798, REGON: 543699175, email address: kontakt@recomly.app",
       "s1.l2": "<strong>Application</strong> - the Recomly mobile application, available on the App Store and Google Play, enabling discovery of restaurants based on recommendations from people the User follows, the User's taste preferences and - with the User's consent - Application usage data",
       "s1.l3": "<strong>Service</strong> - the recomly.app website",
       "s1.l4": "<strong>Account</strong> - a User's individual account in the Application, created upon registration",
       "s1.l5": "<strong>User</strong> - a natural person with legal capacity who has created an Account or uses the Service",
-      "s1.l6": "<strong>Partner</strong> - a restaurant or other food service establishment presented in the Application, with which Recomly cooperates on separate terms set out in a partnership agreement",
+      "s1.l6": "<strong>Partner / Restaurant</strong> - a restaurant or other food service establishment presented in the Application, with which Recomly cooperates on separate terms set out in a partnership agreement",
       "s1.l7": "<strong>Content</strong> - any content added by the User in the Application, including ratings, reviews, photos, descriptions and comments",
-      "s1.l9": "<strong>Regulations</strong> - this document",
+      "s1.l8": "<strong>Regulations</strong> - this document",
+      "s1.l9": "<strong>Benefit / Discount</strong> - a special price offer, discount or additional benefit granted to the User directly by the Partner at its venue upon presentation of the Recomly Code",
+      "s1.l10": "<strong>Recomly Code</strong> - a unique digital identifier generated in the Application (QR code or alphanumeric code), used to verify the User's right to a Benefit at a Partner's venue",
+      "s1.l11": "<strong>DSA</strong> - Regulation (EU) 2022/2065 of the European Parliament and of the Council of 19 October 2022 on a Single Market for Digital Services (Digital Services Act)",
+      "s1.l12": "<strong>Consumer Rights Act</strong> - the Polish Act of 30 May 2014 on consumer rights",
       "s2.h": "§2. General provisions",
       "s2.l1": "The Regulations set forth the rules for the provision of electronic services by Recomly through the Application and the Service.",
       "s2.l2": "Use of the basic features of the Application is free of charge for Users. Recomly reserves the right to introduce paid additional features in the future, of which Users will be separately informed before their launch, with the option to opt out.",
       "s2.l3": "The Application may be used only by persons who are at least 16 years old.",
-      "s2.l4": "By registering in the Application (or by signing in with Apple or Google for the first time), the User accepts the Regulations, confirms having read the Privacy Policy and declares being at least 16 years old.",
+      "s2.l4": "By registering in the Application (or by signing in with Apple or Google for the first time), the User accepts the Regulations, confirms having read the Privacy Policy and declares being at least 16 years old. A person under 16 may not create an Account or conclude a service agreement with Recomly.",
       "s2.l5": "The current version of the Regulations is always available in the Application (Settings → Terms of Use) and at recomly.app/terms.",
       "s2.l6": "Detailed rules for child safety and responding to threats are set out in the separate <a href=\"child-safety\">Child Safety Standards</a>, available in the Application and the Service.",
+      "s2.l7": "The agreement for the provision of electronic services consisting of browsing the public content of the Service is concluded when the User enters recomly.app and terminates when the User leaves it.",
+      "s2.l8": "The agreement for maintaining an Account and using the Application is concluded for an indefinite period upon successful completion of registration and terminates when the Account is deleted.",
       "s3.h": "§3. Registration and Account",
-      "s3.l1": "Creating an Account requires providing an email address or using login via Google or Apple, and verifying a phone number with an SMS code.",
+      "s3.l1": "An Account can be registered in the Application by:<ol><li>entering an email address and password, or using social login with Apple (\"Sign in with Apple\") or Google (\"Google Sign-In\");</li><li>providing a mobile phone number and entering a one-time verification code sent by SMS.</li></ol>",
       "s3.l2": "The User is obliged to provide true data and to update it in case of change.",
-      "s3.l3": "One User may hold only one Account. It is prohibited to create accounts on behalf of third parties without their consent and to create fictitious accounts.",
-      "s3.l4": "The User is responsible for maintaining the confidentiality of the data enabling access to the Account and is liable for actions taken through it, unless they occurred due to circumstances for which the User is not responsible (e.g. a security breach on Recomly's side).",
-      "s3.l5": "The User may delete their Account at any time - directly in the Application (Settings → Delete account) or via the page <a href=\"https://auth.recomly.app/delete-account/\">https://auth.recomly.app/delete-account/</a>, without needing to contact support.",
+      "s3.l3": "One User may hold only one Account. It is prohibited to create accounts on behalf of third parties without their consent and to create fictitious accounts. Sharing an Account with third parties or using other persons' Accounts is prohibited.",
+      "s3.l4": "Verification of the phone number with an SMS code is an integral contractual requirement for registering an Account. It serves to verify that accounts are unique and to protect the platform and Partners against bots, discount fraud and fake ratings.",
+      "s3.l5": "The User is responsible for maintaining the confidentiality of the data enabling access to the Account and is liable for actions taken through it, unless they occurred due to circumstances for which the User is not responsible (e.g. a security breach on Recomly's side).",
+      "s3.l6": "A User who is a consumer has the right to withdraw from the agreement for the provision of electronic services (maintaining the Account) without giving a reason within 14 days of its conclusion. The consumer may submit an unequivocal statement to Recomly, e.g. by email to kontakt@recomly.app, or use the statutory model withdrawal form under the Consumer Rights Act. Sending the statement before the deadline is sufficient to meet it. Since maintaining the Account is free of charge, exercising the right of withdrawal has the same effect as the User deleting the Account.",
+      "s3.l7": "The User may delete their Account at any time free of charge - directly in the Application (Settings → Delete account) or via the page <a href=\"https://auth.recomly.app/delete-account/\">https://auth.recomly.app/delete-account/</a>, without needing to contact support. Deleting the Account terminates the agreement for the provision of electronic services with Recomly.",
       "s4.h": "§4. Application functionalities",
-      "s4.l1": "The Application enables in particular:<ul><li>discovering restaurants and food service venues based on recommendations from people the User follows and the User's taste preferences (Taste Graph);</li><li>adding ratings, reviews and photos of visited places;</li><li>saving and organizing favorite places and lists to visit;</li><li>following friends and browsing their recommendations;</li><li>asking the AI assistant (Remi) questions - automatically generated answers may contain errors;</li><li>using discounts offered by Partners with the Recomly code;</li><li>recommendations tailored to location and - with the User's consent, which can be withdrawn at any time - to how the User uses the Application. Not giving consent does not limit the other features of the Application.</li></ul>",
-      "s4.l2": "Recomly makes efforts to ensure that the recommendations and Partner data presented are up to date and reliable, but does not guarantee their completeness or infallibility - content in the Application is informational in nature.",
-      "s4.l3": "Recomly reserves the right to develop, modify or withdraw individual functionalities of the Application, exercising due diligence in informing Users of significant changes.",
-      "s4.l4": "Some Partners offer discounts to Users. The discount is given by the Partner, which sets its terms and may change or end them. Recomly does not guarantee that a particular Partner offers a discount at a given time.",
+      "s4.l1": "Through the Application, Recomly provides free digital services including, among others:<ul><li>maintaining the Account and personalizing the profile;</li><li>discovering restaurants and food service venues based on recommendations from people the User follows and the User's taste preferences (Taste Graph);</li><li>adding ratings, reviews and photos of visited places;</li><li>saving and organizing favorite places and lists to visit;</li><li>following friends and browsing their recommendations;</li><li>maintaining a Taste Profile based on the User's explicit choices and ratings in order to show a percentage match score for a venue;</li><li>using the conversational AI assistant (\"Remi\") that helps search for venues;</li><li>creating and saving private or public lists of venues (folders);</li><li>generating a Recomly Code entitling the User to Benefits at Partners' venues;</li><li>with the User's separate consent: personalizing recommendations based on behavior analysis (behavioral profiling) and sending push notifications;</li><li>recommendations tailored to location and - with the User's consent, which can be withdrawn at any time - to how the User uses the Application. Not giving consent does not limit the other features of the Application.</li></ul>",
+      "s4.l2": "Remi's answers are generated automatically using artificial intelligence algorithms based on the User's query and venue data.",
+      "s4.l3": "Rules for granting Benefits at Partners' venues:<ul><li>A Benefit (discount) is granted to the User directly by the Partner (the issuer of the bill).</li><li>To receive a Benefit, the User must show a valid Recomly Code to the Partner's staff before the bill / fiscal receipt is issued, and the staff must register the visit.</li></ul>",
+      "s4.l4": "Recomly exercises due diligence in verifying that Partners' offers are up to date, but the Partner running the venue is responsible for providing the food service and applying the Discount correctly.",
+      "s4.l5": "Recomly makes efforts to ensure that the recommendations and Partner data presented are up to date and reliable, but does not guarantee their completeness or infallibility - content in the Application is informational in nature.",
+      "s4.l6": "Recomly reserves the right to develop, modify or withdraw individual functionalities of the Application, exercising due diligence in informing Users of significant changes.",
+      "s4.l7": "Some Partners offer discounts to Users. The discount is given by the Partner, which sets its terms and may change or end them. Recomly does not guarantee that a particular Partner offers a Discount at a given time.",
       "s5.h": "§5. User Content",
-      "s5.l1": "By adding Content to the Application, the User retains full copyright to it, while simultaneously granting Recomly a free, non-exclusive, worldwide license to store, display, reproduce and distribute this Content as part of the Application's operation and in Recomly's promotional materials, for the duration of the Account and for the time necessary to fulfill legal obligations after its deletion. Photos added to a place or a review may be displayed in the Application as photos of the place, including as its main photo. Recomly may display Content without naming its author.",
-      "s5.l2": "The User bears full responsibility for the Content posted and represents that they hold the appropriate rights to it.",
-      "s5.l3": "It is prohibited to post Content that:<ul><li>incites hatred or discrimination based on race, ethnic or national origin, religion, gender, sexual orientation, disability or age;</li><li>constitutes harassment, intimidation, threats or hate speech against others;</li><li>is pornographic or depicts sexual content, in particular involving minors (child sexual abuse material is strictly prohibited and reported to the competent authorities);</li><li>promotes or glorifies violence, self-harm, terrorism or cruelty;</li><li>is illegal or promotes unlawful activities, including trade in prohibited substances;</li><li>constitutes spam, misleading or fraudulent content, or malware;</li><li>infringes third-party rights, including copyright, trademarks or personal rights;</li><li>contains other persons' personal data disclosed without their consent.</li></ul>Recomly applies a zero-tolerance policy towards objectionable content and users who engage in abusive behavior. Content violating the above rules is removed, and Recomly may immediately suspend or delete the author's Account.",
-      "s5.l4": "Reporting and moderation of content. Any User or third party may report Content that violates the Regulations or the law via the \"Report\" feature in the Application or at kontakt@recomly.app. Recomly reviews reports and, at its own discretion, may remove the Content, restrict access to it, or suspend the author's Account, briefly informing them of the reason for the decision.",
-      "s5.l5": "Contact point for public authorities and Users within the meaning of Articles 11-12 of the Digital Services Act (DSA): kontakt@recomly.app.",
-      "s6.h": "§6. Prohibition of abuse",
-      "s6.p1": "When using the Application, the User is obliged to:",
-      "s6.l1": "not take actions that disrupt the proper functioning of the Application,",
-      "s6.l2": "not add false ratings or reviews unrelated to actual experience,",
-      "s6.l3": "not manipulate the recommendation mechanisms (e.g. by creating fictitious accounts or artificial connections),",
-      "s6.l4": "not use automated tools (bots, scripts) to interact with the Application without Recomly's explicit consent,",
-      "s6.l5": "not attempt unauthorized access to the Application's infrastructure or other Users' data,",
-      "s6.l6": "not download, copy or reproduce the content of the Application (including scraping) without Recomly's consent.",
-      "s6.p2": "Violation of the above rules entitles Recomly to warn, temporarily suspend or delete the User's Account and to pursue claims through legal means.",
+      "s5.l1": "By adding Content to the Service or the Application, the User retains full copyright to it, while granting Recomly a free, non-exclusive, worldwide license to record and reproduce it in the memory of devices and cloud servers, store, publicly display, copy and distribute this Content in the Service and the Application, use excerpts of reviews or photos as part of the Application's operation for the duration of the Account, and in Recomly's promotional materials (on social media, websites, and Recomly's digital and printed marketing materials) without time limits, including after the Account is deleted. Photos added to a place or a review may be displayed in the Application as photos of the Restaurant, including as its main photo. Recomly may display Content without naming its author.",
+      "s5.l2": "The User bears full responsibility for the Content posted and represents that they hold the appropriate rights to it or have obtained the appropriate consents from third parties.",
+      "s5.l3": "By adding Content, the User agrees that it will be published, made available to other Users and Restaurants, and used in the Service, the Application and Recomly's promotional materials in accordance with section 1 above. If Recomly wishes to use photos showing people's images for marketing purposes, Recomly will obtain separate consent from those people to use their image.",
+      "s5.l4": "The User represents that the published Content is their own work, reflects their actual experience as a consumer and does not infringe third-party rights (including copyright, image rights, trade secrets or personal rights).",
+      "s5.l5": "It is prohibited to post Content that:<ul><li>incites hatred or discrimination based on race, ethnic or national origin, religion, gender, sexual orientation, disability or age;</li><li>constitutes harassment, intimidation, threats or hate speech against others;</li><li>is pornographic or depicts sexual content, in particular involving minors (child sexual abuse material is strictly prohibited and reported to the competent authorities);</li><li>promotes or glorifies violence, self-harm, terrorism or cruelty;</li><li>is illegal or promotes unlawful activities, including trade in prohibited substances;</li><li>constitutes spam, misleading or fraudulent content, or malware;</li><li>infringes third-party rights, including copyright, trademarks or personal rights;</li><li>contains other persons' personal data disclosed without their consent.</li></ul>",
+      "s6.h": "§6. Illegal content",
+      "s6.l1": "Recomly applies a zero-tolerance policy towards objectionable content and users who engage in abusive behavior. Content violating the above rules is removed, and Recomly may immediately suspend or delete the author's Account.",
+      "s6.l2": "When using the Application, the User is obliged to:<ol><li>not take actions that disrupt the proper functioning of the Application,</li><li>not add false ratings or reviews unrelated to actual experience,</li><li>not manipulate the recommendation mechanisms (e.g. by creating fictitious accounts or artificial connections),</li><li>not use automated tools (bots, scripts) to interact with the Application without Recomly's explicit consent,</li><li>not attempt unauthorized access to the Application's infrastructure or other Users' data,</li><li>not download, copy or reproduce the content of the Application (including scraping) without Recomly's consent.</li></ol>Violation of the above rules entitles Recomly to warn, temporarily suspend or delete the User's Account and to pursue claims through legal means.",
+      "s6.l3": "The User may not provide unlawful content or take actions that could disrupt Recomly's IT infrastructure (in particular reverse engineering, data scraping, DDoS attacks, or the use of unauthorized bots).",
+      "s6.l4": "Any User or third party may report Content that violates the Regulations or the law via the \"Report\" feature in the Application or at kontakt@recomly.app. The report should include a justification and indicate where the content is located (e.g. a link, a screenshot, a review ID). Recomly reviews reports and, at its own discretion, may remove the Content, restrict access to it, or suspend or delete the author's Account, briefly informing them of the reason for the decision.",
+      "s6.l5": "Contact point for public authorities and Users within the meaning of Articles 11-12 of the DSA: kontakt@recomly.app.",
       "s7.h": "§7. Suspension and deletion of Account by Recomly",
       "s7.l1": "Recomly may at any time suspend or delete a User's Account if the User violates the Regulations, the law, or acts to the detriment of Recomly, other Users or Partners, briefly informing them of the reason for the decision.",
       "s7.l2": "If Recomly suspends or restricts a User's Account or removes their Content, it informs the User of the reason. The User may appeal by writing to kontakt@recomly.app. Recomly reviews the appeal within 14 days and informs the User of its decision and the reasons for it.",
       "s8.h": "§8. Remuneration and payments",
-      "s8.p1": "Use of the basic features of the Application by Users is free of charge. Recomly generates revenue from commissions settled with Partners under separate agreements. Recomly reserves the right to introduce paid additional features in the future (including subscriptions billed through the App Store/Google Play) - the rules for such features, including terms of automatic renewal and cancellation, will be set out in a separate document made available before their launch.",
+      "s8.p1": "Use of the basic features of the Application and the Service by Users is free of charge. Recomly generates revenue from commissions settled with Partners under separate agreements. Recomly reserves the right to introduce paid additional features in the future (including subscriptions billed through the App Store/Google Play) - the rules for such features, including terms of automatic renewal and cancellation, will be set out before their launch.",
       "s9.h": "§9. Technical requirements",
-      "s9.p1": "Use of the Application requires a mobile device with an iOS or Android version supported by the manufacturer, Internet access, and an active email address and phone number. Recomly is not responsible for the Application malfunctioning as a result of failure to meet the above requirements.",
+      "s9.l1": "Use of the Application requires a mobile device with a current iOS or Android version supported by the manufacturer, Internet access, and an active email address and phone number. Recomly is not responsible for the Application malfunctioning as a result of the User's failure to meet the above requirements.",
+      "s9.l2": "For the Service to work properly and to use the Account, the User must keep their software up to date, in particular by downloading new versions or updates.",
+      "s9.l3": "Recomly applies technical and organizational measures preventing unauthorized persons from obtaining or modifying personal data (including SSL/TLS encryption); however, using the Internet involves potential technical risks, such as malware (including ransomware), phishing attempts, or unauthorized access by third parties resulting from the User's insufficient protection of their device.",
+      "s9.l4": "Recomly reserves the right to temporarily interrupt access to the Service for maintenance, repairs, updates or expansion of the Service or the Application - where such work requires an interruption.",
       "s10.h": "§10. Intellectual property",
-      "s10.l1": "All rights to the Application and the Service, including the name, logo, content, graphics, layout and source code, belong to Recomly or entities with which Recomly has concluded relevant agreements, subject to Users' rights to their own Content (§5).",
-      "s10.l2": "Use of the Application does not transfer any intellectual property rights to the User.",
+      "s10.l1": "All rights to the Application and the Service, including the name, logo, content, graphics, layout and source code, belong to Recomly or entities with which Recomly has concluded relevant agreements, subject to Users' rights to their own Content.",
+      "s10.l2": "Use of the Application and the Service does not transfer any intellectual property rights to the User.",
       "s10.l3": "It is forbidden to copy, modify, decompile, distribute or use in any way elements of the Application without Recomly's prior written consent, except to the extent permitted by mandatory law.",
       "s10.l4": "The \"Recomly\" trademark and the Recomly logo are protected by law.",
-      "s11.h": "§11. Liability",
-      "s11.l1": "The Application and the Service are provided \"as is\", without guarantee of uninterrupted, error-free or fully secure operation.",
-      "s11.l2": "To the maximum extent permitted by law, Recomly shall not be liable for:<ul><li>decisions made by the User based on recommendations or Content presented in the Application;</li><li>the quality, safety, legality or availability of services provided by Partners;</li><li>Content posted by other Users;</li><li>interruptions in the operation of the Application or Service resulting from force majeure or other causes beyond Recomly's control;</li><li>damage resulting from the User's improper use of the Application or breach of the Regulations;</li><li>loss of data that did not occur solely through Recomly's fault.</li></ul>",
-      "s11.l3": "Nothing in these Regulations limits Recomly's liability for damage caused intentionally or through gross negligence, or any liability that cannot be limited under applicable law, including consumer protection law.",
-      "s11.l4": "The User undertakes to indemnify Recomly against any third-party claims arising from the User's violation of the Regulations or the law, in particular in connection with Content posted by the User.",
-      "s12.h": "§12. Complaints",
-      "s12.l1": "Complaints regarding the functioning of the Application or the Service may be submitted to kontakt@recomly.app.",
-      "s12.l2": "A complaint should include: full name, the email address associated with the Account, a description of the problem, and the expected method of resolution.",
-      "s12.l3": "Recomly considers complaints within 14 days of receiving them.",
-      "s13.h": "§13. Dispute resolution",
-      "s13.l1": "A User who is a consumer may use out-of-court methods of considering complaints and pursuing claims, in particular the assistance of the county (municipal) consumer ombudsman, the Voivodeship Inspectorates of Trade Inspection, or permanent amicable consumer courts.",
-      "s13.l2": "An unjustified restriction of Content or a User's Account by Recomly may be appealed to an out-of-court dispute resolution body certified in accordance with Article 21 of the Digital Services Act - a list of such bodies is published by the European Commission.",
-      "s13.l3": "The use of out-of-court dispute resolution methods is voluntary.",
-      "s14.h": "§14. Changes to the Regulations",
-      "s14.l1": "Recomly may change the Regulations for important reasons, in particular changes in the law, changes to the Application's features, the need to ensure security or prevent abuse, or decisions of public authorities.",
-      "s14.l2": "Recomly informs Users about changes to the Regulations in the Application or by email before they take effect.",
-      "s14.l3": "A User who does not accept the changes may delete their Account before they take effect (§3(5)). Otherwise, the changes bind the User from the date they take effect.",
-      "s15.h": "§15. Personal data",
-      "s15.p1": "The rules for processing Users' personal data are governed by a separate document - the <a href=\"privacy\">Privacy Policy</a>, available in the Application and the Service. The Privacy Policy forms an integral part of these Regulations.",
-      "s16.h": "§16. Final provisions",
-      "s16.l1": "Polish law is the governing law for these Regulations.",
-      "s16.l2": "In matters not regulated by the Regulations, the provisions of the Polish Civil Code, the Act on Providing Electronic Services, the Consumer Rights Act, the Digital Services Act (DSA), and other relevant legal provisions shall apply.",
-      "s16.l3": "Any disputes arising from the Regulations will be settled by the court competent for Recomly's registered office. This provision does not apply to consumers - in their case, the court's jurisdiction is determined by generally applicable law.",
-      "s16.l4": "The invalidity of any provision does not affect the validity of the remaining provisions of the Regulations (severability clause). An invalid provision will be replaced by a provision closest to its purpose.",
-      "s16.p1": "Contact: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>"
+      "s11.h": "§11. AI assistant - Remi",
+      "s11.l1": "When interacting with the AI assistant \"Remi\", the User is having a conversation with an automated artificial intelligence (AI) system, not a natural person. This feature is based on LLM models provided by an external provider.",
+      "s11.l2": "Remi's answers are for assistance only and are subjective and indicative. Due to the nature of generative AI technology, answers may contain inaccuracies, factual errors, outdated data or made-up information (so-called AI hallucinations).",
+      "s11.l3": "Remi's answers are in no case a guarantee that a dish is free of allergens, dietary information or medical advice. Before using a Restaurant's offer, the User must verify the data or information from Remi with the Restaurant. Recomly is not liable for any discrepancy between Remi's suggestions and the actual situation at the Restaurant.",
+      "s11.l4": "The User undertakes not to enter confidential data, payment card data, passwords or personal data, including health data, in the chat with Remi.",
+      "s11.l5": "It is forbidden to use Remi to generate unlawful, vulgar or hateful content, or to attempt to bypass the model's algorithmic safeguards.",
+      "s12.h": "§12. Liability",
+      "s12.l1": "Recomly is liable for non-performance or improper performance of the agreement on general terms. Recomly's liability for lost profits is excluded.",
+      "s12.l2": "To the maximum extent permitted by law, Recomly shall not be liable for:<ul><li>decisions made by the User based on recommendations or Content presented in the Application;</li><li>the quality, safety, legality or availability of services provided by Partners;</li><li>Content posted by other Users;</li><li>interruptions in the operation of the Application or Service resulting from force majeure or other causes beyond Recomly's control;</li><li>damage resulting from the User's improper use of the Application or breach of the Regulations;</li><li>loss of data that did not occur solely through Recomly's fault.</li></ul>",
+      "s12.l3": "Nothing in these Regulations limits Recomly's liability for damage caused intentionally, or any liability that cannot be limited under applicable law, including consumer protection law.",
+      "s12.l4": "The User undertakes to indemnify Recomly against any third-party claims arising from the User's violation of the Regulations or the law, in particular in connection with Content posted by the User.",
+      "s12.l5": "Towards Users who are not consumers (e.g. entrepreneurs using the Application for profit), Recomly's liability for any damage (except damage caused intentionally) is limited to the amount of 3 months' commission paid to the User before the date the damage occurred.",
+      "s12.l6": "Recomly is not liable for non-performance or improper performance of food services provided by Restaurants to Users at their venues, including food quality, table service or any harm to the consumer's health occurring at the venue (liability in this respect rests solely with the Restaurant running the venue).",
+      "s13.h": "§13. Complaints",
+      "s13.l1": "Recomly is obliged to provide services (the Application, the Service) in conformity with the agreement throughout its term. Recomly informs the User about Application updates (including security updates) necessary to keep it in conformity with the agreement and provides them through the App Store / Google Play.",
+      "s13.l2": "If Recomly fails to perform or improperly performs the services, the User has the rights provided for in the Consumer Rights Act (including demanding that the service be brought into conformity with the agreement and, where provided by law, withdrawing from the agreement).",
+      "s13.l3": "Complaints regarding the functioning of the Application, the Account or other digital services may be submitted:<ol><li>by email to: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>;</li><li>in writing to Recomly's registered office address.</li></ol>",
+      "s13.l4": "A complaint should include: data identifying the User (the Account email address), a description of the problem, the date it occurred, and the User's request.",
+      "s13.l5": "Recomly considers the complaint and replies within 14 days of receiving it, sending the reply to the email address from which the complaint was sent.",
+      "s14.h": "§14. Dispute resolution",
+      "s14.l1": "A User who is a consumer may use out-of-court methods of considering complaints and pursuing claims, in particular the assistance of the county (municipal) consumer ombudsman, the Voivodeship Inspectorates of Trade Inspection, or permanent amicable consumer courts.",
+      "s14.l2": "An unjustified restriction of Content or a User's Account by Recomly may be appealed to an out-of-court dispute resolution body certified in accordance with the DSA.",
+      "s14.l3": "The use of out-of-court dispute resolution methods is voluntary.",
+      "s15.h": "§15. Changes to the Regulations",
+      "s15.l1": "Recomly may change these Regulations only for important reasons, which include, among others:<ol><li>a change in generally applicable law, a court ruling or an administrative decision directly affecting the content of the Regulations;</li><li>a change in the technical conditions of providing the services, including iOS/Android updates, integration with new tools or a change of infrastructure providers;</li><li>the introduction of new features, or the modification or withdrawal of existing features of the Application or the Service;</li><li>the need to prevent abuse or security breaches, or to close legal gaps;</li><li>a change in Recomly's contact details or other legal information about Recomly;</li><li>the correction of obvious mistakes or typos, or filling gaps or ambiguities in the Regulations that cannot be resolved by interpretation;</li><li>security or fraud prevention reasons.</li></ol>",
+      "s15.l2": "Users will be notified of every change to the Regulations electronically (to the email address assigned to the Account) or by a clear message in the Application at least 14 days before the new version of the Regulations takes effect.",
+      "s15.l3": "A User who does not agree to the proposed changes has the right to terminate the agreement and delete the Account before the changes take effect. Not deleting the Account or continuing to use the Application after the new Regulations take effect is deemed acceptance of them.",
+      "s16.h": "§16. Personal data",
+      "s16.p1": "The rules for processing Users' personal data are governed by a separate document - the <a href=\"privacy\">Privacy Policy</a>, available in the Application and the Service.",
+      "s17.h": "§17. Final provisions",
+      "s17.l1": "Polish law is the governing law for these Regulations. The choice of Polish law does not deprive a consumer of the protection granted by provisions that cannot be excluded by agreement under the law of the country of their habitual residence.",
+      "s17.l2": "In matters not regulated by the Regulations, in particular the provisions of the Polish Civil Code, the Act on Providing Electronic Services, the Consumer Rights Act and the DSA shall apply.",
+      "s17.l3": "Any disputes arising from the Regulations will be settled by the court competent for Recomly's registered office. This provision does not apply to consumers - in their case, the court's jurisdiction is determined by generally applicable law.",
+      "s17.l4": "The invalidity of any provision does not affect the validity of the remaining provisions of the Regulations (severability clause). An invalid provision will be replaced by a provision closest to its purpose.",
+      "s17.l5": "The current version of the Regulations is always available at https://recomly.app/terms and in the settings menu of the Recomly Application in a way that allows it to be downloaded, reproduced and saved in PDF format.",
+      "s17.p1": "Contact: <a href=\"mailto:kontakt@recomly.app\">kontakt@recomly.app</a>"
     }
   };
 
