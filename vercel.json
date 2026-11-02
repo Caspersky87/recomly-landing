@@ -30,6 +30,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/r/:code", "destination": "/download.html" }
+    { "source": "/r/:code", "destination": "/download" }
   ]
 }
