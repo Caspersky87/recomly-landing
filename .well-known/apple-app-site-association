@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["LJPYU3XYD6.com.recomly.app"],
+        "components": [{ "/": "/r/*" }]
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#6938ef"/>
+<title>Pobierz Recomly</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<style>
+  :root { --primary: #6938ef; --text: #0f0b1f; --muted: #6b6580; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 70%, #f5f0ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    text-align: center;
+  }
+  main { max-width: 420px; width: 100%; }
+  .logo { height: 40px; width: auto; margin-bottom: 28px; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+  p { color: var(--muted); line-height: 1.6; margin-bottom: 28px; }
+  .store {
+    display: block; width: 100%; border: 0; cursor: pointer;
+    background: var(--primary); color: #fff; font: inherit;
+    padding: 14px 20px; border-radius: 14px; font-weight: 600; font-size: 16px;
+  }
+  .store:hover { opacity: 0.85; }
+  .back { display: inline-block; margin-top: 28px; color: var(--primary); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="/logo.png" alt="Recomly" class="logo"/>
+  <h1 data-i18n="title">Pobierz Recomly</h1>
+  <p data-i18n="subtitle">Masz zaproszenie do Recomly. Po instalacji wkleisz kod jednym dotknięciem.</p>
+  <button type="button" class="store" id="get" data-i18n="cta">Pobierz</button>
+  <a href="/" class="back">recomly.app</a>
+</main>
+<script>
+  (function () {
+    var match = location.pathname.match(/^\/r\/([^\/]+)/);
+    var code = match ? decodeURIComponent(match[1]) : '';
+    var link = code ? 'https://recomly.app/r/' + encodeURIComponent(code) : location.href;
+    var store = 'https://apps.apple.com/app/apple-store/id6772970281?pt=128929183&mt=8' +
+      (code ? '&ct=' + encodeURIComponent(code) : '');
+
+    function copyFallback() {
+      var field = document.createElement('textarea');
+      field.value = link;
+      field.setAttribute('readonly', '');
+      field.style.position = 'absolute';
+      field.style.left = '-9999px';
+      document.body.appendChild(field);
+      field.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(field);
+    }
+
+    document.getElementById('get').addEventListener('click', function () {
+      var go = function () { location.href = store; };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(go, function () { copyFallback(); go(); });
+      } else {
+        copyFallback();
+        go();
+      }
+    });
+
+    var t = {
+      en: {
+        title: 'Get Recomly',
+        subtitle: "You've been invited to Recomly. After installing, paste the code with one tap.",
+        cta: 'Download'
+      }
+    };
+    var lang;
+    try { lang = localStorage.getItem('recomly-lang'); } catch (e) {}
+    if (!lang) lang = (navigator.language || 'pl').slice(0, 2) === 'pl' ? 'pl' : 'en';
+    if (lang !== 'en') return;
+    document.documentElement.lang = 'en';
+    document.title = t.en.title;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      el.textContent = t.en[el.getAttribute('data-i18n')];
+    });
+  })();
+</script>
+</body>
+</html>

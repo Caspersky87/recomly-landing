@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.recomly.app",
+      "sha256_cert_fingerprints": [
+        "CB:BA:A2:9B:86:33:AC:1B:0D:15:57:B3:31:20:78:04:DA:36:F8:B6:E9:C8:87:2B:3A:B3:A3:67:3B:E3:8D:B8"
+      ]
+    }
+  }
+]
