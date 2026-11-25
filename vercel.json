@@ -51,6 +51,23 @@
       ],
       "destination": "https://play.google.com/store/apps/details?id=com.recomly.app&referrer=utm_source%3Dreferral%26utm_medium%3Dcode%26utm_campaign%3D:code",
       "permanent": false
+    },
+    {
+      "source": "/v/:code",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*Android.*"
+        }
+      ],
+      "destination": "https://play.google.com/store/apps/details?id=com.recomly.business",
+      "permanent": false
+    },
+    {
+      "source": "/v/:code",
+      "destination": "https://apps.apple.com/app/id6835423379",
+      "permanent": false
     }
   ],
   "rewrites": [

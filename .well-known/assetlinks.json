@@ -5,7 +5,19 @@
       "namespace": "android_app",
       "package_name": "com.recomly.app",
       "sha256_cert_fingerprints": [
-        "CB:BA:A2:9B:86:33:AC:1B:0D:15:57:B3:31:20:78:04:DA:36:F8:B6:E9:C8:87:2B:3A:B3:A3:67:3B:E3:8D:B8"
+        "CB:BA:A2:9B:86:33:AC:1B:0D:15:57:B3:31:20:78:04:DA:36:F8:B6:E9:C8:87:2B:3A:B3:A3:67:3B:E3:8D:B8",
+        "FB:B1:CB:D4:05:C2:EA:A4:D8:EE:2C:D9:63:E2:B7:3A:A7:F0:C6:AB:9B:30:D4:A4:F4:66:EE:07:37:12:65:8C"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.recomly.business",
+      "sha256_cert_fingerprints": [
+        "1D:92:13:A4:08:69:6A:D4:CD:F7:77:26:52:BD:0E:C0:48:AC:35:34:A0:05:B8:06:3C:2C:22:8D:CE:84:88:0E",
+        "E4:4D:81:08:83:B3:BB:13:03:38:D6:56:3B:1B:41:A3:C6:5B:F6:13:7C:CE:81:E5:FD:CF:10:A9:D0:AB:06:66"
       ]
     }
   }
