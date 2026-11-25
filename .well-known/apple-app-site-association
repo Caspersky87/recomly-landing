@@ -4,6 +4,10 @@
       {
         "appIDs": ["LJPYU3XYD6.com.recomly.app"],
         "components": [{ "/": "/r/*" }]
+      },
+      {
+        "appIDs": ["LJPYU3XYD6.com.recomly.business"],
+        "components": [{ "/": "/v/*" }]
       }
     ]
   }

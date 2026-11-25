@@ -16,3 +16,7 @@ Sends phones to their store; other devices see both store buttons.
 ## Homepage
 
 Store buttons in the hero and the download section. Phones see only their store; desktop sees both plus `qr-download.svg` (points to `https://recomly.app/download`).
+
+## `/v/<code>` (guest visit QR, Recomly Business)
+
+With Recomly Business installed, the link opens the app (iOS associated domains, Android app link via the files in `.well-known/`). Without it, `vercel.json` sends Android to Play and everything else to the App Store. The page never redeems the code.
