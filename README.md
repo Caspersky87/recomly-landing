@@ -13,6 +13,10 @@ Sends phones to their store; other devices see both store buttons.
 - `vercel.json` redirects iPhone and Android (except Huawei) on the server.
 - The script in `download.html` catches iPads, which send a Mac user agent.
 
+## `/business/download` (Recomly Business QR code target)
+
+Same as `/download`, for Recomly Business (App Store id6835423379, Play `com.recomly.business`). The printed QR code points to `https://recomly.app/business/download?utm_source=qr`, so this path must never change. `business/qr-download.svg` is that code.
+
 ## Homepage
 
 Store buttons in the hero and the download section. Phones see only their store; desktop sees both plus `qr-download.svg` (points to `https://recomly.app/download`).

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#6938ef"/>
+<title>Pobierz Recomly Business</title>
+<script>
+  (function () {
+    var APP_STORE = 'https://apps.apple.com/app/id6835423379';
+    var PLAY = 'https://play.google.com/store/apps/details?id=com.recomly.business';
+    var ua = navigator.userAgent;
+    document.documentElement.className = /Mobi|Android/.test(ua) ? 'mobile' : '';
+    var isIPad = /iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (isIPad || /iPhone|iPod/.test(ua)) location.replace(APP_STORE);
+    else if (/Android/.test(ua) && !/HuaweiBrowser/.test(ua)) location.replace(PLAY);
+  })();
+</script>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<style>
+  :root { --primary: #6938ef; --text: #0f0b1f; --muted: #6b6580; --border: #ece8f5; }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 70%, #f5f0ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    text-align: center;
+  }
+  main { max-width: 420px; width: 100%; }
+  .logo { height: 40px; width: auto; margin-bottom: 28px; }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+  p { color: var(--muted); line-height: 1.6; margin-bottom: 28px; }
+  .stores { display: flex; flex-direction: column; gap: 12px; }
+  .stores.badges { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .badges a { display: inline-block; transition: transform 0.15s; }
+  .badges a:hover { transform: scale(1.04); }
+  .badges img { height: 52px; width: auto; display: block; }
+  .qr { margin-top: 28px; }
+  .qr img { width: 140px; height: 140px; display: block; margin: 0 auto 10px; }
+  .qr p { font-size: 14px; margin: 0; }
+  html.mobile .qr { display: none; }
+  .back { display: inline-block; margin-top: 28px; color: var(--primary); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <img src="/logo.png" alt="Recomly" class="logo"/>
+  <h1 data-i18n="title">Pobierz Recomly Business</h1>
+  <p data-i18n="subtitle">Aplikacja dla obsługi lokali partnerskich Recomly.</p>
+  <div class="stores badges">
+    <a href="https://apps.apple.com/app/id6835423379"><img src="/badge-app-store-pl.svg" data-en="/badge-app-store-en.svg" alt="App Store"/></a>
+    <a href="https://play.google.com/store/apps/details?id=com.recomly.business"><img src="/badge-google-play-pl.png" data-en="/badge-google-play-en.png" alt="Google Play"/></a>
+  </div>
+  <div class="qr">
+    <img src="/business/qr-download.svg" alt="QR"/>
+    <p data-i18n="qr">Zeskanuj aparatem w telefonie</p>
+  </div>
+  <a href="/" class="back" data-i18n="back">recomly.app</a>
+</main>
+<script>
+  (function () {
+    var t = {
+      en: {
+        title: 'Get Recomly Business',
+        subtitle: 'The app for staff at Recomly partner places.',
+        back: 'recomly.app',
+        qr: 'Scan with your phone camera'
+      }
+    };
+    var lang;
+    try { lang = localStorage.getItem('recomly-lang'); } catch (e) {}
+    if (!lang) lang = (navigator.language || 'pl').slice(0, 2) === 'pl' ? 'pl' : 'en';
+    if (lang !== 'en') return;
+    document.documentElement.lang = 'en';
+    document.title = t.en.title;
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      el.textContent = t.en[el.getAttribute('data-i18n')];
+    });
+    document.querySelectorAll('img[data-en]').forEach(function (img) {
+      img.src = img.getAttribute('data-en');
+    });
+  })();
+</script>
+</body>
+</html>
